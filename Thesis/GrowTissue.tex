@@ -1,0 +1,37 @@
+\chapter{Epithelium}
+\section{About Epithelium}
+For my Master's Thesis I have implemented the Nagai-Honda Model for epithelial tissue development. My software is easy to install, takes up less than 50Mb, comes in parallel and non-parallel versions (Version 1.0.0, Version 1.0.1) and has very few dependencies which are likely already installed on mac and linux computers. 
+
+My code allows users to specify all parameters of interest in a couple of well commented configuration files, can handle simulations of arbitrarily large size, and can generate beautiful animations and plots of epithelial tissue development as well as beautiful plots of various quantities of interest to the researcher. 
+
+On top of all of this, the source code is highly modularized and allows for ambitious users to easily extend the code to meet their needs. For example, alternate numerical integrators can easily replace the existing one, new mesh generators can replace the square mesh I have developed, and all data is output in very simple formats which users with scriting experience can transform to fit into the graphical utilities of their choice. In addition, the cell and vertex classes are well documented and can be extended to output new data, as users may need. What follow are a few graphs to give some flavor of what \textbf{GrowTissue} can do.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{../Images/IntroEnergy.png}
+\caption{A plot of the energy in the system as a function of iteration.}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{../Images/IntroBargraph.pdf}
+\caption{A plot of the number of sides cells have.}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{../Images/More5Than6.pdf}
+\caption{The equilibrium distribution of cell shapes given a different initial condition.}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{../Images/initialMesh.png}
+\caption{A mesh of cells before the application of forces.}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{../Images/afterMesh.png}
+\caption{A mesh after the application of forces.}
+\end{figure}
