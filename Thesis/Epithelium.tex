@@ -1,4 +1,4 @@
-\chapter{GrowFlesh}
+\chapter{Epithelium}
 \begin{center}
 ``All models are wrong, but some are useful'' - G. Pox
 \end{center}
@@ -55,72 +55,6 @@ This file is a configuration file, and does not require you to recompile when yo
 \end{lstlisting}
 \section{Image Gallery}
 This selection of graphs captures the properties of the mesh with various choices of parameter values. The target area for each cell was set to 4.0, unless otherwise specified. A couple of plots have outliers in the number of sides the cells have, or in the perimeters attained. This is due to the individual specification of cell properties for a handful of cells. In this way, the distribution of cell properties was more finely controlled. The images come in groups of four. There are two parameter studies per page. On the right you will see the equilibrium area and perimeter reached after applying the force, and the on the right you will see the equilibrium distribution of cell shapes along with a plot of the decreasing energy in the mesh as a function of time.
-
-Following the parameter studies several interesting tissues are presented.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{../Images/compiled/done/beta1.png}
-\caption[Beta Dominant Output]{These graphs show the equilibrium reached when beta is the dominant parameter.}
-\end{figure}
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{../Images/compiled/done/equal1.png}
-\caption[Equal Parameter Output]{These graphs show the equilibrium reached when all parameters are set equal.}
-\end{figure}
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{../Images/compiled/done/gamma1.png}
-\caption[Gamma Dominant Output]{These graphs show the equilibrium reached when gamma is the dominant parameter.}
-\end{figure}
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{../Images/compiled/done/lambda.png}
-\caption[Lambda Dominant Output]{These graphs show the equilibrium reached when lambda is the dominant parameter.}
-\end{figure}
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{../Images/compiled/done/no.png}
-\caption[Missing Parameter Output]{These graphs show the equlibrium in the absence of a parameter.}
-\end{figure}
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{../Images/compiled/done/area_and_gamma.png}
-\caption[Large Area Output]{These graphs show the equilibrium reached when the target area is set to be larger than the available space in the mesh, and there is also a graph showing another gamma-dominant equilibrium.}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \begin{subfigure}[b]{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{../Images/finalMesh/finalmesh4.png}
-        \caption{A Final Mesh With White Background.}
-        \label{fig:whitebg}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{../Images/finalMesh/finalmesh21.png}
-        \caption{A final mesh where some cells have target area $< 4.0$}
-        \label{fig:small area}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{../Images/finalMesh/finalmesh22.png}
-        \caption{A final mesh where some cells have target area $>4.0$}
-        \label{fig:large area}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{../Images/finalMesh/Middlemesh17.png}
-        \caption{A mesh during an integration, before equilibration.}
-        \label{fig:whitebg2}
-    \end{subfigure}
-    \caption{A Selection of Interesting Tissues}
-    \label{fig:Interesting tissue}
-\end{figure}
 
 \section{Why \emph{Epithelium} is a good piece of software}
 To close our discussion of \emph{Epithelium} I would like to discuss why it is a great piece of software for \emph{you}. \emph{GrowFlesh} has only a couple of dependencies which are likely already installed on you computer if you are interested in computational science. You will need a compiler supporting the C++11 standard, python2.7,  the matplotlib plotting library for python and the numpy python library. The only packages which will likely not be installed on your computer are the geomview geometric visualization software and the imagemagick image conversion program. Geomview and ImageMagick are free, and are such good programs that they have been around for more than 20 years. Of course, all of the animation, and plot information is outputed from this software in file formats that are easy to adapt to the user's choice of visualization software. The energy and histogram files are space separated lists and the mesh information is outputted in the OFF file format, which features a list of coordinates followed by a list of polygons which are defined counterclockwise as a list of vertex indices from the preceding list of vertices. A  sample mesh file is shown below to convince you of how simple this file format is, and to suggest that you could write a smal script to change this file to a different format that will be acceptable to your choice of visualization software.

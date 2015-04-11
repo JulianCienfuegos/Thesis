@@ -1,10 +1,61 @@
-\chapter{Overview of the Model}
+\chapter{Modeling}
+\chapter{About Epithelial Tissue?}
+Epithelial tissue covers the interior and exterior surfaces of our bodies. Skin, the lining of the esophogas and intestines, the urethra, the lining of the lungs and all of the bronchioles in the lungs are all made up of epithelial tissue. In this way, we can think of epithelial tissue as being the envelope in which our contents are packaged \cite{Shape Formation}; epithelial tissue is our interface with the outside world. 
+
+\begin{figure}[hb]
+\centering \includegraphics[width=\textwidth]{../diagrams/output.png}
+\caption{The Types of Epithelial Tissue}
+\label{fig:types}
+\end{figure}
+
+As Figure~\ref{fig:types} shows, there are many types of epithelial tissue in animals which vary in their number of layers and how the cells are shaped. Each of these types of cells are found in a different region of the body where they perform a specific function.  For example, the simple squamous epithelium is no more than one layer of cells thick, and the cells are all very flat, much flatter than they are wide. These cells are therefore well suited to  allow diffussion across themselves. As such, simple squamous tissue is found in the walls of blood vessels and in the alveoli in the lungs, where the diffusion of oxygen occurs. On the other hand, columnar cells are much taller than they are wide, and are thus well suited to absorption. These cells are found in the intestines where they absorb nutrients from passing food. Stratified squamous epithelia are several layers thick line the esophogas and mouth and serve to protect against abraision.
+
+What all of these tissues have in common, however, is how amenable they are to computational modeling. The simplest case is that of simple epithelia, which typically have near-uniform height, and very little difference in appearance between their apical and basal faces. This means that the cells can easily be approximated by a two dimensional mesh, since the top and bottom of the cells move in tandem and the surface where two cells touch can be approximated by a line. See Figures CITE FIGURES HERE to see examples of current 2D models.  Slightly more difficult is the modeling of stratified tissue. In this case, the tissue develops in three dimensions, since underlying cells affect the cells on top of them CITE OKUDA IMAGE FOLLOWING DR. OVERMANS HELP WITH IMAGE FORMATTING. These cannot be modeled in two dimensions, but can be modeled by a solid composed of three dimensional polytopes. The theory behind these models is well developed, but the techincal details of implementing such a model has made it so that very exist, and are often quite limited \footnote{Even a leading epithelial tissue simulator, Chaste, still does not have stable 3D modeling capabilities}. For an example of a 3D model, see image INSERT IMAGE NAME HERE.
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../diagrams/okuda1.png}
+		\caption{Simple Squamous Tissue Bending in 3D\cite{Okuda1}}
+		\label{fig:okuda1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../diagrams/perfect.png}
+		\caption{Comparison of Living Tissue and Simulation\cite{Yoshi}}
+		\label{fig:yoshi}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../diagrams/HondaResult.png}
+        \caption{Equilibrium Mesh\cite{HondaNagai}}
+        \label{fig:Honda}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../diagrams/mirim.png}
+        \caption{Equilibrium Mesh on a 3d Surface \cite{Vertex Models}}
+        \label{fig:mirim}
+    \end{subfigure}
+    \caption{Some existing models of epithelial tissue.}
+    \label{fig:four graphs}
+\end{figure}
+
+
+Current modeling is producing great results in the field of epithelial tissue morphogenisis, equilibration, and wound healing. The Honda-Nagai model which we will discuss in great detail in this paper successfully reproduced the wound healing of cats' corneas\cite{Wound Healing}. This model has also been able to reproduce all of the essential dynamics of epithelial tissue \cite{HondaNagai}. MENTION THE DROSOPHILA RESULTS. Current imaging tools have enabled the recording of epithelial tissue dynamics \emph{in vivo} CITE KIEHART AND MAGASON, providing a wealth of experimental data which can serve as either initial conditions for simulations, or as benchmarks to measure the success of computational models. In turn, models of epithelial dynamics can provide insights into the physical parameters that govern tissue development, maintenance, and illness.
+
+Other modeling communities share advanced, free, and parallel simulation codes. For example, consider LAMMPS for simulating atomistic materials, and CHARMM, Amber,and NAMD for the molecular dynamics of biomolecules. Unfortunately, there are only a handful of codes in use for the simulation of ET, and only one of them is freely available \cite{ChasteMain}. In this thesis I will present the basic ideas of \textbf{vertex dynamics models}, and then describe the implementation of one of them in a freely available modeling tool for the community.
+
+\section{Modeling Epithelial Tissue}
 \begin{center}
 \emph{The world was so recent that many things still lacked names,}\\
 \emph{and to mention them one had to point with a finger. }\\
 \textbf{\hspace{10ex} - Gabriel Garcia Marquez}
 \end{center}
-\section{Introduction}
 A two dimensional \textbf{vertex dynamics model} of epithelial tissue is made up of vertices and edges. A cell is represented as a convex hull made up of cells and vertices. This model presupposes that the movement of cells in epithelial tissue can be approximated by the movement of the vertices which make up the cell. Some force is hypothesized to be the guiding force between epithelial cell movement, and this force is applied to all of the vertices in the mesh of cells, producing some final state of the tissue. The three dimensional model is an extension of the two-dimensional model, but the mesh comes to include not only vertices and edges, but also cell faces. 
 
 Epithelial vertex dynamics has been a lively field of research since the 1970s because of several heartening results in the field. Some researchers have had success modelling the morphogenesis of \emph{Drosophila} wing growth, whereas other researchers have successfully reproduced the dynamics of corneal wound healing. Unfortunately, these results have not come from one standard force, but from a variety of different hypothesized forces.
