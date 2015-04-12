@@ -1,5 +1,5 @@
 \chapter{Modeling}
-\chapter{About Epithelial Tissue?}
+\label{chap:intro}
 Epithelial tissue covers the interior and exterior surfaces of our bodies. Skin, the lining of the esophogas and intestines, the urethra, the lining of the lungs and all of the bronchioles in the lungs are all made up of epithelial tissue. In this way, we can think of epithelial tissue as being the envelope in which our contents are packaged \cite{Shape Formation}; epithelial tissue is our interface with the outside world. 
 
 \begin{figure}[hb]
@@ -38,7 +38,7 @@ What all of these tissues have in common, however, is how amenable they are to c
     \begin{subfigure}[b]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{../diagrams/mirim.png}
-        \caption{Equilibrium Mesh on a 3d Surface \cite{Vertex Models}}
+        \caption{Equilibrium Mesh on a 3d Surface \cite{VertexModels}}
         \label{fig:mirim}
     \end{subfigure}
     \caption{Some existing models of epithelial tissue.}
@@ -46,17 +46,19 @@ What all of these tissues have in common, however, is how amenable they are to c
 \end{figure}
 
 
-Current modeling is producing great results in the field of epithelial tissue morphogenisis, equilibration, and wound healing. The Honda-Nagai model which we will discuss in great detail in this paper successfully reproduced the wound healing of cats' corneas\cite{Wound Healing}. This model has also been able to reproduce all of the essential dynamics of epithelial tissue \cite{HondaNagai}. MENTION THE DROSOPHILA RESULTS. Current imaging tools have enabled the recording of epithelial tissue dynamics \emph{in vivo} CITE KIEHART AND MAGASON, providing a wealth of experimental data which can serve as either initial conditions for simulations, or as benchmarks to measure the success of computational models. In turn, models of epithelial dynamics can provide insights into the physical parameters that govern tissue development, maintenance, and illness.
+Current modeling is producing great results in the field of epithelial tissue morphogenisis, equilibration, and wound healing. The Honda-Nagai model which we will discuss in great detail in this paper successfully reproduced the wound healing of cats' corneas\cite{WoundHealing}. This model has also been able to reproduce all of the essential dynamics of epithelial tissue \cite{HondaNagai}.  Current imaging tools have enabled the recording of epithelial tissue dynamics \emph{in vivo} \cite{Solokow}\cite{Xiong}, providing a wealth of experimental data which can serve as either initial conditions for simulations, or as benchmarks to measure the success of computational models. In turn, models of epithelial dynamics can provide insights into the physical parameters that govern tissue development, maintenance, and malady.
 
 Other modeling communities share advanced, free, and parallel simulation codes. For example, consider LAMMPS for simulating atomistic materials, and CHARMM, Amber,and NAMD for the molecular dynamics of biomolecules. Unfortunately, there are only a handful of codes in use for the simulation of ET, and only one of them is freely available \cite{ChasteMain}. In this thesis I will present the basic ideas of \textbf{vertex dynamics models}, and then describe the implementation of one of them in a freely available modeling tool for the community.
 
-\section{Modeling Epithelial Tissue\footnote{A very similar overview can be found in \cite{ChasteMain}}
+\section{Modeling Epithelial Tissue} 
 \label{sec:modeling}
+
 \begin{center}
 \emph{The world was so recent that many things still lacked names,}\\
 \emph{and to mention them one had to point with a finger. }\\
 \textbf{\hspace{10ex} - Gabriel Garcia Marquez}
 \end{center}
+
 A two dimensional \textbf{vertex dynamics model} of epithelial tissue is made up of vertices and edges\cite{DirichletDomains}. A cell is represented as a polygon in 2 dimensions, or a polyhedron in 3 dimension. This model presupposes that the movement of cells in epithelial tissue can be approximated by the movement of the vertices which make up the cell. Some force is hypothesized to be the guiding force behind epithelial cell movement, and this force is applied to all of the vertices in the mesh of cells, transforming the tissue.
 
 Epithelial vertex dynamics has been a lively field of research since the 1970s because of several heartening results. Some researchers have had success modeling the morphogenesis of \emph{Drosophila} wing growth\cite{Farhadifar}, whereas others have accurately reproduced the dynamics of corneal wound healing\cite{WoundHealing}. In other research, simulations have faithfully captured the effects of laser perturbations to epithelial cell junctions \cite{Yoshi}, and others have quantified parameters which are important in describing the formation of the epithelial envelope in \emph{Drosophila}\cite{Sokolow}. Unfortunately, these results have not come from one standard model of epithelial tissue development, but from a variety of different, often irreconcilable, models. Two models will clearly illustrate the different approaches taken to modeling tissue. 
@@ -102,7 +104,7 @@ In 1989, K. Kawaski showed that the dynamics of grain growth can be reduced to a
 \eta\frac{dr_i}{dt} = F_i
 \end{equation}
 
-where $F_i$ denotes the force applied to vertex $i$, $r_i$ denotes the position of the $i^{th}$ vertex,  and the left hand side is the velocity of the vertex multiplied by a positive drag coefficient, $\eta$\cite{1989 Kawasaki}.
+where $F_i$ denotes the force applied to vertex $i$, $r_i$ denotes the position of the $i^{th}$ vertex,  and the left hand side is the velocity of the vertex multiplied by a positive drag coefficient, $\eta$\cite{1989Kawasaki}.
 
 Based upon the notion described in the preceding section, that biological cells move in a way quite similar to crystallites at high temperature\footnote{Often referred to as grain growth}, the Honda-Nagai model has this equation of motion as its basis. The force on the right hand side of the equation is in turn defined as the gradient of a free energy function, since the model presupposes the principle of maximum entropy is the guiding principle behind epithelial cell equiliibria. Then, the free energy function is composed of three terms which reflect the properties of biological cells.
 
@@ -112,7 +114,7 @@ C(x-x_0)^2
 \end{equation}
 \begin{figure}
 \centering
-\includegraphics{../diagrams/pe.jpg}
+\includegraphics[width=0.25\textwidth]{../diagrams/parabola.png}
 \caption{Potential Energy as a Function of Distance from Equilibrium.}
 \label{fig:pe}
 \end{figure}
@@ -222,7 +224,7 @@ In the case of the Honda Nagai Model, however, there is little difference betwee
 
 \begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{../diagrams/distibutionHonda.png}
-\caption[Distribution of Cell Shapes]{The distribution of cell shapes As a function of time \cite{HondaNagai} in the original Honda-Nagai Model.}
+\caption[Distribution of Cell Shapes]{The distribution of cell shapes as a function of time \cite{HondaNagai} in the original Honda-Nagai Model.}
 \end{figure}
 
 \section{Further Remarks About the HNM, and Epithelial Modeling in General.}
@@ -245,3 +247,42 @@ The T3 swap is also known as ``mitosis'' or ``cell division''. Cell division was
 \caption{The T3 Swap}
 \label{fig:t3}
 \end{figure}
+
+\subsection{The Euler Characeteristic and Its Implications}
+In this section I will expand upon some observations made in \cite{Soap}. \textbf{Euler's Formula} is an equation which relates the number of edges, faces, and vertices in a graph or polyhedron. An invariant $\chi$ relates the faces, edges, and vertices as follows:
+
+\begin{equation}
+\chi = V - F + E
+\end{equation}
+
+The invariant depends upon the graph or polyhedron in question. We will ignore the exact value of $\chi$ and simply use the fact that it is a constant. The majority or current vertex dynamics models assume that vertices will have a coordination number of 3, since empirical evidence shows that the vast majority of cells have this property\city{EpithelialTopology}\cite{Overview}. While there are certain models which consider \emph{rosettes}, for now we will assume that all vertices connect to exactly three other vertices. Then we notice that all edges have two vertices, and that all vertices are connected to three edges. Inititally, our intuition tells us that there should be three times as many edges as vertices, which leads us to the incorrect:
+\begin{equation}
+3V = E
+\end{equation}
+But then we notice that if we consider all of the vertices in the mesh, we count each edge twice, so we divide the conjectured  number of edges by two and then simplify to get:
+\begin{equation}
+3V = 2E
+\end{equation}
+
+Similarly, if we consider how to relate the number of edges to the faces in the mesh, we conjecture that the number of edges in equal to the number of cells with 3 sides plus the number of cells with 4 sides plus the number of cells with 5 sides plus . . . each multiplied by the number of edges per cell. THis gives us:
+\begin{equation}
+\sum_{k=3}^N kF_k = E
+\end{equation}
+Where $N$ is the highest number of edges encountered by any cell in the mesh. But in this way we have again counted all of the edges twice, so the true number of edges must be the summation above divided by 2. We simplify the equation to :
+\begin{equation}
+\sum_{k=3}^N kF_k = 2E
+\end{equation}
+Now, we are able to reduce Euler's Forula to one variable using the relationships given above.
+\begin{gather}
+V - F + E = \chi\\
+\frac{2E}3 - F + E = \chi\\
+\frac{5E}3 - F = \chi\\
+\frac{\sum_{k=3}^N kF_k}{6} - F = \chi\\
+(\frac{\sum_{k=3}^N kF_k}{F} - 6)F = 6\chi
+\end{gather}
+Biological cells are very small, and an epithelial tissue is composed of many cells, so we assume that $F\to\infty$ and then immediately notice that the expression in parentheses must tend to zero as F goes to infinity, or else the left hand side of the above equation will not approach the constant $6\chi$. From here it is easy to see that the introduction of a finite number of rosettes will not affect this result in the limiting case, and even if our model does include vertices of degree higher than three, they ought not to have a great effect on the average cell shape.
+
+So we know that the algebraic mean of the number of vertices per face must be 6. Of course we have no reason at this point to assume a that there exists a distribution which guarantees that any percentage of cells in the tissue have exactly six edges. It is feasible that the tissue could be made up entirely of five and seven sided cells. Nevertheless, empirical evidence shows a strong central tendency in the distribution of cell shapes. Whenever a cell tries to stray from the average, there are computational means (such as the T3 swap) of recentering the distribution at 6 sides.
+
+\subsection{Rosettes}
+The choice to impose degree three on each vertex is not one hundred percent consistent with nature, but has been a part of most models of epithelial tissue. This is because empirical evidence shows that the \emph{majority} of vertices in a tissue will have out degree three. It is a simplifying assumption that \emph{rosettes} (epithelial cells organized radially about one vertex which has degree greater than or equal to 4) do not change the global dynamics of the development of an epithelial tissue.  Recent computer vision developments \cite{rose} have made it easier to detect rosettes in epithelial tissue samples and may in the future provide information about the number of these formations, or evidence that rosettes are an important feature of epithelial tissue. 

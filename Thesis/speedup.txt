@@ -1,1 +1,0 @@
-Runtime went down by 14% by changing the coordinates to be stored in X, Y and no longer in coordinate().
