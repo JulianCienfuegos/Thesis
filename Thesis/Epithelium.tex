@@ -1,15 +1,15 @@
 \chapter{Epithelium}
-\begin{center}
-``All models are wrong, but some are useful'' - G. Pox
-\end{center}
+
 \section{About Epithelium}
-For my Master's Thesis I have implemented the Nagai-Honda Model for epithelial tissue development. My software is easy to install, takes up less than 50Mb, comes in parallel and non-parallel versions (Version 1.0.0, Version 1.0.1) and has very few dependencies (and they are likely already installed on mac and linux computers). 
+For my Master's Thesis I have implemented the Honda-Nagai Model for epithelial tissue development. My software is easy to install, takes up less than 50Mb, comes in parallel and non-parallel versions (Version 1.0.0p, Version 1.0.0) and has very few dependencies (and they are likely already installed on mac and linux computers). 
 
 My code allows users to specify all parameters of interest in a couple of well commented configuration files, can handle simulations of arbitrarily large size, and can generate beautiful animations and plots of epithelial tissue development as well as useful plots of various quantities which are of interest to the researcher. 
 
-On top of all of this, the source code is highly modularized and allows for ambitious users to easily extend the code to meet their needs. For example, alternate numerical integrators can easily replace the existing one, new mesh generators can replace the square mesh I have developed, and all data is output in very simple formats( which users with scriting experience can transform to fit into the graphical utilities of their choice). In addition, the cell and vertex classes are well documented and can be extended to output new data, as users may need. What follow are a few graphs to give some flavor of what \emph{Epithelium} can do.
+On top of all of this, the source code is highly modularized and allows for ambitious users to easily extend the code to meet their needs. For example, alternate numerical integrators can easily replace the existing one, new mesh generators can replace the square mesh I have developed, and all data is output in very simple formats( which users with scriting experience can transform to fit into the graphical utilities of their choice). In addition, the cell and coordinate classes are well documented and can be extended to output new data, as users may need.
+
 
 Mention how Chaste was a step in the right direction, but the dependencies are too many and the it is difficult to get started. Epithelium is lightwiehgt and the code is easy to read, a better introductory tool. 
+
 \section{Sample Configuration Files}
 \subsection{config.txt}
 In this file, the user an specify some global properties about the mesh, and some important quantities for how the simulation will proceed. Most of the quantities are self explanatory. The dimension of the mesh is explained in the Code Design chapter of this paper. The swap length , upper bound, and Max Swaps parameters are used for performing random transformations to the mesh in the beginning of the simulation. The swap length is the edge length below which a swap is performed. The Max Swaps is the maximum nuber of random perturbations the code will make to the mesh. The upper bound is an integer which is upper bound of the range for a random number generator. The random swaps occur when a `1' is generated, and we choose random numbers from [1:upper bound].
