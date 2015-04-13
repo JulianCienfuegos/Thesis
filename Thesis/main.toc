@@ -1,40 +1,37 @@
-\contentsline {chapter}{\numberline {1}Modeling}{4}
+\contentsline {chapter}{\numberline {1}Epithelial Tissue\\ and Vertex Dynamics}{4}
 \contentsline {section}{\numberline {1.1}Modeling Epithelial Tissue}{6}
 \contentsline {section}{\numberline {1.2}The Nagai-Honda Model}{9}
 \contentsline {subsection}{\numberline {1.2.1}How the Vertices Move}{9}
 \contentsline {subsection}{\numberline {1.2.2}Topological Changes to the Mesh}{12}
 \contentsline {subsection}{\numberline {1.2.3}Selection of Parameters}{13}
-\contentsline {section}{\numberline {1.3}Further Remarks About the HNM, and Epithelial Modeling in General.}{14}
-\contentsline {subsection}{\numberline {1.3.1}Similar Models of Potential Energy}{14}
-\contentsline {subsection}{\numberline {1.3.2}The T3 Swap}{15}
-\contentsline {subsection}{\numberline {1.3.3}The Euler Characeteristic and Its Implications}{15}
-\contentsline {subsection}{\numberline {1.3.4}Rosettes}{17}
-\contentsline {chapter}{\numberline {2}Epithelium}{18}
-\contentsline {section}{\numberline {2.1}About Epithelium}{18}
+\contentsline {section}{\numberline {1.3}Further Remarks About Epithelial Tissue Modeling}{15}
+\contentsline {subsection}{\numberline {1.3.1}Similar Models of Potential Energy}{15}
+\contentsline {subsection}{\numberline {1.3.2}The T3 Swap}{16}
+\contentsline {subsection}{\numberline {1.3.3}The Euler Characeteristic and Its Implications}{16}
+\contentsline {subsection}{\numberline {1.3.4}Okuda Reconnection}{18}
+\contentsline {chapter}{\numberline {2}Epithelium}{19}
+\contentsline {section}{\numberline {2.1}About Epithelium}{19}
 \contentsline {section}{\numberline {2.2}Sample Configuration Files}{19}
-\contentsline {subsection}{\numberline {2.2.1}config.txt}{19}
-\contentsline {subsection}{\numberline {2.2.2}parameters.hpp}{20}
-\contentsline {subsection}{\numberline {2.2.3}changemesh.txt}{20}
-\contentsline {section}{\numberline {2.3}Image Gallery}{20}
-\contentsline {section}{\numberline {2.4}Why \emph {Epithelium} is a good piece of software}{21}
-\contentsline {section}{\numberline {2.5}The Design of \emph {Epithelium}}{22}
-\contentsline {section}{\numberline {2.6}[Highly Simplified] Pseudocode}{22}
-\contentsline {section}{\numberline {2.7}Classes}{23}
-\contentsline {subsection}{\numberline {2.7.1}The Cell Class}{23}
-\contentsline {subsection}{\numberline {2.7.2}The Coordinate Class}{25}
-\contentsline {section}{\numberline {2.8}Initial Mesh Design}{25}
-\contentsline {section}{\numberline {2.9}A Relational Database}{26}
-\contentsline {section}{\numberline {2.10}Moving the Vertices}{27}
-\contentsline {section}{\numberline {2.11}Embarassing Parallelism and CUDA}{27}
-\contentsline {section}{\numberline {2.12}Computing Topological changes.}{29}
-\contentsline {subsection}{\numberline {2.12.1}The T1 Swap}{29}
-\contentsline {subsection}{\numberline {2.12.2}The implementation of the T2 swap.}{30}
-\contentsline {section}{\numberline {2.13}Error Tolerance of the Algorithm}{30}
+\contentsline {subsection}{\numberline {2.2.1}config.txt}{20}
+\contentsline {subsection}{\numberline {2.2.2}parameters.txt}{21}
+\contentsline {subsection}{\numberline {2.2.3}change\_mesh.txt}{21}
+\contentsline {section}{\numberline {2.3}Image Gallery}{22}
+\contentsline {section}{\numberline {2.4}The Design of \emph {Epithelium}}{22}
+\contentsline {subsection}{\numberline {2.4.1}[Highly Simplified] Pseudocode}{22}
+\contentsline {subsection}{\numberline {2.4.2}Classes}{23}
+\contentsline {section}{\numberline {2.5}Initial Mesh Design}{25}
+\contentsline {section}{\numberline {2.6}A Relational Database}{25}
+\contentsline {section}{\numberline {2.7}Moving the Vertices}{28}
+\contentsline {section}{\numberline {2.8}Embarassing Parallelism and CUDA}{29}
+\contentsline {section}{\numberline {2.9}Computing Topological changes.}{30}
+\contentsline {subsection}{\numberline {2.9.1}The T1 Swap}{30}
+\contentsline {subsection}{\numberline {2.9.2}The implementation of the T2 swap.}{32}
+\contentsline {section}{\numberline {2.10}Error Tolerance of the Algorithm}{32}
 \contentsline {chapter}{\numberline {3}Advances}{34}
 \contentsline {section}{\numberline {3.1}Further Parallelization}{34}
 \contentsline {section}{\numberline {3.2}A New Potential, A New Force}{35}
 \contentsline {section}{\numberline {3.3}Images}{35}
 \contentsline {section}{\numberline {3.4}Periodic Voronoi Mesh}{35}
 \contentsline {section}{\numberline {3.5}Visualization SOftware }{35}
-\contentsline {chapter}{\numberline {A}Getting, Running, and Modifying the Code}{39}
-\contentsline {section}{\numberline {A.1}GitHub}{39}
+\contentsline {chapter}{\numberline {A}Getting, Running, and Modifying the Code}{40}
+\contentsline {section}{\numberline {A.1}GitHub}{40}

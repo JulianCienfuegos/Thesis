@@ -1,60 +1,53 @@
-\chapter{Modeling}
+\chapter{Epithelial Tissue\\ and Vertex Dynamics}
 \label{chap:intro}
-Epithelial tissue covers the interior and exterior surfaces of our bodies. Skin, the lining of the esophogas and intestines, the urethra, the lining of the lungs and all of the bronchioles in the lungs are all made up of epithelial tissue. In this way, we can think of epithelial tissue as being the envelope in which our contents are packaged \cite{Shape Formation}; epithelial tissue is our interface with the outside world. 
+Epithelial tissue covers the interior and exterior surfaces of our bodies. Skin, the lining of the esophagus and intestines, the urethra, the lining of the lungs and the bronchioles are all made up of epithelial tissue. In this way, we can think of epithelial tissue as being the envelope in which our contents are packaged ~\cite{ShapeFormation}; epithelial tissue is our interface with the outside world. 
 
 \begin{figure}[hb]
 \centering \includegraphics[width=\textwidth]{../diagrams/output.png}
-\caption{The Types of Epithelial Tissue}
+\caption{\textbf{The Types of Epithelial Tissue. Image credit~\cite{Epithelium}.}}
 \label{fig:types}
 \end{figure}
 
-As Figure~\ref{fig:types} shows, there are many types of epithelial tissue in animals which vary in their number of layers and how the cells are shaped. Each of these types of cells are found in a different region of the body where they perform a specific function.  For example, the simple squamous epithelium is no more than one layer of cells thick, and the cells are all very flat, much flatter than they are wide. These cells are therefore well suited to  allow diffussion across themselves. As such, simple squamous tissue is found in the walls of blood vessels and in the alveoli in the lungs, where the diffusion of oxygen occurs. On the other hand, columnar cells are much taller than they are wide, and are thus well suited to absorption. These cells are found in the intestines where they absorb nutrients from passing food. Stratified squamous epithelia are several layers thick line the esophogas and mouth and serve to protect against abraision.
+As Figure~\ref{fig:types} shows, there are many types of epithelial tissue in animals which vary in their number of layers and how the cells are shaped. Each of these types of cells are found in a different region of the body where they perform a specific function.  For example, the simple squamous epithelium is no more than one layer of cells thick, and the cells are much flatter than they are wide. Because these cells are well suited to allow diffussion across themselves, simple squamous tissue is found in the walls of blood vessels and in the alveoli in the lungs, where the diffusion of oxygen occurs. On the other hand, columnar cells are much taller than they are wide, and are thus well suited to absorption. These cells are found in the intestines where they absorb nutrients from passing food. Stratified squamous epithelia are several layers thick and line the esophagus and mouth and protect against abraision.
 
-What all of these tissues have in common, however, is how amenable they are to computational modeling. The simplest case is that of simple epithelia, which typically have near-uniform height, and very little difference in appearance between their apical and basal faces. This means that the cells can easily be approximated by a two dimensional mesh, since the top and bottom of the cells move in tandem and the surface where two cells touch can be approximated by a line. See Figures CITE FIGURES HERE to see examples of current 2D models.  Slightly more difficult is the modeling of stratified tissue. In this case, the tissue develops in three dimensions, since underlying cells affect the cells on top of them CITE OKUDA IMAGE FOLLOWING DR. OVERMANS HELP WITH IMAGE FORMATTING. These cannot be modeled in two dimensions, but can be modeled by a solid composed of three dimensional polytopes. The theory behind these models is well developed, but the techincal details of implementing such a model has made it so that very exist, and are often quite limited \footnote{Even a leading epithelial tissue simulator, Chaste, still does not have stable 3D modeling capabilities}. For an example of a 3D model, see image INSERT IMAGE NAME HERE.
+What all of these tissues have in common, however, is how amenable they are to computational modeling. The most easily modeled tissues are simple epithelia, which typically have near-uniform height, and very little difference in appearance between their apical and basal faces. This means that the cells can easily be approximated by a two dimensional mesh in which the surfaces where two cells touch are approximated by a line. Examples of 2D epithelial tissue simulations are presented in Figure ~\ref{fig:fourgraphs} (a.) and (b.). For an example of a 2D epithelial simulation on a three dimensional surface, see Figure ~\ref{fig:fourgraphs} (d.). The 3D simulation of stratified tissue is more difficult to implement than a two dimensional model\footnote{Even a leading epithelial tissue simulator, Chaste~\cite{ChasteMain}, still does not have stable 3D modeling capabilities.}. For an example of one successful 3D model, see Figure ~\ref{fig:fourgraphs}(c.).
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{../diagrams/abcd3.pdf}
-    \caption[Various Models of Epithelial Tissue]{(a.) A comparison of living tissue to a simulation \cite{Yoshi}. (b.) A diagram from the original Honda-Nagai paper \cite{HondaNagai}. (c.) A 2d mesh of cells deforming in three dimensions \cite{Okuda1}. (d.) A tissue developing on a surface \cite{VertexModels}}
+    \caption[Various Models of Epithelial Tissue]{\textbf{(a.) A comparison of living tissue to a simulation ~\cite{Yoshi}. (b.) A diagram from the original Honda-Nagai paper ~\cite{HondaNagai}. (c.) A 2d mesh of cells deforming in three dimensions ~\cite{Okuda1}. (d.) A tissue developing on a surface ~\cite{VertexModels}.}}
     \label{fig:fourgraphs}
 \end{figure}
 
+Current modeling is producing great results in the field of epithelial tissue morphogenisis, equilibration, and wound healing. The Honda-Nagai model, which we will discuss in great detail below, successfully reproduced the wound healing of cats' corneas~\cite{WoundHealing}. This model has also been able to reproduce all of the essential dynamics of epithelial tissue ~\cite{HondaNagai}.  Current imaging tools have enabled the recording of epithelial tissue dynamics \emph{in vivo} ~\cite{Solokow}~\cite{Xiong}, providing a wealth of experimental data which can serve as either initial conditions for simulations, or as benchmarks to measure the accuracy of computational predictions. In turn, models of epithelial dynamics can provide insights into the physical parameters that govern tissue development, maintenance, and malady.
 
-Current modeling is producing great results in the field of epithelial tissue morphogenisis, equilibration, and wound healing. The Honda-Nagai model which we will discuss in great detail in this paper successfully reproduced the wound healing of cats' corneas\cite{WoundHealing}. This model has also been able to reproduce all of the essential dynamics of epithelial tissue \cite{HondaNagai}.  Current imaging tools have enabled the recording of epithelial tissue dynamics \emph{in vivo} \cite{Solokow}\cite{Xiong}, providing a wealth of experimental data which can serve as either initial conditions for simulations, or as benchmarks to measure the success of computational models. In turn, models of epithelial dynamics can provide insights into the physical parameters that govern tissue development, maintenance, and malady.
-
-Other modeling communities share advanced, free, and parallel simulation codes. For example, consider LAMMPS for simulating atomistic materials, and CHARMM, Amber,and NAMD for the molecular dynamics of biomolecules. Unfortunately, there are only a handful of codes in use for the simulation of ET, and only one of them is freely available \cite{ChasteMain}. In this thesis I will present the basic ideas of \textbf{vertex dynamics models}, and then describe the implementation of one of them in a freely available modeling tool for the community.
+Other modeling communities share advanced, free, and parallel simulation codes. For example, consider LAMMPS~\cite{LAMMPS} for simulating atomistic materials, and CHARMM~\cite{CHARMM}, Amber~\cite{Amber}, and NAMD~\cite{NAMD} for the molecular dynamics of biomolecules. Unfortunately, there are only a handful of codes in use for the simulation of epithelial tissue, and to the best of our knowledge only one of them is freely available ~\cite{ChasteMain}. In this thesis I will present the basic ideas of \textbf{vertex dynamics models}, and then describe the implementation of one of them as a freely available modeling tool for the community.
 
 \section{Modeling Epithelial Tissue} 
 \label{sec:modeling}
 
-\begin{center}
-\emph{The world was so recent that many things still lacked names,}\\
-\emph{and to mention them one had to point with a finger. }\\
-\textbf{\hspace{10ex} - Gabriel Garcia Marquez}
-\end{center}
+A two dimensional \textbf{vertex dynamics model} of epithelial tissue is made up of vertices and edges~\cite{DirichletDomains} which bound cells. The vertex dynamics model presupposes that the movement of cells in epithelial tissue can be approximated by the movement of edges and vertices. Some force is then proposed to guide epithelial cell movement, and this force is applied to all of the vertices in the mesh via some numerical method.
 
-A two dimensional \textbf{vertex dynamics model} of epithelial tissue is made up of vertices and edges\cite{DirichletDomains}. A cell is represented as a polygon in 2 dimensions, or a polyhedron in 3 dimension. This model presupposes that the movement of cells in epithelial tissue can be approximated by the movement of the vertices which make up the cell. Some force is hypothesized to be the guiding force behind epithelial cell movement, and this force is applied to all of the vertices in the mesh of cells, transforming the tissue.
+Epithelial vertex dynamics has been a lively field of research since the 1970s because of several heartening results. Some researchers have had success modeling the morphogenesis of \emph{Drosophila} wing growth~\cite{Farhadifar}, whereas others have accurately reproduced the dynamics of corneal wound healing~\cite{WoundHealing}. In other research, simulations have faithfully captured the effects of laser perturbations to epithelial cell junctions ~\cite{Yoshi}, and others have quantified parameters which are important in describing the formation of the epithelial envelope in \emph{Drosophila}~\cite{Sokolow}. Unfortunately, these results have not come from one standard model of epithelial tissue development, but from a variety of different, often irreconcilable, models. Two different approaches to epithelial simulation will clearly illustrate the variety of techniques in practice.
 
-Epithelial vertex dynamics has been a lively field of research since the 1970s because of several heartening results. Some researchers have had success modeling the morphogenesis of \emph{Drosophila} wing growth\cite{Farhadifar}, whereas others have accurately reproduced the dynamics of corneal wound healing\cite{WoundHealing}. In other research, simulations have faithfully captured the effects of laser perturbations to epithelial cell junctions \cite{Yoshi}, and others have quantified parameters which are important in describing the formation of the epithelial envelope in \emph{Drosophila}\cite{Sokolow}. Unfortunately, these results have not come from one standard model of epithelial tissue development, but from a variety of different, often irreconcilable, models. Two models will clearly illustrate the different approaches taken to modeling tissue. 
-
-In the model developed by M. Weliky and G. Oster, forces due to osmotic pressure and contractile tension describe how vertices move \cite{WO}. This model also allows for certain forces external to the tissue to be applied at each node. In the end, the force applied to each vertex in the mesh is given by
+In the model developed by M. Weliky and G. Oster, forces due to osmotic pressure and contractile tension describe how vertices move ~\cite{WO}. This model also allows for certain forces external to the tissue to be applied at each node. In the end, the force applied to each vertex in the mesh is given by
 \begin{equation*}
-F_i = F_{ext}+\sum\limits_{n=1}^N(T_{i-1}^n - T{i+1}^n + P^n)
+F_i = F_{ext}+\sum\limits_{n=1}^N(T_{i-1}^n - T_{i+1}^n + P^n)
 \end{equation*}
 where $n$ is the index of the $n^th$ cell which touches vertex $i$. The force applied to vertex $i$ coming from cell $n$  is seen graphically in Figure~\ref{fig:WO}.
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\textwidth]{../diagrams/welikyoster.png}
-\caption{The Weliky-Oster Force}
+\caption{\textbf{The Weliky-Oster Force.}}
 \label{fig:WO}
 \end{figure}
 
-The model developed by H. Honda and T. Nagai takes an approach to modeling epithelial tissues rooted in the study of cellular structures.  In the fantastic review paper\emph{Soap, Cells, and Statistics}, D. Weaire and N. Rivier argue for the existence of some natural mechanism underlying the development of epithelial tissue, columnar basalt formations, soap froths, grain growths, and other cellular structures, as they exhibit a great deal of similarity. For example, consider the images of epithelial tissue presented throughout this paper juxtaposed with the image of The Giant's Causeway in Northern Ireland in Figure ~\ref{fig:cause}. The equilibrium states of these structures all contain primarily hexagonal cells, and three cells typically meet at any junction. There are some differences in the exact distribution of cell shapes, the presence of chemicals in biological tissues versus the absence of growth inducing chemicals in geological structures, and the active migration of biological cells versus the entirely passive movement of soap froths; still, the authors conjecture that the dominant principle behind all cellular dynamics is the principle of maximum entropy, by which the structures seek a state with minimal potential energy.
+In contrast, the model developed by H. Honda and T. Nagai takes an approach to modeling epithelial tissues rooted in the study of cellular structures~\cite{VertDyn}.  In the fantastic review paper \emph{Soap, Cells, and Statistics}, D. Weaire and N. Rivier argue for the existence of some natural mechanism underlying the development of epithelial tissue, columnar basalt formations, soap froths, grain growths, and other cellular structures, as they exhibit a great deal of similarity. For example, consider the images of epithelial tissue presented throughout this paper juxtaposed with the image of The Giant's Causeway in Northern Ireland in Figure ~\ref{fig:cause}. The equilibrium states of these structures all contain primarily hexagonal cells, and three cells typically meet at any junction. There are some differences in the exact distribution of cell shapes, the presence of chemicals in biological tissues versus the absence of growth inducing chemicals in geological structures, and the active migration of biological cells versus the entirely passive movement of soap froths; still, the authors conjecture that the dominant principle behind all cellular dynamics is the principle of maximum entropy, by which the structures seek a state with minimal potential energy.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\textwidth]{../diagrams/resize_giant.jpg}
-\caption{The Giant's Causeway}
+\caption{\textbf{The Giant's Causeway. Image courtesy of ~\cite{Giant}.}}
 \label{fig:cause}
 \end{figure}
 
@@ -63,13 +56,13 @@ A very basic result from physics is the relationship between force and potential
 \begin{gather}
 \vec{F} = (F_x, F_y, F_z)\\
 W = -\Delta U(\vec{x}) = \int_{x_0}^xF_xdx+\int_{y_0}^yF_ydy+\int_{z_0}^zF_zdz\\
-\nabla(-\Delta U(\vec{x}) = \nabla\Bigg(\int_{x_0}^xF_xdx+\int_{y_0}^yF_ydy+\int_{z_0}^zF_zdz\Bigg)\\
+\nabla(-\Delta U(\vec{x})) = \nabla\Bigg(\int_{x_0}^xF_xdx+\int_{y_0}^yF_ydy+\int_{z_0}^zF_zdz\Bigg)\\
 -\nabla U(\vec{x}) = \vec{F}
 \end{gather}
 
-In the Honda-Nagai model, the authors posit that dynamics of epithelial cell packing is dominated by their seeking a state with minimal potential energy. They describe several stores of potential energy in a tissue, take a gradient of the free energy function as described above, and then apply the resulting force to the vertices in the epithelial mesh.
+In the Honda-Nagai model, the authors posit that dynamics of epithelial cell packing is dominated by their seeking a state with minimal potential energy. They describe several stores of potential energy in a tissue, take a gradient of the energy function as described above, and then apply the resulting force to the vertices in the epithelial mesh~\cite{HondaNagai}.
 
-While both the Honda-Nagai and the Weliky-Oster models successfully reproduce the topological and geometric properties of epithelial tissue, I have chosen to focus my efforts on the Nagai-Honda model. This was the original vertex dynamics model, it still enjoys considerable use by other researchers, and is of a form quite similar to a force used by another scientist\cite{Farhadifar} (suggesting that the basic formulation is quite acceptable to physicists). This model has been extensively researched, but can still be better understood (i.e. there is still no rigorous proof of why it achieves the equilibria it does due to certain parameterizations}.
+While both the Honda-Nagai and the Weliky-Oster models successfully reproduce the topological and geometric properties of epithelial tissue, I have chosen to focus my efforts on the Nagai-Honda model. This was the original vertex dynamics model, it still enjoys considerable use by other researchers, and is of a form quite similar to a force used by another scientist~\cite{Farhadifar}\footnote{ Which suggests that the basic formulation is quite acceptable to physicists.}.
 
 \section{The Nagai-Honda Model}
 \subsection{How the Vertices Move}
@@ -78,9 +71,9 @@ In 1989, K. Kawaski showed that the dynamics of grain growth can be reduced to a
 \eta\frac{dr_i}{dt} = F_i
 \end{equation}
 
-where $F_i$ denotes the force applied to vertex $i$, $r_i$ denotes the position of the $i^{th}$ vertex,  and the left hand side is the velocity of the vertex multiplied by a positive drag coefficient, $\eta$\cite{1989Kawasaki}.
+where $F_i$ denotes the force applied to vertex $i$, $r_i$ denotes the position of the $i^{th}$ vertex,  and the left hand side is the velocity of the vertex multiplied by a positive drag coefficient, $\eta$~\cite{1989Kawasaki}.
 
-Based upon the notion described in the preceding section, that biological cells move in a way quite similar to crystallites at high temperature\footnote{Often referred to as grain growth}, the Honda-Nagai model has this equation of motion as its basis. The force on the right hand side of the equation is in turn defined as the gradient of a free energy function, since the model presupposes the principle of maximum entropy is the guiding principle behind epithelial cell equiliibria. Then, the free energy function is composed of three terms which reflect the properties of biological cells.
+Based upon the notion described in the preceding section, that biological cells move in a way quite similar to crystallites at high temperature\footnote{Often referred to as grain growth}, the Honda-Nagai model has this equation of motion as its basis. The force on the right hand side of the equation is in turn defined as the gradient of a energy function, since the model presupposes the principle of maximum entropy is the guiding principle behind epithelial cell equiliibria. Then, the energy function is composed of three terms which reflect the properties of biological cells.
 
 The first two potential energy terms come from the assumption that the cell is elastic, and that the cell wants to return to a target shape. Therefore, the first two energy terms are of the harmonic form: 
 \begin{equation}
@@ -88,30 +81,33 @@ C(x-x_0)^2
 \end{equation}
 \begin{figure}
 \centering
-\includegraphics[width=0.25\textwidth]{../diagrams/parabola.png}
-\caption{Potential Energy as a Function of Distance from Equilibrium.}
+\includegraphics[width=0.5\textwidth]{../diagrams/parabola.png}
+\caption{Potential energy as a function of distance from equilibrium.}
 \label{fig:pe}
 \end{figure}
-where $x$ is some physical quantity, and $C$ is some constant. The plot of this energy is therefore a parabola with a minimum at $x =  x_0$, and the farther the quantity $x$ strays from the equilibrium, the steeper its gradient it will be, and the more forcefully it will want to return to equilibrium. 
+where $x$ is some physical quantity, and $C$ is some constant. The plot of this energy is therefore a parabola with a minimum at $x =  x_0$, and the farther the quantity $x$ strays from the equilibrium, the steeper its gradient it will be, and the more forcefully it will want to return to equilibrium. See Figure~\ref{fig:pe}.
 
-The last energy term is an adhesion energy, which is proportional to the amount of interfacial surface area between a cell and its neighbor. There is a successful theory in biology called the \textbf{differential adhesion hypothesis} which attempts to account for certain cellular distribution phenomena through the cadherin-subtype-specific binding tendencies. The theory essentially says that certain cells tend to bond more tightly to cells of type A than to cells of type B due to the presence or absence of different proteins in the membranes of these cells  \cite{DA}.
+The last energy term is an adhesion energy, which is proportional to the amount of interfacial surface area between a cell and its neighbor. There is a successful theory in biology called the \textbf{differential adhesion hypothesis} which attempts to account for certain cellular distribution phenomena through their adhesive binding tendencies. The theory essentially says that certain cells tend to bond more tightly to cells of type A than to cells of type B due to the presence or absence of different adhesion proteins in the membranes of these cells  ~\cite{DA}.
+
+The precise statement of the potential energies discussed above are the following:
 
 \begin{enumerate}
-\item The deformation energy term is given by \\ 
+\item The deformation energy term $U_D$ is given by \\ 
 \begin{equation}
 U_D = \lambda(A - A_0)^2
 \end{equation}
- where A is the cell area, $A_0$ is the target cell area, and lambda is some positive constant.
-\item The membrane surface energy is given by
+ where A is the cell area, $A_0$ is the target cell area, and $\lambda$ is some positive constant.
+\item The membrane surface energy term $U_S$ is given by
 \begin{equation}
 U_S = \beta(P - P_0)^2
 \end{equation}
- where $P$ is the cell perimiter, $P_0$ is a target perimeter, and $\beta$ is some positive constant. Note that the target perimeter is dependent upon the target area. There are several ways to assign a target perimeter $P_0(A_0)$ as a function of the target area. One obvious choice is to assume the cell wants to become a circle, and then solve a system using the equations for area and perimeter of a circle, giving $P_0 =2\sqrt{\pi A_0}$. Another easy choice would be to assume the equilibrium epithelial cell is a hexagon, and then compute the target perimeter using the equations for the perimeter and area of a regular hexagon. In my model I take the circle approach.
-\item The cell-cell adhesion energy is given by
-\begin{equation}U_A = \displaystyle\sum\limits_{j = 1}^{n}\gamma_{j}d_{j}\end{equation}
-where $n$ is the number of vertices in the cell, $\gamma$ is some constant for the boundary in question between one cell and another, and $d$ is the distance between one vertex and the next in a counter clockwise fashion. Note that in two dimensins the boundary is a distance $d$, but in three dimensions it would have to be the area of a cell face. Also take note of the fact that the $\gamma$ term could be implemented in various ways. I have chosen to assign a ``stickiness'' to each cell, and then the gamma term is calculated as the average stickiness of the two cells. This is the approach taken in the molecular dynamics software CHARMM for handling pair interactions of hetero molecules \cite{CHARMM}.
+ where $P$ is the cell perimiter, $P_0$ is a target perimeter, and $\beta$ is some positive constant. Note that the target perimeter is dependent upon the target area. There are several ways to assign a target perimeter $P_0(A_0)$ as a function of the target area. One obvious choice is to assume the cell wants to become a circle, and then solve a system using the equations for area and perimeter of a circle, giving $P_0 =2\sqrt{\pi A_0}$. Another easy choice would be to assume the equilibrium epithelial cell is a hexagon, and then compute the target perimeter using the equations for the perimeter and area of a regular hexagon. The correct form for the target perimeter term is not specified in~\cite{HondaNagai}, so I take the circle approach, as done in ~\cite{ChasteMain}.
 
- $\gamma$ could also have been implemented as something of the form:
+\item The cell-cell adhesion energy $U_A$ is given by
+\begin{equation}U_A = \displaystyle\sum\limits_{j = 1}^{n}\gamma_{j}d_{j}\end{equation}
+where $n$ is the number of vertices in the cell, $\gamma$ is some constant for the boundary in question between one cell and another, and $d$ is the distance between one vertex and the next in a counter clockwise fashion. Note that in two dimensions the boundary is a distance $d$, but in three dimensions it would have to be the area of a cell face. Also take note of the fact that the $\gamma$ term could be implemented in various ways. I have chosen to assign a ``stickiness'' to each cell, and then the $\gamma$ term is calculated as the average stickiness of two interacting cells. This is the approach taken in the molecular dynamics software CHARMM for handling pair interactions of atoms~\cite{CHARMM}.
+
+The $\gamma$ parameter could also have been implemented as something of the form:
 \[  \gamma_{ij} =  \left\{
 \begin{array}{ll}
       0 & \textrm{if the cells $i$ and $j$ are of the same type} \\
@@ -119,34 +115,33 @@ where $n$ is the number of vertices in the cell, $\gamma$ is some constant for t
       -1 & \textrm{if the cells are of incompatible type} \\
 \end{array} 
 \right. \]
-And the resulting dynamics might be quite different.
+And the resulting dynamics might be quite different. Neither form was explicitly stated in the original Nagai-Honda paper~\cite{HondaNagai}, so I had to make a choice about the implementation.
 \end{enumerate}
 
 In total, the potential energy in a sheet of N cells is given as:
 \begin{equation*}
-U = \sum\limits_{c = 1}^N\left(\lambda(A_c - A_{0_c})^2 + \beta(P_c - P_{0_c})^2 + \sum_{edges\in c}\gamma_{edge}d_{edge}\right)
+U = \sum\limits_{c = 1}^N\left(\lambda_c(A_c - A_{0_c})^2 + \beta_c(P_c - P_{0_c})^2 + \sum_{edges\in c}\gamma_{edge}d_{edge}\right)
 \end{equation*}
 
- As seen in \cite{ChasteMain}, the negative gradient of this potential energy is:
-\begin{equation}\label{eq:force}
-\begin{split}
-F_i = -\displaystyle\sum_{l\in N_i}(2\lambda(A_l - A_{0_l})\nabla_iA_l + 2\beta(P_l - P_{0_l})(\nabla_i d_{l, I_l-1}+\nabla_i d_{l, I_l}) + \\
-\gamma_{l, I_l-1}\nabla_i d_{l, I_l-1} + \gamma_{l, I_l}\nabla_i d_{l, I_l}
-\begin{split}
+ As seen in ~\cite{ChasteMain}, the negative gradient of this potential energy is:
+
+\begin{equation}
+F_i = -\displaystyle\sum_{l\in N_i}(2\lambda(A_l - A_{0_l})\nabla_iA_l + 2\beta(C_l - C_{0_l})(\nabla_i d_{l, I_l-1}+\nabla_i d_{l, I_l}) + \gamma_{l, I_l-1}\nabla_i d_{l, I_l-1} + \gamma_{l, I_l}\nabla_i d_{l, I_l}
 \end{equation} 
-where $l$ is the $l^{th}$ cell containing vertex $i$, given a counter clockwise orientation. $I_l$ is the local index of node $i$ in element $l$. The derivation of the force is explained in detail below.
+where l is the lth cell containing vertex $i$, given a counter clockwise orientation. $I_l$ is the local index of node $i$ in element $l$. A detailed derivation of the force follows, as in ~\cite{ChasteMain}.
+
  The area of a cell is given by Gauss's Shoelace Formula:
 \begin{equation}
-A = \frac12\Big|\sum\limits_{j=1}^N\Big(x_jy_{j+1}-x_{j+1}y_j\Big)\Big|
+A = \frac12\sum\limits_{i=1}^N\Big(x_iy_{i+1}-x_{i+1}y_i\Big)
 \end{equation}
-where $N+1 := 1$. Therefore, the gradient with respect to vertex $i$ is given by:
+where $N+1 := 1$ Therefore, the gradient is given by:
 \begin{equation}
 \nabla_i A_l = \frac12
 \Big(
 y^l_{I+1} - y^l_{I-1},\;\;x^l_{I-1} - x^l_{I+1}
 \Big)
 \end{equation}
- where the superscrpits $l$ denote that x, y are in cell $l$. The subscripts are local indices in the cell $l$, and the orientation of vertices is counterclockwise. The circumference is given by:
+ where the superscripts $l$ denote that x, y are in cell $l$. The subscripts are local indices in the cell $l$, and the orientation of vertices is counterclockwise. The circumference is given by:
 
 \begin{equation}
 P = \sum\limits_{j=1}^Nd_j = \sum\limits_{j=1}^N\sqrt{(x_{j+1} - x_j)^2 + (y_{j+1} - y_j)^2}
@@ -173,80 +168,93 @@ gives the force described in equation ~\ref{eq:force}.
     \centering
     \includegraphics[width=\textwidth, keepaspectratio]{../diagrams/t1.png}
     \label{fig:t1}
-    \caption[A T1 Swap]{A T1 Swap. Two neighboring cells are no longer neighbors after the swap.}
+    \caption[A T1 Swap]{\textbf{A T1 Swap. Two neighboring cells are no longer neighbors after the swap. Image courtesy of}~\cite{Soap}}
 \end{figure}
-There is emprirical evidence that nearly all vertices in a sheet of epithelial tissue have coordination number three (most vertices have three incident edges)\cite{EpithelialTopology}. Since the coordination number of almost all vertices is three, this has led many researchers in the field of cellular structures to consider what sort of topological changes can occur in meshes of cells without changing the connectivity \cite{Soap}.  As it turns out, there are three changes which can occur, called the T1, T2 and T3 swaps, and the Honda-Nagai Model implements the T1 and T2 swaps.
+There is emprirical evidence that nearly all vertices in a sheet of epithelial tissue have coordination number three (most vertices have three incident edges)~\cite{EpithelialTopology}. Since the coordination number of almost all vertices is three, this has led many researchers in the field of cellular structures to consider what sort of topological changes can occur in meshes of cells without changing the connectivity ~\cite{Soap}.  As it turns out there are three changes which can occur, called the T1, T2 and T3 swaps, and the original Honda-Nagai Model implements the first two.
 
- The T1 swap and in illustrated in Figure~\ref{fig:t1}. This is also called a "neighbor exchanging swap" because, as you can see, two cells which were adjacent cease to be neighbors and two cells that weren't adjacent become neighbors. The T1 swap occurs when two vertices become critically close to each other, and instead of allowing the force to drive the vertices into each other we rotate the offending edge. There is no specification in the literature about how to rotate the edge, but the natural choice is to turn the edge by 90 degrees. In nature this should correspond to two vertices getting very close, colliding, and then flattening out into an edge. Our model performs this action discretly as a simplifying measure to avoid having to handle the momentary degree four vertex.
+ The T1 swap, illustrated in Figure~\ref{fig:t1}, is also called a ``neighbor exchanging swap" because two cells that were adjacent cease to be neighbors and two cells that weren't adjacent become neighbors. The T1 swap occurs when two vertices become critically close to each other, and instead of allowing the vertices to collide we rotate the offending edge. There is no specification in the literature about how to rotate the edge, but the natural choice is to turn the edge by 90 degrees. In nature this should correspond to two vertices getting very close, colliding, and then flattening out into an edge. The Honda-Nagai model performs this action discretely as a simplifying measure to avoid having to handle the momentary degree four vertex.
 
-The second topological change is the T2 swap, which is also known as "cell removal''. A T2 swap occurs when a triangular cell becomes too small and is deleted and replaced by a single vertex. See Figure ~\ref{fig:T2},
+The second topological change is the T2 swap, which is also known as ``cell removal''. A T2 swap occurs when a triangular cell becomes too small and is deleted and replaced by a single vertex. See Figure ~\ref{fig:T2}.
 
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{../diagrams/t2.png}
-\caption{A T2 Swap}
+\caption[A T2 Swap]{\textbf{A T2 Swap. Image courtesy of}~\cite{Soap}}
 \label{fig:t2}
 \end{figure}
 
 \subsection{Selection of Parameters}
+The basic vertex dynamics model requires the programmer to specify the $A_0$, $P_0$, and $\gamma_{edge}$ parameters for each cell, as well as a value for the drag coefficient $\eta$ and the integration timestep $dt$. The equations in this model are dimensionless. I will not undertake a discussion of how to derive the dimensionless model from the dimensional model, but for the curious reader this is all laid out in ~\cite{HondaNagai}. Typically, one would not choose the values of the aforementioned parameters, but would instead have some dimensional biological data and go through the necessary conversion steps to convert these parameters to the simpler ones~\cite{NewOkuda}.
 
-The equations in this model are dimensionless. I will not undertake a discussion of how to derive the dimensionless model from the dimensional model, but for the curious reader this is all laid out in \cite{HondaNagai}. Typically, one would not choose the values of the parameters $\alpha$, $\beta$ and $gamma$, but would instead have some dimensional biological data and go through the necessary conversion steps to convert these parameters to the simpler ones\cite{NewOkuda}.
-
-Interestingly, I haved found very few explicit statements of the parameters used in simulation (exceptions are \cite{WoundHealing}\cite{ChasteMain}\cite{NewOkuda}). Still, even in these cases, the physical significance of the parameterizations chosen is not stated. Very recently, new imaging techniques has permited the \emph{in vivo} observation of epithelial tissue morphogenesis \footnote{Morphogenesis is the development of shape in an organism.}\cite{Sokolow}\cite{Xiong}. This will likely open new doors for the correct parameterization of current models, or for the reformulation of their descriptions of forces and potential energies. 
-
-In the case of the Honda Nagai Model, however, there is little difference between equilibrium states attributed to various parameter choices (See Chapter~\ref{chap:epithelium}). Still, it has been shown that different parameter values coupled with other mesh changing operations (such as oriented cell division) can cause drastically different types of morphogenesis \cite{Overview}. For example, drosophila wings, with their highly oriented divisions, have been shown to contain approximately 80\% hexagonal cells whereas simulations of of tissues with purely stochastic divisions converge to  approximately 47\% hexagons \cite{Epithelial Topology}. While all epithelial tissue has a strong tendency towards achieving an equilibrium dominated by hexagons, the width of the distribution of cell shapes differs by cellular structure and, hence, by parameter choices \cite{Soap}. 
-
-\begin{figure}[ht]
-\includegraphics[width=0.5\textwidth]{../diagrams/distibutionHonda.png}
-\caption[Distribution of Cell Shapes]{The distribution of cell shapes as a function of time \cite{HondaNagai} in the original Honda-Nagai Model.}
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{../diagrams/params1.png}
+\caption{\textbf{Parameter values as specified in~\cite{ChasteMain}.}}
+\label{fig:param}
 \end{figure}
 
-\section{Further Remarks About the HNM, and Epithelial Modeling in General.}
+
+Interestingly, I haved found very few explicit statements of the parameters used in simulation (exceptions are ~\cite{WoundHealing, ChasteMain, NewOkuda}, see Figure~\ref{fig:param}). Still, even in these cases, the physical significance of the parameterizations chosen is not stated. Very recently, new imaging techniques has permited the \emph{in vivo} observation of epithelial tissue morphogenesis \footnote{Morphogenesis is the development of shape in an organ or organism.}~\cite{Sokolow, Xiong}. This will likely open new doors for the correct parameterization of current models, or for the reformulation of the expressions for forces and potential energies. 
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.5\textwidth]{../diagrams/distibutionHonda.png}
+\caption[Distribution of Cell Shapes]{\textbf{The distribution of cell shapes as a function of time in the original Honda-Nagai Model. Image courtesy of}~\cite{HondaNagai}}
+\label{fig:hnm}
+\end{figure}
+
+In the case of the Honda-Nagai Model, however, there is little difference between equilibrium states attributed to various parameter choices (See Chapter~\ref{chap:Epithelium}). One of the parameter-independent defining characteristics of the Honda-Nagai model is the strong tendency toward six-sided cells in equilibrium, as shown in Figure~\ref{fig:hnm}.  Still, it has been shown that different parameter values coupled with other mesh changing operations (such as oriented cell division) can cause drastically different types of morphogenesis ~\cite{Overview}. For example, drosophila wings, with their highly oriented divisions, have been shown to contain approximately 80\% hexagonal cells whereas simulations of of tissues with purely stochastic divisions converge to  approximately 47\% hexagons ~\cite{EpithelialTopology}. While all epithelial tissue has a strong tendency towards achieving an equilibrium dominated by hexagons, the width of the distribution of cell shapes differs by cellular structure and, hence, by parameter choices ~\cite{Soap}. 
+
+
+\section{Further Remarks About Epithelial Tissue Modeling}
+Over the years, various modifications and improvements have been made to the Honda-Nagai model. These changes involve new ways of specifying the potential energy, adding new cell dynamics, and changing the connectivity of the mesh. In this section I will discuss some of these advances, as well as present some important mathematical theory underlying epithelial tissue models.
 \subsection{Similar Models of Potential Energy}
-Interestingly, as mentioned in the section ~\ref{sec:modeling}, the Honda-Nagai form for the energy in a vertex is quite similar to the form developed by Farhadifar \cite{Farhadifar}, which gives a feeling of universal acceptance of this formulation. The Farhadifar formulation is:
+Interestingly, as mentioned in the section ~\ref{sec:modeling}, the Honda-Nagai form for the energy in a vertex is quite similar to the form developed by Farhadifar ~\cite{Farhadifar}. The Farhadifar formulation is:
 \begin{equation}
 E_i = \sum\limits_{cells}\frac K2(A - A_0)^2 + \sum\limits_{edge}\gamma_{edge}d_{edge} + \sum\limits_{\alpha}\frac\beta2P_\alpha^2
 \end{equation}
 
-Remember the formulation of the HNM energy:
+Remember the formulation of the Honda-Nagai energy:
 \begin{equation*}
 U = \sum\limits_{cells}\left(\lambda(A_c - A_{0_c})^2 + \beta(P_c - P_{0_c})^2 + \sum_{edges_c}\gamma_{edge}d_{edge}\right)
 \end{equation*}
 
+The equations are nearly identical, except that the Farhadifar model asserts that the lowest energy for a cell is the energy in which its perimeter is zero. Nevertheless, the topological results of this model are not wildly different from the Honda-Nagai results~\cite{Farhadifar}.
+
 \subsection{The T3 Swap}
-The T3 swap is also known as ``mitosis'' or ``cell division''. Cell division was not a part of the original Honda-Nagai Model \cite{HondaNagai} that dealt with the equilibration of a fixed number of cells. However, during proliferation cells divide, and computational models need to take into account tissues with varying numbers of cells. The challenge with implementing the T3 swap is that there are infinitely (within the bounds of floating point arithmetic) many choices about where to divide a cell, and there are several competing opinions (though no unanimouslly accepted theory) about how the dvision is oriented. Some cells divide along their longer axis, which is known as the `Hertwig's Long Axis Rule', but global tissue stress and local cell geometry are also thought to affect the orientation of mitosis \cite{Order}\cite{Orientation}. The computational realization of a T3 swap is trivial, as the swap occurs by placing two new vertices along the edges of a cell and joining them by a new edge. The trouble is that there is no specification about which edges ought to have vertices implanted, or where to insert these vertices. The choice of where to divide a cell in a proliferating tissue can have profound effects upon the geometric appearance of a tissue \cite{EpithelialTopology}. \emph{Epithelium} is capable of handling the T3 swap, and more discussion of this topic will appear in Chapter ~\ref{chap:advances}.
+The T3 swap is also known as ``mitosis'' or ``cell division''. Cell division was not a part of the original Honda-Nagai Model ~\cite{HondaNagai} that dealt with the equilibration of a fixed number of cells. However, during proliferation cells divide, and computational models need to take into account tissues with varying numbers of cells. The challenge with implementing the T3 swap is that there are infinitely (within the bounds of floating point arithmetic) many choices about where to divide a cell, and there are several competing opinions (though no unanimouslly accepted theory) about how the dvision is oriented. Some cells divide along their longer axis, which is known as the `Hertwig's Long Axis Rule', but global tissue stress and local cell geometry are also thought to affect the orientation of mitosis ~\cite{Order}~\cite{Orientation}. The computational realization of a T3 swap is trivial, as the swap occurs by placing two new vertices along the edges of a cell and joining them by a new edge. The trouble is that there is no specification about which edges ought to have vertices implanted, or where to insert these vertices. The choice of where to divide a cell in a proliferating tissue can have profound effects upon the geometric appearance of a tissue - indeed, improperly oriented cell divisions are an indicator of cancer ~\cite{EpithelialTopology, misaligned}. 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{../diagrams/t3.png}
-\caption{The T3 Swap}
+\caption[The T3 Swap.]{\textbf{The T3 Swap. Image courtesy of~\cite{Soap}.}}
 \label{fig:t3}
 \end{figure}
 
 \subsection{The Euler Characeteristic and Its Implications}
-In this section I will expand upon some observations made in \cite{Soap}. \textbf{Euler's Formula} is an equation which relates the number of edges, faces, and vertices in a graph or polyhedron. An invariant $\chi$ relates the faces, edges, and vertices as follows:
+The majority or current vertex dynamics models assume that all vertices have a coordination number of 3, since empirical evidence shows that the vast majority of cells have this property\cite{EpithelialTopology,Overview}. In this section I will expand upon some observations made in ~\cite{Soap} that deal with this phenomenon. \textbf{Euler's Formula} is an equation which relates the number of edges, faces, and vertices in a graph or polyhedron. An invariant $\chi$ relates the faces, edges, and vertices as follows:
 
 \begin{equation}
 \chi = V - F + E
 \end{equation}
 
-The invariant depends upon the graph or polyhedron in question. We will ignore the exact value of $\chi$ and simply use the fact that it is a constant. The majority or current vertex dynamics models assume that vertices will have a coordination number of 3, since empirical evidence shows that the vast majority of cells have this property\city{EpithelialTopology}\cite{Overview}. While there are certain models which consider \emph{rosettes}, for now we will assume that all vertices connect to exactly three other vertices. Then we notice that all edges have two vertices, and that all vertices are connected to three edges. Inititally, our intuition tells us that there should be three times as many edges as vertices, which leads us to the incorrect:
+The invariant depends upon the graph or polyhedron in question. We will ignore the exact value of $\chi$ and simply use the fact that it is a constant. We know that each vertex connects to exactly three other vertices. Then we notice that all edges have two vertices, and that all vertices are connected to three edges. Inititally, our intuition tells us that there should be three times as many edges as vertices, which leads us to the incorrect formula:
 \begin{equation}
 3V = E
 \end{equation}
-But then we notice that if we consider all of the vertices in the mesh, we count each edge twice, so we divide the conjectured  number of edges by two and then simplify to get:
+But then we notice that if we consider all of the vertices in the mesh, we count each edge twice, so we divide by two and then simplify to get:
 \begin{equation}
 3V = 2E
 \end{equation}
 
-Similarly, if we consider how to relate the number of edges to the faces in the mesh, we conjecture that the number of edges in equal to the number of cells with 3 sides plus the number of cells with 4 sides plus the number of cells with 5 sides plus . . . each multiplied by the number of edges per cell. THis gives us:
+Similarly, if we consider how to relate the number of edges to the faces in the mesh, we conjecture that the number of edges in the mesh is equal to the sum of the products of cell shapes by the sides per shape. More clearly, we might guess the following:
 \begin{equation}
 \sum_{k=3}^N kF_k = E
 \end{equation}
-Where $N$ is the highest number of edges encountered by any cell in the mesh. But in this way we have again counted all of the edges twice, so the true number of edges must be the summation above divided by 2. We simplify the equation to :
+Where $N$ is the highest number of edges in any cell in the mesh. But in this way we have again counted all of the edges twice, so the true number of edges must be the summation above divided by 2. We simplify the equation to get
 \begin{equation}
 \sum_{k=3}^N kF_k = 2E
 \end{equation}
-Now, we are able to reduce Euler's Forula to one variable using the relationships given above.
+Now, we are able to reduce Euler's Formula to one variable using the relationships given above.
 \begin{gather}
 V - F + E = \chi\\
 \frac{2E}3 - F + E = \chi\\
@@ -254,9 +262,11 @@ V - F + E = \chi\\
 \frac{\sum_{k=3}^N kF_k}{6} - F = \chi\\
 (\frac{\sum_{k=3}^N kF_k}{F} - 6)F = 6\chi
 \end{gather}
-Biological cells are very small, and an epithelial tissue is composed of many cells, so we assume that $F\to\infty$ and then immediately notice that the expression in parentheses must tend to zero as F goes to infinity, or else the left hand side of the above equation will not approach the constant $6\chi$. From here it is easy to see that the introduction of a finite number of rosettes will not affect this result in the limiting case, and even if our model does include vertices of degree higher than three, they ought not to have a great effect on the average cell shape.
 
-So we know that the algebraic mean of the number of vertices per face must be 6. Of course we have no reason at this point to assume a that there exists a distribution which guarantees that any percentage of cells in the tissue have exactly six edges. It is feasible that the tissue could be made up entirely of five and seven sided cells. Nevertheless, empirical evidence shows a strong central tendency in the distribution of cell shapes. Whenever a cell tries to stray from the average, there are computational means (such as the T3 swap) of recentering the distribution at 6 sides.
+Biological cells are very small, and an epithelial tissue is composed of many cells, so we assume that $F\to\infty$ and then immediately notice that the expression in parentheses must tend to zero as F goes to infinity, or else the left hand side of the above equation will not approach the constant $6\chi$. From here it is easy to see that the introduction of a finite number of vertices with coordination number higher than three will not affect this result in the limiting case.
 
-\subsection{Rosettes}
-The choice to impose degree three on each vertex is not one hundred percent consistent with nature, but has been a part of most models of epithelial tissue. This is because empirical evidence shows that the \emph{majority} of vertices in a tissue will have out degree three. It is a simplifying assumption that \emph{rosettes} (epithelial cells organized radially about one vertex which has degree greater than or equal to 4) do not change the global dynamics of the development of an epithelial tissue.  Recent computer vision developments \cite{rose} have made it easier to detect rosettes in epithelial tissue samples and may in the future provide information about the number of these formations, or evidence that rosettes are an important feature of epithelial tissue. 
+So we know that the algebraic mean of the number of vertices per face must be 6. Of course we have no reason at this point to assume that there is even one cell in the mesh with exactly six edges. It is feasible that the tissue entirely be made up of five and seven sided cells. Nevertheless, empirical evidence shows a strong central tendency in the distribution of cell shapes. Whenever a cell tries to stray from the average, there are computational means (such as the T3 swap) of recentering the distribution at 6 sides.
+
+The choice to impose degree three on each vertex is not one hundred percent consistent with nature, but has been a part of most models of epithelial tissue.  It is a simplifying assumption that \emph{rosettes} (epithelial cells organized radially about one vertex which has degree greater than or equal to 4) do not change the global dynamics of the development of an epithelial tissue.  Recent computer vision developments ~\cite{rose} have made it easier to detect rosettes in epithelial tissue samples and may in the future provide information about the number of these formations, or evidence that rosettes are an important feature of epithelial tissue. Models would need to be revised to handle the introduction of vertices of higher degree.
+
+\subsection{Okuda Reconnection}

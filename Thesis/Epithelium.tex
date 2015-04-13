@@ -1,94 +1,69 @@
 \chapter{Epithelium}
 
 \section{About Epithelium}
-For my Master's Thesis I have implemented the Honda-Nagai Model for epithelial tissue development. My software is easy to install, takes up less than 50Mb, comes in parallel and non-parallel versions (Version 1.0.0p, Version 1.0.0) and has very few dependencies (and they are likely already installed on mac and linux computers). 
-
-My code allows users to specify all parameters of interest in a couple of well commented configuration files, can handle simulations of arbitrarily large size, and can generate beautiful animations and plots of epithelial tissue development as well as useful plots of various quantities which are of interest to the researcher. 
-
-On top of all of this, the source code is highly modularized and allows for ambitious users to easily extend the code to meet their needs. For example, alternate numerical integrators can easily replace the existing one, new mesh generators can replace the square mesh I have developed, and all data is output in very simple formats( which users with scriting experience can transform to fit into the graphical utilities of their choice). In addition, the cell and coordinate classes are well documented and can be extended to output new data, as users may need.
-
-
-Mention how Chaste was a step in the right direction, but the dependencies are too many and the it is difficult to get started. Epithelium is lightwiehgt and the code is easy to read, a better introductory tool. 
+Here I present my implementation of the Honda-Nagai Model for epithelial tissue development as the simulation software called \emph{Epithelium}. The software is easy to install, takes up less than 50Mb, comes in parallel and non-parallel versions (Version 2.0.0, Version 1.0.0) and has very few dependencies. \emph{Epithelium} allows users to specify all parameters of interest in easily modifiable text configuration files, can handle simulations of arbitrarily large size, and can generate data for animations of epithelial tissue development as well as useful plots of important variables. 
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{../diagrams/BeforeAfter.png}
+\caption{Cells before (left) and after (right) the application of force.}
+\label{fig:beforeafter}
+\end{figure}
+The source code is highly modularized and allows for ambitious users to easily extend the code to meet their needs. For example, alternate numerical integrators can easily replace the existing one, new mesh generators can replace the square mesh I have developed, and all data is output in space-separated formats which users with scripting language experience can transform to serve as input into the graphical utilities of their choice. In addition, the cell and coordinate classes are well documented and can be extended to output new data, as users may need. Figure~\ref{fig:beforeafter} provides a taste of the what the most basic installation of \emph{Epithlium} can do, showing a mesh of cells before and after equilibration.
 
 \section{Sample Configuration Files}
+The typical user will not want to modify source code, but would prefer to have a simple interface for changing simulation parameters. In this section we will explore in depth what the user interface looks like in terms of the three main configuration files, \texttt{config.txt}, \texttt{parameters.txt} and \texttt{change\_mesh.txt}.
 \subsection{config.txt}
-In this file, the user an specify some global properties about the mesh, and some important quantities for how the simulation will proceed. Most of the quantities are self explanatory. The dimension of the mesh is explained in the Code Design chapter of this paper. The swap length , upper bound, and Max Swaps parameters are used for performing random transformations to the mesh in the beginning of the simulation. The swap length is the edge length below which a swap is performed. The Max Swaps is the maximum nuber of random perturbations the code will make to the mesh. The upper bound is an integer which is upper bound of the range for a random number generator. The random swaps occur when a `1' is generated, and we choose random numbers from [1:upper bound].
+In this file, the user an specify some global properties about the mesh, and some important quantities for how the simulation will proceed. Most of the quantities are self explanatory. The \texttt{dimension} of the mesh refers to the number of cells along a given axis in a square mesh, and the \texttt{swap length} , \texttt{upper bound}, and \texttt{max swaps} parameters are used for performing random transformations to the mesh in the beginning of the simulation. The \textt{swap length} is the edge length below which a swap is performed. The \texttt{max swaps} parameter is the maximum nuber of random perturbations the code will make to the mesh before starting the simulation. The \texttt{upper bound} is an integer which is upper bound of the range for a random number generator. A random number generator produces a number in the range [1:\textt{upper bound}], and a random T1 swap is performed on `1'. The \texttt{delta} parameter specifies how close too vertices must be to force a T1 swap to occur.
 
-OFF is the file format given to the plotting program geomview to plot the mesh. You can specify how often the code prints an image. It must be a multiple of ten, so if you want more closely spaced images you can just drop the maximum step size for the numerical integrator. The numerical integrator takes adaptively sized steps, and this will be discussed in more detail later. 
-
+OFF is the file format given to the plotting program \textbf{geomview} to plot the mesh. You can specify how often the code prints an image with the \texttt{frequency} parameter, but it must be a multiple of ten. More closely spaced images can be generated by using a smaller integration step size.
 \begin{lstlisting}
 13 # Dimension of mesh MUST BE ODD!!!!
-1 # Plot the energy in the system? [1/0]
-1 # Make a movie in the end? [1/0]
 0.01 # Maximum step size
 1000 # Number of iterations
 10 # frequency of OFF file output. Must be a multiple 10!
 .1 # delta minimum vertex separation.
-1000 # Max swaps
+1000 # max swaps
 1.5 # swap length
 2 # upper bound random number generator
-1 # Make a bar graph of cell sides? [1/0]
-0 # Make a histogram of the areas? [1/0]
-0 # Make a histogram of the perimeters? [1/0]
+1 # Make energy and shape plots?
+1 # Make a movie in the end? [1/0]
 \end{lstlisting}
-\subsection{parameters.hpp}
-In this header the user can define some global parameter values for the cells in the mesh. Unfortunately, you must recompile every time a parameter is changed. This could be rewritten such that parameters are read in from a configuration file, but that is just not the way the code was developed. 
+
+\subsection{parameters.txt}
+In the \texttt{parameters.txt} file, the user can specify the parameters discussed in Chapter~\ref{chap:intro}. These are the default parameters for all of the cells in the tissue. 
 \begin{lstlisting}
-const double beta = 0.1;
-const double lambda = 0.1;
-const double pi = 3.141592;
-const double t_gamma = 1;
-const double t_area = 14.0;
+beta = 3;
+lambda = 55;
+t_gamma = 1;
+t_area = 4.0;
 \end{lstlisting}
-\subsection{changemesh.txt}
-This file is a configuration file, and does not require you to recompile when you change it. You can fine tune the properties of the cells in the mesh with this file.
+
+\subsection{change\_mesh.txt}
+While the parameters file allows global control of the mesh, the \texttt{change\_mesh.txt} file alows users to change local properties of the mesh. The first line of the file is for specifying how many $\gamma$, $A_0$, $\lambda$, and $\beta$ modifications will be made to the mesh. Note that $P_0$ cannot be changed, as $P_0$ is a function of $A_0$ (See Chapter~\ref{chap:intro}). The subsequent lines are for specifying the index and new value for each one of these modifications. As can be seen in Figure~\ref{fig:beforeafter}, cells can be color coded by parameter value to show these changes to the default settings.
 \begin{lstlisting}
-# This file contains number of gamma changes, 
-# followed by the number of area changes, 
-# followed by the indices and new values
-2 3
-16 4.0
-17 5.1
-3 1.0
-4 1.0
-10 3.7
+2 3 1 1 # num gamma, num area, num lambda, num beta
+16 4.0  # gamma
+17 5.1  # gamma
+3 1.0   # area
+4 1.0   # area
+10 3.7  # area
+1 10    # lambda
+90 100  # beta
 \end{lstlisting}
+
 \section{Image Gallery}
-This selection of graphs captures the properties of the mesh with various choices of parameter values. The target area for each cell was set to 4.0, unless otherwise specified. A couple of plots have outliers in the number of sides the cells have, or in the perimeters attained. This is due to the individual specification of cell properties for a handful of cells. In this way, the distribution of cell properties was more finely controlled. The images come in groups of four. There are two parameter studies per page. On the right you will see the equilibrium area and perimeter reached after applying the force, and the on the right you will see the equilibrium distribution of cell shapes along with a plot of the decreasing energy in the mesh as a function of time.
+Model parameters are easy to change in \emph{Epithelium}, and a variety of simulations are possible with very minimal effort on part of the user. Figure~\ref{figAFIHAoIHGa} - Figure~\ref{fig:aAIHgIASg} show the output from \emph{Epithelium} for several parameterizations. Each of the plots that follow show the decreasing energy in the mesh over time, the equilibrium distribution of cell areas, perimeters, and shapes. You may notice that there is very little variation between the plots - this is an essential property of the Honda-Nagai Model~\cite{HondaNagai} that the introduction of cell proliferation and an unbounded mesh could change.  
 
-\section{Why \emph{Epithelium} is a good piece of software}
-To close our discussion of \emph{Epithelium} I would like to discuss why it is a great piece of software for \emph{you}. \emph{GrowFlesh} has only a couple of dependencies which are likely already installed on you computer if you are interested in computational science. You will need a compiler supporting the C++11 standard, python2.7,  the matplotlib plotting library for python and the numpy python library. The only packages which will likely not be installed on your computer are the geomview geometric visualization software and the imagemagick image conversion program. Geomview and ImageMagick are free, and are such good programs that they have been around for more than 20 years. Of course, all of the animation, and plot information is outputed from this software in file formats that are easy to adapt to the user's choice of visualization software. The energy and histogram files are space separated lists and the mesh information is outputted in the OFF file format, which features a list of coordinates followed by a list of polygons which are defined counterclockwise as a list of vertex indices from the preceding list of vertices. A  sample mesh file is shown below to convince you of how simple this file format is, and to suggest that you could write a smal script to change this file to a different format that will be acceptable to your choice of visualization software.
-
-\begin{lstlisting}
-{appearance {+edge}
-OFF 
-# This is the OFF formate for a square. 
-# We have the numVerts, numFaces, and a zero
-# Then a list of vertex coordinates
-# Then a list of faces described counterclockwise 
-# by their vertices.
-4 1 0
-1 0 0
-1 1 0
-0 1 0
-0 0 0
-4 1 2 3 4
-\end{lstlisting}
-
-\begin{figure}[h]
-\centering
-\includegraphics{../diagrams/screen.png}
-\caption{A screenshot of the simulator}
-\end{figure}
+INSERT FIGURES
 
 \section{The Design of \emph{Epithelium}}
-In this chapter I will explain the internals of \emph{GrowFlesh}. I will outline the data structure I used for the model, and some of the interesting algorithms I desinged to calculate inter- and intra- cellular forces. It is interesting to note that a number of datastructures and algorithms were scrapped in the beginning of the modeling process because of the complicated relationship between and vertices. The model I have implemented is a vertex dynamics model, and, as such, one would think that the main object of interest should be a vertex. Vertices require information about the cells which contain them in order to be moved. With this as a starting idea, I developed a sophisticated vertex class which contained cells as member variables. Apart from the software bloat coming from many vertices containing massive amounts of cell information, another issue was that cells are made of vertices, and, as such, cells ought to contain vertices as member variables! Unfortunately this bilateral inclusion is not supported by C++. In this chapter I will describe how this issue was circumvented through the use of tables which mimic the behavior of a relational database.
+The technical details of how a vertex dynamics model can be effectively implemented are not explained in great depth in the literature\footnote{\cite{ChasteMain} is an exception, but is rather advanced}. I will fill the void in this field in the section that follows and present a detailed look at the data structures and algorithms needed for the programming of the Honda-Nagai Model. It is fitting to start with a very high-level overview of the structure of the code.
 
-\section{[Highly Simplified] Pseudocode}
+\subsection{[Highly Simplified] Pseudocode}
 Here I will briefly outline how the code works. All of the functions are explained in some detail later in this chapter.
 \begin{lstlisting}
-mesh_variables $<$- read_configs()
-mesh $<$- make_mesh()
+mesh_variables <- read_configs()
+mesh <- make_mesh()
 random_alterations(mesh)
 copy(mesh, rotate_mesh)
 rotate(rotate_mesh)
@@ -96,24 +71,23 @@ print(simulation_info) # So the user can verify all parameters.
 for i = 1:num_iters
    if(iter%print_freq == 0)
       print(OFF_file)
-   temp_mesh = NagaiHondaForce(mesh) # if any displacement in temp_mesh,
-                                     # the displacement is recalculated
+   temp_mesh = NagaiHondaForce(mesh) 
    temp_rotate_mesh = NagaiHondaForce(rotate_mesh)
-   mesh $<$- mesh + temp_mesh
-   rotate_mesh $<$- rotate_mesh + temp_rotate_mesh
-   performT1(mesh)
+   mesh <- mesh + temp_mesh
+   rotate_mesh <- rotate_mesh + temp_rotate_mesh
    performT2(mesh)
-   performT1(rotate_mesh)
+   performT1(mesh)
    performT2(temp_rotate_mesh)
+   performT1(rotate_mesh)
 rotate_back(rotate_mesh)
 compare_mesh(mesh, rotate_mesh)
-print(graphs and error analysis)
+print(graphics and error analysis)
 \end{lstlisting}
 
-\section{Classes}
-\emph{GrowFlesh} uses two classes to organize data. They are the cell and coordinate classes.
-\subsection{The Cell Class}
-The cell class contains a number of useful functions and data members to make the code easy to read and understand. All cell information could have been stored in arrays, but the OO structure makes the code more readable. All cells know their index, which vertices (coordinates) make them up, they are able to calulate their area and perimeter, can modify their constituent vertices, can tell you whether or not ther contain a vertex, and can print out a graphical, color coded representation of themselves to an OFF file.
+\subsection{Classes}
+\emph{Epithelium} has a partially object oriented design. The cell and vertex classes organize the data into meaningul pieces.
+\begin{itemize}
+\item The {\color{red} Cell} class contains a number of useful functions and data members to make the code easy to read and understand. All cell information could have been stored in arrays, but the OO structure makes the code more readable. All cells know their index, which vertices (coordinates) make them up, they are able to calulate their area and perimeter, can modify their constituent vertices, can tell you whether or not ther contain a vertex, and can print out a graphical, color coded representation of themselves to an OFF file. Cells have other 
 \begin{lstlisting}
 public:
  cell(int index, vector$<$int$>$ AssociatedVertices,\
@@ -129,7 +103,7 @@ public:
 	
  cell(){} // Default constructor
 	
- vector$<$int$>$ GetVertices(){return m_AssociatedVertices;};
+ vector<int>GetVertices(){return m_AssociatedVertices;};
  int GetIndex(){return m_index;};
  void SetIndex(int index){m_index = index;};
  void SetTargetArea(double area){m_target_area = area;};
@@ -144,21 +118,21 @@ public:
  void InsertVert(int v1, int v2);
  void EraseVert(int index)
  {
-   vector$<$int$>$::iterator it = find(m_AssociatedVertices, index); 
+   vector<int>::iterator it = find(m_AssociatedVertices, index); 
    m_AssociatedVertices.erase(it);
  };
  void ReplaceVert(int before, int after)
  {
-   vector$<$int$>$::iterator it = find(m_AssociatedVertices, before); 
+   vector<int>::iterator it = find(m_AssociatedVertices, before); 
    *it = after;
  };
- void SetVertices(vector$<$int$>$ vertices)
+ void SetVertices(vector<int> vertices)
  {
    m_AssociatedVertices = vertices;
  };
  int GetNumSides(){return m_AssociatedVertices.size();};
 private:
- vector$<$int$>$ m_AssociatedVertices; // Stored counterclockwise
+ vector<int> m_AssociatedVertices; // Stored counterclockwise
  int m_index;	
  double m_target_area;
  double m_target_perimeter;
@@ -167,55 +141,90 @@ private:
 
 \end{lstlisting}
 
-\subsection{The Coordinate Class}
-The coordinate class stores the index of a coordinate, and whether or not the vertex will move during the integration. \emph{GrowFlesh} will run with two types of meshes: meshes with border, and meshes without. A mesh with border is a mesh with fixed border elements. A mesh without border is a mesh which was generated with periodic boundary conditions and which maintains the periodicity throughout the calculations done by the program. Border vertices will not move, whereas interior vertices will be able to move; the coordinate class allows us to secify whether or not a vertex is interior or exterior. Another benefit of this class is that is allows use to easily extend the code to include forces acting on individual vertices, and to specify other types of vertices besides interior and exterior. This code was developed with eyes to the future. Another interesting idea to explore in computational biology is active cell migration, ad the cell class allows us to specify which vertices want to move actively.
+\item{The Vertex Class}
+The {\color{green} Vertex} class stores the index of a vertex, and 
+whether or not the vertex will move during the integration. While a 
+vertex object does not store the location of the vertex, it tells the 
+simulator whether or not a vertex is on the border of a mesh and, if it 
+is not, it is allowed to move. It was a design choice that 
+\emph{Epithelium} be able to run three popular types of meshes, those 
+with border, those without, and those that cover a surface.  Another 
+benefit of the vertex class is that is allows users to easily extend 
+the code to include forces acting on individual vertices, and to 
+specify other types of vertices besides interior and exterior. The 
+vertex class could be extended to include a member function such as 
+activeMigration(), or any number of interesting functions. This code was developed with eyes to the future. 
 \begin{lstlisting}
-class coordinate
+class vertex
 {
 public:
-  coordinate(int idx, bool t) : index(idx), IsInner(t){};
-  coordinate(){index = -1; IsInner = 0;};
+  vertex(int idx, bool t) : index(idx), IsInner(t){};
+  vertex(){index = -1; IsInner = 0;};
   int index;
   bool IsInner;
-  inline bool operator==(const coordinate& rhs)
+  inline bool operator==(const vertex& rhs)
   {return index == rhs.index;};
 };
 \end{lstlisting}
+\end{itemize}
 
-\section{Initial Mesh Design}
-The hex\_mesh() function generates an $n$x$n$ mesh of cells, where the dimension represents the number of cells touching the boundary. 
-
-\begin{figure}
-\centering
-\includegraphics[height=0.7\textheight]{../diagrams/vert_mesh.pdf}
-\caption[A 5x5 Hexagonal Mesh.]{A 5x5 hexagonal mesh. The cell indices are written in the cells and the vertex indices are written on the red bars.}
-\label{fig:mesh}
-\end{figure}
 
 \section{A Relational Database}
-A popular way to store data since the 1970's is to store data in group of tables which are connected via \emph{keys}. This type of database is popular for reasons which will become apparent by means of a simple example. 
+There is one other major idea behind the design of \emph{Epithelium}. A 
+popular way to store data since the 1970's is to store data in groups of tables which are connected via \emph{keys}. This type of database is popular for reasons which will become apparent by means of a simple example. 
 
-Consider a business which sells a number of products, and wants to keep track of their customers, the customer's orders, the customer's addresses, and information about the products ordered. A wasteful way to store this data is to store a large table with a column for customer. Next to every customer's name is the customer's address. Next to the customers address is the customer's order number. Next to the customer's order number is an item in that order. And, next to each item ordered is the item information. This method of storing data is terribly redundant, for each customer you would need $\sum\limits_{c}\sum\limits_{o_c}|o_c|$ rows in the table, and many rows would have the customer's information repeated. Similarly, item information would be repeated in every row that features this item. 
+Consider a business which sells a number of products, and wants to keep 
+track of their customers, the customer's orders, the customer's 
+addresses, and information about the products ordered. A wasteful way 
+to store this data is to create a large table in which the first column 
+is for customer names. Next to every customer's name is the customer's 
+address, and next to the customers address is the customer's order 
+number. Next to the customer's order number is an item in that order, 
+and next to each item ordered is the item information. This method of 
+storing data is terribly redundant, because for each order with more 
+than one item you would have redundant storage of the orderid, and of 
+the customer information. Furthermore, every time the same item is 
+order 
 
-A better idea is to break this data up into several tables which together define a \emph{schema}. In this example, the following tables define a good schema:
-\begin{enumerate}
-\item Customer information. columns: name, address, order number
-\item Order numbers: columns: order number, item
-\item Items: columns: item, item description
-\end{enumerate}
+A better idea is to break this data up into several tables which 
+together define a \emph{schema}. In the preceding example, the following tables define a good schema:
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{../diagrams/relationaldb.png}
+\caption{An example of a relational database.}
+\label{fig:rdb}
+\end{figure}
+
 
 We are now guaranteed that the customer information is not duplicated for every item in an order, and that item information is not duplicated every time an item is in an order.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\textwidth]{../diagrams/ds.png}
-\caption{The Relational Database}
+\caption{\textbf{The Relational Database.}}
 \end{figure}
 
 My data structure is inspired by the relational database model. I have six tables, including the simulationCells, coordinateList, X, Y, tempX and tempY tables. The cell and coordinate tables are implemented as 1d vectors of cell and coordinate indices, whereas the position tables are implemented as 1d arrays for ease of passing these structures to CUDA C functions (will talk more about CUDA C later). The cells can extract coordinate information from the coordinateList table via the \emph{index} key, and the coordinateList can access the position information from the X and Y arrays via their own \emph{index}. The temporary X and Y arrays store temporary position information about the vertices before the mesh positions are updated. This choice saves memory because the cells, coordinates, and coordinate locations are stored independently of each other, and there is no data redundancy. 
 
+\section{Initial Mesh Design}
+The hex\_mesh() function generates an $n$x$n$ mesh of cells, where the 
+dimension represents the number of cells touching the boundary in 
+either axial direction. Figure ~\ref{fig:mesh} shows the default mesh 
+used by \emph{Epithelium}, with the cell ids and vertex indices are 
+labelled. After a sheet of cells is generated by 
+hex\_mesh(), the tissue is perturbed in by first performing random 
+T1 swaps on edges of the mesh, and then by perturbing the locations of a select 
+number of vertices.
+
+\begin{figure}
+\centering
+\includegraphics[height=0.7\textheight]{../diagrams/vert_mesh.pdf}
+\caption[A 5x5 Hexagonal Mesh.]{\textbf{A 5x5 hexagonal mesh. The cell 
+indices are written in the cells and the vertex indices are written on the red bars.}}
+\label{fig:mesh}
+\end{figure}
 \section{Moving the Vertices}
-\emph{GrowFlesh} loops over the vertices, computes the force applied to each vertex and then computes a displacement due to the force using the Euler Method. In their original paper, H. Honda and T. Nagai described the use of a Modified Runge Kutta Method to move the vertices, but this method would result in extra unnecessary computations at each time step. The \emph{Error Tolerance} section of this chapter describes how the Euler Method is numerically stable enough for this application. The same decision to use then Euler Method was made by the research group at Oxford that developed CHASTE, the \emph{other} leading software for implementing the Nagai-Honda Model. 
+\emph{Epithelium} loops over the vertices, computes the force applied to each vertex and then computes a displacement due to the force using the Euler Method. In their original paper, H. Honda and T. Nagai described the use of a Modified Runge Kutta Method to move the vertices, but this method would result in extra unnecessary computations at each time step. The \emph{Error Tolerance} section of this chapter describes how the Euler Method is numerically stable enough for this application. The same decision to use then Euler Method was made by the research group at Oxford that developed CHASTE, the \emph{other} leading software for implementing the Nagai-Honda Model. 
 
 A displacement is calculated and stored in the temporary X and Y arrays. No vertex is permitted to move more than one half of the minimum delta separating vertices (the $\delta$ under which a T1 swap will occur) during an integration. By imposing this restiction we are ensuring that we will not miss the event of two vertices coming critcally close and a T1 swap occurring. Also, this prevents vertices from passing each other and invalidating the mesh. To ensure that no vertex moves too much, we store verify each displacement as we put it in the temporary X and Y arrays. If a displacement is too large, then the entire array of temporary displacements is erased, the time step is halved, and we begin the integration again. We could label the integrator as `fault tolerant'.
 
@@ -298,10 +307,10 @@ I $\mapsto$ mp + (dx, -dy) AND Ip1 $\mapsto$ mp + (-dx, dy)
 The PerformT2s() function looks at every cell in the mesh and checks its area. If the area is critically small, then the cell is deleted from the mesh. The centroid of the triangle is calculated, and this become the collapsed triangle. Then, one of the three vertices has its position updated to the centroid coordinate and any cell which contained on of the other two coordinates is assigned the centroid coordinate index as a replacement.
 
 \section{Error Tolerance of the Algorithm}
-\emph{GrowFlesh} has been empirically shown to be numerically stable; the code outputs an error measurement at the end of a simulation to give the user a sense of the stability. There was no clear way to provide an analytical proof of stability but at least we will always have an error measure to strengthen our confidence in the code. \emph{GrowFlesh} runs two simultions at the same time, one on the mesh made by hex\_mesh(), and another on the same mesh which has been rotated 45 degrees. Then, at the end of a simulation, the rotated mesh is rotated back and corresponding vertices are compared by index using the Euclidean norm. In practice we see near machine epsilon error for every simulation.
+\emph{Epithelium} has been empirically shown to be numerically stable; the code outputs an error measurement at the end of a simulation to give the user a sense of the stability. There was no clear way to provide an analytical proof of stability but at least we will always have an error measure to strengthen our confidence in the code. \emph{Epithelium} runs two simultions at the same time, one on the mesh made by hex\_mesh(), and another on the same mesh which has been rotated 45 degrees. Then, at the end of a simulation, the rotated mesh is rotated back and corresponding vertices are compared by index using the Euclidean norm. In practice we see near machine epsilon error for every simulation.
 
 \begin{figure}[hr]
 \centering
-\includegraphics[width=0.5\textwidth]{../Images/rotate.png}
+\includegraphics[width=0.5\textwidth]{../diagrams/rotate.png}
 \caption{A Rotated Mesh for Error Analysis.}
 \end{figure}
