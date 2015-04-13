@@ -19,19 +19,19 @@
 \contentsline {section}{\numberline {2.4}The Design of \emph {Epithelium}}{22}
 \contentsline {subsection}{\numberline {2.4.1}[Highly Simplified] Pseudocode}{22}
 \contentsline {subsection}{\numberline {2.4.2}Classes}{23}
-\contentsline {section}{\numberline {2.5}Initial Mesh Design}{25}
-\contentsline {section}{\numberline {2.6}A Relational Database}{25}
-\contentsline {section}{\numberline {2.7}Moving the Vertices}{28}
+\contentsline {section}{\numberline {2.5}A Relational Database}{25}
+\contentsline {section}{\numberline {2.6}Initial Mesh Design}{27}
+\contentsline {section}{\numberline {2.7}Moving the Vertices}{27}
 \contentsline {section}{\numberline {2.8}Embarassing Parallelism and CUDA}{29}
 \contentsline {section}{\numberline {2.9}Computing Topological changes.}{30}
 \contentsline {subsection}{\numberline {2.9.1}The T1 Swap}{30}
 \contentsline {subsection}{\numberline {2.9.2}The implementation of the T2 swap.}{32}
 \contentsline {section}{\numberline {2.10}Error Tolerance of the Algorithm}{32}
-\contentsline {chapter}{\numberline {3}Advances}{34}
-\contentsline {section}{\numberline {3.1}Further Parallelization}{34}
-\contentsline {section}{\numberline {3.2}A New Potential, A New Force}{35}
-\contentsline {section}{\numberline {3.3}Images}{35}
-\contentsline {section}{\numberline {3.4}Periodic Voronoi Mesh}{35}
-\contentsline {section}{\numberline {3.5}Visualization SOftware }{35}
-\contentsline {chapter}{\numberline {A}Getting, Running, and Modifying the Code}{40}
-\contentsline {section}{\numberline {A.1}GitHub}{40}
+\contentsline {chapter}{\numberline {3}Advances}{33}
+\contentsline {section}{\numberline {3.1}Further Parallelization}{33}
+\contentsline {section}{\numberline {3.2}A New Potential, A New Force}{34}
+\contentsline {section}{\numberline {3.3}Images}{34}
+\contentsline {section}{\numberline {3.4}Periodic Voronoi Mesh}{34}
+\contentsline {section}{\numberline {3.5}Visualization SOftware }{34}
+\contentsline {chapter}{\numberline {A}Getting, Running, and Modifying the Code}{39}
+\contentsline {section}{\numberline {A.1}GitHub}{39}
