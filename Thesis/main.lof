@@ -11,11 +11,14 @@
 \contentsline {figure}{\numberline {1.10}{\ignorespaces The T3 Swap.}}{17}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Cells before (left) and after (right) the application of force.\relax }}{20}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces An example of a relational database.\relax }}{26}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces \textbf {The Relational Database.}\relax }}{27}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces A 5x5 Hexagonal Mesh.}}{28}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Getting Cells in Order\relax }}{29}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces A Rotated Mesh for Error Analysis.\relax }}{32}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces \textbf {Simulation output.}}}{22}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces \textbf {Simulation output}\relax }}{23}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces \textbf {Simulation output}\relax }}{23}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces \textbf {The Relational Database.}\relax }}{28}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces A 5x5 Hexagonal Mesh.}}{29}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Getting Cells in Order\relax }}{30}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces \textbf {A Rotated Mesh for Error Analysis.}\relax }}{31}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces \textbf {Implementation of a T1 swap.}}}{34}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Square Cells in Quail Epithelium\relax }}{33}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Square Cells in Quail Epithelium\relax }}{35}
 \addvspace {10\p@ }
