@@ -80,7 +80,7 @@ Model parameters are easy to change in \emph{Epithelium}, and a variety of simul
 \end{figure}
 
 \section{The Design of \emph{Epithelium}}
-The technical details of how a vertex dynamics model can be effectively implemented are not explained in great depth in the literature\footnote{\cite{ChasteMain} is an exception, but is rather advanced}. I will fill this intellectual void in the section that follows by presenting a detailed look at the data structures and algorithms needed for the programming of the Honda-Nagai Model. It is fitting to start with a very high-level overview of the structure of the code.
+The technical details of how a vertex dynamics model can be effectively implemented are not explained in great depth in the literature\footnote{\cite{ChasteMain} is an exception, but is rather advanced.}. I will fill this intellectual void in the section that follows by presenting a detailed look at the data structures and algorithms needed for the programming of the Honda-Nagai Model. It is fitting to start with a very high-level overview of the structure of the code.
 
 \subsection{[Highly Simplified] Pseudocode}
 Here I will briefly outline how the code works. All of the functions are explained in some detail later in this chapter.
@@ -283,7 +283,7 @@ A displacement is calculated and stored in the temporary X and Y arrays. No vert
 \label{fig:ctrclockwise}
 \end{wrapfigure}
 
-Another important aspect of the numerical integration is that cell and vertex information must be processed in counterclockwise order. When we are integrating a vertex $i$, \mph{Epithelium} first searches in the \texttt{simulationCells} vector for a cell which contains $i$, and then the finds the next vertex $ip1$ in that cell's \texttt{m\_AssociatedVertices}\footnote{\texttt{m\_AssociatedVertices} is the container for the vertices making up a cell. See section~\ref{sec:class}}. This step gives us an oriented edge. Some other cell contains that edge if it contains both of the vertices, and, if that cell exists, it must be clockwise from the first (See Figure~\ref{fig:ctrclockwise}). The cells are stored in the reverse order of which they are uncovered by this algorithm before the integration of the equation of motion for $i$ starts. This is a very expensive step ($O(n^3)$) in the computation, and ought to be optimized.
+Another important aspect of the numerical integration is that cell and vertex information must be processed in counterclockwise order. When we are integrating a vertex $i$, \mph{Epithelium} first searches in the \texttt{simulationCells} vector for a cell which contains $i$, and then the finds the next vertex $ip1$ in that cell's \texttt{m\_AssociatedVertices}\footnote{\texttt{m\_AssociatedVertices} is the container for the vertices making up a cell. See section~\ref{sec:class}.}. This step gives us an oriented edge. Some other cell contains that edge if it contains both of the vertices, and, if that cell exists, it must be clockwise from the first (See Figure~\ref{fig:ctrclockwise}). The cells are stored in the reverse order of which they are uncovered by this algorithm before the integration of the equation of motion for $i$ starts. This is a very expensive step ($O(n^3)$) in the computation, and ought to be optimized.
 
 \begin{figure}[hr]
 \centering
