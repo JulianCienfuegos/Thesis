@@ -1,24 +1,25 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces \textbf {The Types of Epithelial Tissue. Image credit\nobreakspace {}\cite {Epithelium}.}\relax }}{4}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces The Types of Epithelial Tissue. Image credit\nobreakspace {}\cite {Epithelium}.\relax }}{4}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Various Models of Epithelial Tissue}}{6}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces \textbf {The Weliky-Oster Force.}\relax }}{7}
-\contentsline {figure}{\numberline {1.4}{\ignorespaces \textbf {The Giant's Causeway. Image courtesy of \nobreakspace {}\cite {Giant}.}\relax }}{8}
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Potential energy as a function of distance from equilibrium.\relax }}{10}
-\contentsline {figure}{\numberline {1.6}{\ignorespaces A T1 Swap}}{12}
-\contentsline {figure}{\numberline {1.7}{\ignorespaces A T2 Swap}}{13}
-\contentsline {figure}{\numberline {1.8}{\ignorespaces \textbf {Parameter values as specified in\nobreakspace {}\cite {ChasteMain}.}\relax }}{14}
-\contentsline {figure}{\numberline {1.9}{\ignorespaces Distribution of Cell Shapes}}{15}
-\contentsline {figure}{\numberline {1.10}{\ignorespaces The T3 Swap.}}{17}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces The Weliky-Oster Force.\relax }}{7}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces The Giant's Causeway. Adapted from\nobreakspace {}\cite {Giant}.\relax }}{8}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces A T1 Swap}}{12}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces A T2 Swap}}{12}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Some typical values used in a vertex dynamics simulation. Adapted from\nobreakspace {}\cite {ChasteMain}.\relax }}{13}
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Distribution of Cell Shapes}}{14}
+\contentsline {figure}{\numberline {1.9}{\ignorespaces The T3 Swap.}}{15}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Cells before (left) and after (right) the application of force.\relax }}{20}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces \textbf {Simulation output.}}}{22}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces \textbf {Simulation output}\relax }}{23}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces \textbf {Simulation output}\relax }}{23}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces \textbf {The Relational Database.}\relax }}{28}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces A 5x5 Hexagonal Mesh.}}{29}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Getting Cells in Order\relax }}{30}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces \textbf {A Rotated Mesh for Error Analysis.}\relax }}{31}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces \textbf {Implementation of a T1 swap.}}}{34}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Cells before (left) and after (right) dynamics.\relax }}{19}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces \textbf {Simulation output.}}}{21}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces \textbf {Simulation output}\relax }}{22}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces \textbf {Simulation output}\relax }}{22}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces An example of a relational database.}}{27}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Datastructure used for storing data in a non-redundant form.\relax }}{28}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces A 5x5 Hexagonal Mesh.}}{29}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Getting Cells in Order\relax }}{30}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces \textbf {A Rotated Mesh for Error Analysis.}\relax }}{31}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Implementation of a T1 swap.}}{35}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Square Cells in Quail Epithelium\relax }}{35}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \textbf {Square Cells in Quail Epithelium. Image courtesy of\nobreakspace {}\cite {Checkers}.}\relax }}{37}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \textbf {The stress-strain curve for rubber. Image courtesy of\nobreakspace {}\cite {rubr}.}\relax }}{39}
 \addvspace {10\p@ }

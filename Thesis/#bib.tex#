@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+S\begin{thebibliography}{1}
 \bibitem{Amber} Amber Molecular Dynamics. \url{ambermd.org}
 \bibitem{tessel} D. Austin. Voronoi diagrams and a day at the beach. \url{http://www.ams.org/samplings/feature-column/fcarc-voronoi}
 \bibitem{3dwing} L. Bai et. al. 3D surface reconstruction and visualization of the Drosophila wing imaginal disk at cellular resolution. [Awaiting publication]
@@ -46,7 +46,7 @@
 \bibitem{WO}G. Oster and M. Weliky. The mechanical basis of cell rearrangement. \emph{Development} \texbf{109} 373-386. (1990)
 \bibitem{epitheliumImage} \url{http://www.millerplace.k12.ny.us/webpages/lmiller/photos/636532/Epithelial\%20TissueTypes.bmp}
 \bibitem{misaligned} J. Pease and J. Tirnauer. Mitotic spindle misorientation in cancer - out of alignment and into the fire. \emph{J. of Cell Science} \textbf{124} (1007-1016).
-\bibitem{Order} K. Ragkousi and M. Gibson. Cell Division and the Maintenance of Epithelial Order. \emph{Journal of Cell Biology} \textbf{207} 181-188
+\bibitem{Order} K. Ragkoi and M. Gibson. Cell Division and the Maintenance of Epithelial Order. \emph{Journal of Cell Biology} \textbf{207} 181-188
 \bibitem{Morphogen} Restrepo, S., Zartman, J. , and Basler, K. \emph{ Coordination of Patterning and Growth by the Morphogen DPP} Current Biology 24, 245- 255
 \bibitem{Sokolow} A. Sokolow et. al. Cell Ingression and Apical Shape Oscillations during Dorsal Closure in \emph{Drosophila}. \textbf{102} 969-979.
 \bibitem{TopologicalModels} R. Thom. Topological Models in Biology. \emph{Topology} \textbf{8} 313- 315 (1969)
