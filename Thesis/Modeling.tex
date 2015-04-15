@@ -10,7 +10,6 @@ Epithelial tissue covers the interior and exterior surfaces of our bodies. Skin,
 \end{figure}
 
 As Figure~\ref{fig:types} shows, there are many types of epithelial tissue in animals which vary in their number of layers and how the cells are shaped. Each of these types of cells are found in a different region of the body where they perform a specific function.  For example, the simple squamous epithelium is no more than one layer of cells thick, and the cells are much flatter than they are wide. Because these cells are well suited to allow diffussion across themselves, simple squamous tissue is found in the walls of blood vessels and in the alveoli in the lungs, where the diffusion of oxygen occurs. On the other hand, columnar cells are much taller than they are wide, and are thus well suited to absorption. These cells are found in the intestines where they absorb nutrients from passing food. Stratified squamous epithelia are several layers thick and line the esophagus and mouth and protect against abraision.
-
 What all of these tissues have in common, however, is how amenable they are to computational modeling. The most easily modeled tissues are simple epithelia, which typically have near-uniform height, and very little difference in appearance between their apical and basal faces. This means that the cells can easily be approximated by a two dimensional mesh in which the surfaces where two cells touch are approximated by a line. Examples of 2D epithelial tissue simulations are presented in Figure ~\ref{fig:fourgraphs}a,b. For an example of a 2D epithelial simulation on a three dimensional surface, see Figure~\ref{fig:fourgraphs}d. The 3D simulation of stratified tissue is more difficult to implement than a two dimensional model\footnote{Even a leading epithelial tissue simulator, Chaste~\cite{ChasteMain}, still does not have stable 3D modeling capabilities.}. For an example of one successful 3D model, see Figure~\ref{fig:fourgraphs}c.
 
 \begin{figure}[h]
@@ -70,8 +69,8 @@ While both the Honda-Nagai and the Weliky-Oster models successfully reproduce th
 \subsection{How the Vertices Move}
 In 1989, K. Kawaski showed that the dynamics of grain growth can be reduced to a first order system given by:
 \begin{equation}
-\eta\frac{dr_i}{dt} = F_i
 \label{eq:motion}
+\eta\frac{dr_i}{dt} = F_i
 \end{equation}
 
 where $F_i$ denotes the force applied to vertex $i$, $r_i$ denotes the position of the $i^{th}$ vertex,  and the left hand side is the velocity of the vertex multiplied by a positive drag coefficient, $\eta$~\cite{1989Kawasaki}. This is equivalent to $m_i\frac{d^2r_i}{dt^2} + \eta\frac{dr_i}{dt} = F_i$, in which the 
@@ -114,10 +113,10 @@ U = \sum\limits_{c = 1}^N\left(\lambda_c(A_c - A_{0_c})^2 + \beta_c(P_c - P_{0_c
  As seen in~\cite{ChasteMain}, the negative gradient of this potential energy is:
 
 \begin{equation}
+\label{eq:force}
 \begin{split}
 F_i = -\displaystyle\sum_{l\in N_i}(2\lambda(A_l - A_{0_l})\nabla_iA_l + 2\beta(C_l - C_{0_l})(\nabla_i d_{l, I_l-1}+\nabla_i d_{l, I_l}) +\\ \gamma_{l, I_l-1}\nabla_i d_{l, I_l-1} + \gamma_{l, I_l}\nabla_i d_{l, I_l}
 \end{split}
-\label{eq:force}
 \end{equation} 
 where $l$ is the $l^{th}$ cell containing vertex $i$, given a counter clockwise orientation. $I_l$ is the local index of node $i$ in element $l$. A detailed derivation of the force follows, as in~\cite{ChasteMain}.
 
@@ -174,20 +173,12 @@ There is emprirical evidence that nearly all vertices in a sheet of epithelial t
 \end{figure}
 
 
-The second topological change is the T2 swap, which is also known as ``cell removal''. A T2 swap occurs when a triangular cell becomes too small and is deleted and replaced by a single vertex located at the centroid of the cell (Figure~\ref{fig:t2}).
+The second topological change is the T2 swap, which is also known as ``cell removal''. A T2 swap occurs when an edge of a triangular cell becomes too small and the cell is deleted and replaced by a single vertex located at the centroid of the cell (Figure~\ref{fig:t2}).
 
 \subsection{Selection of Parameters}
 The basic vertex dynamics model requires the user to specify the $A_0$, $P_0$, and $\gamma_{edge}$ parameters for each cell, as well as a value for the drag coefficient $\eta$ and the integration timestep $dt$. The equations in this model are dimensionless. I will not undertake a discussion of how to derive the dimensionless model from the dimensional model, but for the curious reader this is all laid out in~\cite{HondaNagai}. Typically, one would not choose the values of the aforementioned parameters, but would instead have some dimensional biological data and go through the necessary conversion steps to use them in the simulation~\cite{NewOkuda}.
 
-\begin{figure}
-\centering
-\includegraphics[width=0.5\textwidth]{../diagrams/params1.png}
-\caption{Some typical values used in a vertex dynamics simulation. Adapted from~\cite{ChasteMain}.}
-\label{fig:param}
-\end{figure}
-
-
-Interestingly, I haved found very few explicit statements of the parameters used in simulation (exceptions are~\cite{WoundHealing, ChasteMain, NewOkuda}, see Figure~\ref{fig:param}). Still, even in these cases, the physical significance of the parameterizations chosen is not stated. Very recently, new imaging techniques have permitted the \emph{in vivo} observation of epithelial tissue morphogenesis \footnote{Morphogenesis is the development of shape in an organ or organism.}~\cite{Sokolow, Xiong}. This will likely open new doors for a more accurate parameterization of current models, or for the reformulation of the expressions for forces and potential energies. 
+Interestingly, I haved found very few explicit statements of the parameters used in simulation (exceptions are~\cite{WoundHealing, ChasteMain, NewOkuda}). As Honda has said, ``We do not have accurate values for the cell parameters at present''~\cite{Honda3D}.  Very recently, new imaging techniques have permitted the \emph{in vivo} observation of epithelial tissue morphogenesis \footnote{Morphogenesis is the development of shape in an organ or organism.}~\cite{Sokolow, Xiong} and this will likely open new doors for a more accurate parameterization of current models, or perhaps even for the reformulation of the expressions for forces and potential energies. 
 
 \begin{figure}[ht]
 \centering
@@ -201,6 +192,36 @@ In the case of the Honda-Nagai Model, however, there is little difference betwee
 
 \section{Further Remarks About Epithelial Tissue Modeling}
 Over the years, various modifications and improvements have been made to the Honda-Nagai model. These changes involve new ways of specifying the potential energy, adding new cell dynamics, and changing the connectivity of the mesh. In this section I will discuss some of these advances, as well as present some important mathematical theory underlying epithelial tissue models.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{../diagrams/hoi.png}
+\caption[The HOI swap.]{The HOI swap. \emph{H} configutation(left),\emph{O} configutation (center), \emph{I} configuration (right).}
+\label{fig:hoi}
+\end{figure}
+
+\subsection{Three dimensional models: Honda-Nagai and Okuda.}
+Honda and Nagai also implemented their model in three dimensions and used the same equation of motion for the tissue. However, while the vertices in two dimensions all meet at the junction of three edges,  in three dimensions the vertices meet where four edges are coincident, and each edge is touched by four polygonal faces. A new type of topological change handles the new connectivity, as the T1 and T2 swaps work only on two-dimensional meshes. The so-called HOI swap (Figure~\ref{fig:hoi}) looks at all of the edges in the mesh and finds the edges measuring less than $\delta$; then, it proceeds on a case by case basis. If the edge lies on a triangle, then it is of the \emph{H} form, and the swap goes from left to right (as indicated in Figure~\ref{fig:hoi}). Otherwise, the edge is of the \emph{I} form, and the transformation goes from right to left~\cite{Honda3D}. The Honda-Nagai model in three dimensions has been successful in describing how embryonic epithelial cells grow in a plane at the expense of not proliferating in the orthogonal direction, but is not the only 3D epithelial growth model.
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{../diagrams/jump.png}
+  \end{center}
+\caption{A jump in the potential energy. The reconnection scheme of the Honda-Nagai model can 
+result in curves which are not smooth under certain circumstances.}
+\label{fig:jump}
+\end{wrapfigure}
+The 3D vertex dynamics models recently developed by Satoru Okuda take a slightly different approach than Honda and Nagai. The Okuda models of epithelial tissue morphogenesis feature an altered cell reconnection model(Reversible Network Reconnection, or, RNR) which allows new tissue dynamics to develop~\cite{Okuda1}, and include a new viscosity term in the equation of motion which gives the model more physical plausibility~\cite{Okuda3}.
+
+In 2012, Okuda proposed a new reconnection scheme which contrasts with the Honda-Nagai model in that there are no large inconsistencies in the energy output (Figure~\ref{fig:jump}). The principal idea behind the RNR is that a triangular element ought not be reduced to a point unless \emph{all} of its edges are critically small, whereas in the two-dimensional Honda-Nagai model a T2 swap (and in the three-dimensional model, an HIO swap) occurs when only one edge of a triangular face is smaller than $\delta$. This can lead to jumps in potential energy, as well as generate artifical tissue dynamics which only occur because edges which are larger than the approximated zero length ($\delta$) are forced to zero. Due to the fact that a triangle is forced to a vertex, the occurence of an oscillation through several T2/HOI swaps at a vertex is not seen by the model. The two drawbacks to the RNR model are that it may not produce quality results when simulating tissues in which topological irreversibility is a defining feature~\cite{CellSurf}, and that the model can sometimes produce topologies which are not computable by the software implementing it (i.e. when one edge of a triangle becomes critically small, while the other two remain long, and the triangle becomes a double edge between two vertices~\cite{Okuda3}).
+
+Okuda's other innovation was the introduction of a new viscosity term into the equation of motion for a vertex, giving:
+\begin{equation}
+F_i = \eta_i(\frac{dr_i}{dt} - \vec{v_i})
+\end{equation}
+where the $v_i$ is a vector which describes the viscous force acting on a vertex as a result of its local interactions with neighboring vertices. Observations of growing tissues show that the viscosity of a growing tissue is inhomogeneous and depends upon the cells the types of cells in a region as well as the membranes interacting with the cells, yet the vertex models existing before Okuda's did not take this into account. For this reason, the Honda-Nagai 3D model was unable to capture the morphogenetic dynamics seen in~\cite{Mao}, while the Okuda model was.
+
+
 \subsection{Similar Models of Potential Energy}
 Interestingly, as mentioned in section~\ref{sec:modeling}, the Honda-Nagai form for the energy in a vertex is quite similar to the form developed by Farhadifar~\cite{Farhadifar}. The Farhadifar formulation is:
 \begin{equation}
@@ -213,9 +234,6 @@ U = \sum\limits_{cells}\left(\lambda(A_c - A_{0_c})^2 + \beta(P_c - P_{0_c})^2 +
 \end{equation*}
 
 The equations are nearly identical, except that the Farhadifar model asserts that the cell perimeter persistently tries to collapse the cell($P_0=0$), while the potential energy due internal pressure ($A_0\ne0$) resists this tendency. Nevertheless, the topological results of this model are not wildly different from the Honda-Nagai results~\cite{Farhadifar}.
-
-\subsection{Okuda Reconnection}
-
 
 \subsection{The T3 Swap}
 The T3 swap is also known as ``mitosis'' or ``cell division''. Cell division was not a part of the original Honda-Nagai Model~\cite{HondaNagai} that dealt with the equilibration of a fixed number of cells. However, during proliferation cells divide, and computational models need to take into account tissues with varying numbers of cells. The challenge with implementing the T3 swap is that there are infinitely (within the bounds of floating point arithmetic) many choices about where to divide a cell, and there are several competing opinions (though no unanimouslly accepted theory) about how the dvision is oriented. Some cells divide along their longer axis, which is known as the `Hertwig's Long Axis Rule', but global tissue stress and local cell geometry are also thought to affect the orientation of mitosis~\cite{Order, Orientation}. The computational realization of a T3 swap is trivial, as the swap occurs by placing two new vertices along the edges of a cell and joining them by a new edge. The trouble is that there is no specification about which edges ought to have vertices implanted, or where to insert these vertices. The choice of where to divide a cell in a proliferating tissue can have profound effects upon the geometric appearance of a tissue - indeed, improperly oriented cell divisions are an indicator of cancer~\cite{EpithelialTopology, misaligned}. 

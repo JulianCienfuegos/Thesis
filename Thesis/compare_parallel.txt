@@ -1,0 +1,8 @@
+Run time for simulation:
+iter = 100
+           Serial                  Parallel      Ratio
+dim = 5   0.0978191            0.180287          1.84
+dim = 9   1.24828              2.08035		 1.666
+dim = 13  6.28209              10.172            1.61
+dim = 15  11.4579              18.7423           1.635
+dim = 25  99.3351	       163.411           1.645

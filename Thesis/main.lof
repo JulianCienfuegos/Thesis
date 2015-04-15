@@ -7,19 +7,21 @@
 \contentsline {figure}{\numberline {1.6}{\ignorespaces A T2 Swap}}{12}
 \contentsline {figure}{\numberline {1.7}{\ignorespaces Some typical values used in a vertex dynamics simulation. Adapted from\nobreakspace {}\cite {ChasteMain}.\relax }}{13}
 \contentsline {figure}{\numberline {1.8}{\ignorespaces Distribution of Cell Shapes}}{14}
-\contentsline {figure}{\numberline {1.9}{\ignorespaces The T3 Swap.}}{15}
+\contentsline {figure}{\numberline {1.9}{\ignorespaces The HOI swap.}}{15}
+\contentsline {figure}{\numberline {1.10}{\ignorespaces A jump in the potential energy. The reconnection scheme of the Honda-Nagai model can result in curves which are not smooth under certain circumstances.\relax }}{15}
+\contentsline {figure}{\numberline {1.11}{\ignorespaces The T3 Swap.}}{17}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Cells before (left) and after (right) dynamics.\relax }}{19}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces \textbf {Simulation output.}}}{21}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces \textbf {Simulation output}\relax }}{22}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces \textbf {Simulation output}\relax }}{22}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces An example of a relational database.}}{27}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Datastructure used for storing data in a non-redundant form.\relax }}{28}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces A 5x5 Hexagonal Mesh.}}{29}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Getting Cells in Order\relax }}{30}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces \textbf {A Rotated Mesh for Error Analysis.}\relax }}{31}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Implementation of a T1 swap.}}{35}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Cells before (left) and after (right) dynamics.\relax }}{21}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces \textbf {Simulation output.}}}{23}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces \textbf {Simulation output}\relax }}{24}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces \textbf {Simulation output}\relax }}{24}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces An example of a relational database.}}{29}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Datastructure used for storing data in a non-redundant form.\relax }}{30}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces A 5x5 Hexagonal Mesh.}}{31}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Getting Cells in Order\relax }}{32}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces \textbf {A Rotated Mesh for Error Analysis.}\relax }}{33}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Implementation of a T1 swap.}}{37}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces \textbf {Square Cells in Quail Epithelium. Image courtesy of\nobreakspace {}\cite {Checkers}.}\relax }}{37}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces \textbf {The stress-strain curve for rubber. Image courtesy of\nobreakspace {}\cite {rubr}.}\relax }}{39}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \textbf {Square Cells in Quail Epithelium. Image courtesy of\nobreakspace {}\cite {Checkers}.}\relax }}{39}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \textbf {The stress-strain curve for rubber. Image courtesy of\nobreakspace {}\cite {rubr}.}\relax }}{41}
 \addvspace {10\p@ }
