@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.11)  15 APR 2015 19:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.11)  15 APR 2015 22:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -289,6 +289,46 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \titlewidthlast=\dimen147
 \titlewidthfirst=\dimen148
 )
+(/home/labcomputer/texmf/tex/latex/local/tocloft/tocloft.sty
+Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 44.
+\cftparskip=\skip50
+\cftbeforetoctitleskip=\skip51
+\cftaftertoctitleskip=\skip52
+\cftbeforepartskip=\skip53
+\cftpartnumwidth=\skip54
+\cftpartindent=\skip55
+\cftbeforechapskip=\skip56
+\cftchapindent=\skip57
+\cftchapnumwidth=\skip58
+\cftbeforesecskip=\skip59
+\cftsecindent=\skip60
+\cftsecnumwidth=\skip61
+\cftbeforesubsecskip=\skip62
+\cftsubsecindent=\skip63
+\cftsubsecnumwidth=\skip64
+\cftbeforesubsubsecskip=\skip65
+\cftsubsubsecindent=\skip66
+\cftsubsubsecnumwidth=\skip67
+\cftbeforeparaskip=\skip68
+\cftparaindent=\skip69
+\cftparanumwidth=\skip70
+\cftbeforesubparaskip=\skip71
+\cftsubparaindent=\skip72
+\cftsubparanumwidth=\skip73
+\cftbeforeloftitleskip=\skip74
+\cftafterloftitleskip=\skip75
+\cftbeforefigskip=\skip76
+\cftfigindent=\skip77
+\cftfignumwidth=\skip78
+\c@lofdepth=\count127
+\c@lotdepth=\count128
+\cftbeforelottitleskip=\skip79
+\cftafterlottitleskip=\skip80
+\cftbeforetabskip=\skip81
+\cfttabindent=\skip82
+\cfttabnumwidth=\skip83
+)
 (/home/labcomputer/texmf/tex/latex/local/lstlang1.sty
 File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
@@ -297,21 +337,25 @@ File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
 (/home/labcomputer/texmf/tex/latex/local/lstmisc.sty
 File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
-) (./main.aux)
+) (./main.aux
+
+LaTeX Warning: Label `fig:g2' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -349,16 +393,16 @@ LaTeX Font Info:    ... okay on input line 44.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count127
+\scratchcounter=\count129
 \scratchdimen=\dimen149
 \scratchbox=\box58
-\nofMPsegments=\count128
-\nofMParguments=\count129
+\nofMPsegments=\count130
+\nofMParguments=\count131
 \everyMPshowfont=\toks24
-\MPscratchCnt=\count130
+\MPscratchCnt=\count132
 \MPscratchDim=\dimen150
-\MPnumerator=\count131
-\makeMPintoPDFobject=\count132
+\MPnumerator=\count133
+\makeMPintoPDFobject=\count134
 \everyMPtoPDFconversion=\toks25
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -404,40 +448,78 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count133
+\c@lstlisting=\count135
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
 (./title.tex [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
-(./copyright.tex) (./abstract.tex [1] [1]) (./dedicatoria.tex)
-(./acknowledgments.tex [1]) (./vita.tex [2]) [3] (./main.toc [1
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2])
+(./copyright.tex) (./abstract.tex [2] [3]) (./dedicatoria.tex)
+(./acknowledgments.tex [3]) (./vita.tex [4]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(92.14519pt, 430.00462pt, 92.14519pt)
+* v-part:(T,H,B)=(144.54pt, 555.03262pt, 95.39737pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=430.00462pt
+* \textheight=555.03262pt
+* \oddsidemargin=19.8752pt
+* \evensidemargin=19.8752pt
+* \topmargin=35.27pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+ [5
+
+] [6
+
+]) (./main.toc [7
 
 
 ])
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
- [2]
-(./main.lof)
+ [8]
+(./main.lof [9
+
+])
 \tf@lof=\write4
 \openout4 = `main.lof'.
 
- (./Modeling.tex [3
-
-]
+ [10] (./Modeling.tex
 Chapter 1.
-<../diagrams/output.png, id=39, 1565.85pt x 626.34pt>
+<../diagrams/output.png, id=48, 1565.85pt x 626.34pt>
 File: ../diagrams/output.png Graphic file (type png)
 
 <use ../diagrams/output.png>
 Package pdftex.def Info: ../diagrams/output.png used on input line 7.
 (pdftex.def)             Requested size: 433.62001pt x 173.44345pt.
- [4
+ [1
+
 
  <../diagrams/output.png>]
-<../diagrams/abcd3.pdf, id=43, 722.7pt x 542.025pt>
+<../diagrams/abcd3.pdf, id=53, 722.7pt x 542.025pt>
 File: ../diagrams/abcd3.pdf Graphic file (type pdf)
 
 <use ../diagrams/abcd3.pdf>
@@ -447,26 +529,33 @@ Package pdftex.def Info: ../diagrams/abcd3.pdf used on input line 17.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5] [6 <../diagrams/abcd3.pdf>]
-<../diagrams/welikyoster.png, id=83, 1439.3775pt x 1077.02374pt>
+[2] [3 <../diagrams/abcd3.pdf>]
+<../diagrams/welikyoster.png, id=93, 1439.3775pt x 1077.02374pt>
 File: ../diagrams/welikyoster.png Graphic file (type png)
 
 <use ../diagrams/welikyoster.png>
 Package pdftex.def Info: ../diagrams/welikyoster.png used on input line 40.
 (pdftex.def)             Requested size: 216.81pt x 162.22038pt.
- [7 <../diagrams/welikyoster.png>]
-<../diagrams/resize_giant.jpg, id=93, 501.875pt x 376.40625pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4] <../diagrams/resize_giant.jpg, id=102, 501.875pt x 376.40625pt>
 File: ../diagrams/resize_giant.jpg Graphic file (type jpg)
 
 <use ../diagrams/resize_giant.jpg>
 Package pdftex.def Info: ../diagrams/resize_giant.jpg used on input line 49.
 (pdftex.def)             Requested size: 216.81pt x 162.60966pt.
- [8 <../diagrams/resize_giant.jpg>] [9]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5 <../diagrams/welikyoster.png>] [6 <../diagrams/resize_giant.jpg>] [7]
 Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
-[10] <../diagrams/t1.png, id=104, 1026.83624pt x 349.305pt>
+[8] [9] <../diagrams/t1.png, id=120, 1026.83624pt x 349.305pt>
 File: ../diagrams/t1.png Graphic file (type png)
 
 <use ../diagrams/t1.png>
@@ -478,197 +567,203 @@ Package caption Warning: \label without proper \caption on input line 160.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:t1' on page 11 undefined on input line 165.
+LaTeX Warning: Reference `fig:t1' on page 10 undefined on input line 165.
 
-[11] <../diagrams/t2.png, id=108, 1077.02374pt x 284.06125pt>
+[10 <../diagrams/t1.png>]
+<../diagrams/t2.png, id=124, 1077.02374pt x 284.06125pt>
 File: ../diagrams/t2.png Graphic file (type png)
 
 <use ../diagrams/t2.png>
 Package pdftex.def Info: ../diagrams/t2.png used on input line 170.
-(pdftex.def)             Requested size: 216.81pt x 57.17966pt.
- [12 <../diagrams/t1.png> <../diagrams/t2.png>]
-<../diagrams/params1.png, id=112, 773.89125pt x 649.42625pt>
-File: ../diagrams/params1.png Graphic file (type png)
-
-<use ../diagrams/params1.png>
-Package pdftex.def Info: ../diagrams/params1.png used on input line 183.
-(pdftex.def)             Requested size: 216.81pt x 181.9372pt.
-
-<../diagrams/distibutionHonda.png, id=113, 424.58624pt x 523.9575pt>
+(pdftex.def)             Requested size: 433.62001pt x 114.36366pt.
+ [11 <../diagrams/t2.png>]
+<../diagrams/distibutionHonda.png, id=128, 424.58624pt x 523.9575pt>
 File: ../diagrams/distibutionHonda.png Graphic file (type png)
 
 <use ../diagrams/distibutionHonda.png>
-Package pdftex.def Info: ../diagrams/distibutionHonda.png used on input line 19
-3.
+Package pdftex.def Info: ../diagrams/distibutionHonda.png used on input line 18
+5.
 (pdftex.def)             Requested size: 216.81pt x 267.55057pt.
- [13 <../diagrams/params1.png>]
-<../diagrams/hoi.png, id=118, 645.41125pt x 196.735pt>
+ [12 <../diagrams/distibutionHonda.png>]
+<../diagrams/hoi.png, id=132, 645.41125pt x 196.735pt>
 File: ../diagrams/hoi.png Graphic file (type png)
 
 <use ../diagrams/hoi.png>
-Package pdftex.def Info: ../diagrams/hoi.png used on input line 207.
+Package pdftex.def Info: ../diagrams/hoi.png used on input line 199.
 (pdftex.def)             Requested size: 433.62001pt x 132.17497pt.
- <../diagrams/jump.png, id=120, 722.7pt x 542.025pt>
+ <../diagrams/jump.png, id=134, 722.7pt x 542.025pt>
 File: ../diagrams/jump.png Graphic file (type png)
 
 <use ../diagrams/jump.png>
-Package pdftex.def Info: ../diagrams/jump.png used on input line 216.
+Package pdftex.def Info: ../diagrams/jump.png used on input line 208.
 (pdftex.def)             Requested size: 208.13574pt x 156.09976pt.
- [14 <../diagrams/distibutionHonda.png>]
+ [13 <../diagrams/hoi.png>]
 
-LaTeX Warning: Citation `Okuda3' on page 15 undefined on input line 222.
+LaTeX Warning: Citation `Okuda3' on page 14 undefined on input line 214.
+
+[14 <../diagrams/jump.png>]
+
+LaTeX Warning: Citation `CellSurf' on page 15 undefined on input line 216.
 
 
-LaTeX Warning: Citation `CellSurf' on page 15 undefined on input line 224.
+LaTeX Warning: Citation `Okuda3' on page 15 undefined on input line 216.
 
-
-LaTeX Warning: Citation `Okuda3' on page 15 undefined on input line 224.
-
-[15 <../diagrams/hoi.png> <../diagrams/jump.png>] [16]
-<../diagrams/t3.png, id=131, 1067.99pt x 359.3425pt>
+[15] <../diagrams/t3.png, id=146, 1067.99pt x 359.3425pt>
 File: ../diagrams/t3.png Graphic file (type png)
- <use ../diagrams/t3.png>
-Package pdftex.def Info: ../diagrams/t3.png used on input line 250.
-(pdftex.def)             Requested size: 433.62001pt x 145.90028pt.
 
-[17 <../diagrams/t3.png>] [18]) (./Epithelium.tex [19]
+<use ../diagrams/t3.png>
+Package pdftex.def Info: ../diagrams/t3.png used on input line 242.
+(pdftex.def)             Requested size: 433.62001pt x 145.90028pt.
+ [16] [17 <../diagrams/t3.png>] [18]) (./Epithelium.tex [19] [20]
 Chapter 2.
-<../diagrams/BeforeAfter.png, id=142, 1003.75pt x 501.875pt>
+<../diagrams/BeforeAfter.png, id=163, 1003.75pt x 501.875pt>
 File: ../diagrams/BeforeAfter.png Graphic file (type png)
 
 <use ../diagrams/BeforeAfter.png>
 Package pdftex.def Info: ../diagrams/BeforeAfter.png used on input line 8.
 (pdftex.def)             Requested size: 433.62001pt x 216.8129pt.
- [20
+ [21
 
-] [21 <../diagrams/BeforeAfter.png>]
-[22] <../diagrams/graphs4.png, id=153, 578.16pt x 397.485pt>
-File: ../diagrams/graphs4.png Graphic file (type png)
+] [22 <../diagrams/BeforeAfter.png>]
+[23] [24] <../diagrams/energyComp.png, id=177, 1156.32pt x 433.62pt>
+File: ../diagrams/energyComp.png Graphic file (type png)
 
-<use ../diagrams/graphs4.png>
-Package pdftex.def Info: ../diagrams/graphs4.png used on input line 63.
-(pdftex.def)             Requested size: 378.43732pt x 260.16803pt.
+<use ../diagrams/energyComp.png>
+Package pdftex.def Info: ../diagrams/energyComp.png used on input line 63.
+(pdftex.def)             Requested size: 346.89732pt x 130.087pt.
 
-<../diagrams/graphs2.png, id=154, 578.16pt x 397.485pt>
-File: ../diagrams/graphs2.png Graphic file (type png)
+<../diagrams/perimComp.png, id=178, 7811.1825pt x 2940.9875pt>
+File: ../diagrams/perimComp.png Graphic file (type png)
 
-<use ../diagrams/graphs2.png>
-Package pdftex.def Info: ../diagrams/graphs2.png used on input line 70.
-(pdftex.def)             Requested size: 378.43732pt x 260.16803pt.
+<use ../diagrams/perimComp.png>
+Package pdftex.def Info: ../diagrams/perimComp.png used on input line 70.
+(pdftex.def)             Requested size: 346.89732pt x 130.58856pt.
 
-<../diagrams/graphs3.png, id=155, 578.16pt x 397.485pt>
-File: ../diagrams/graphs3.png Graphic file (type png)
+<../diagrams/areaComp.png, id=179, 4611.2275pt x 1800.7275pt>
+File: ../diagrams/areaComp.png Graphic file (type png)
 
-<use ../diagrams/graphs3.png>
-Package pdftex.def Info: ../diagrams/graphs3.png used on input line 77.
-(pdftex.def)             Requested size: 378.43732pt x 260.16803pt.
- [23 <../diagrams/graphs4.png>] [24 <../diagrams/graphs2.png> <../diagrams/grap
-hs3.png>]
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 88.
+<use ../diagrams/areaComp.png>
+Package pdftex.def Info: ../diagrams/areaComp.png used on input line 77.
+(pdftex.def)             Requested size: 346.89732pt x 135.46088pt.
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+<../diagrams/shapeComp.png, id=180, 8052.0825pt x 3351.52126pt>
+File: ../diagrams/shapeComp.png Graphic file (type png)
+
+<use ../diagrams/shapeComp.png>
+Package pdftex.def Info: ../diagrams/shapeComp.png used on input line 84.
+(pdftex.def)             Requested size: 346.89732pt x 144.3683pt.
+ [25 <../diagrams/energyComp.png (PNG copy)> <../diagrams/perimComp.png>] [26 <
+../diagrams/areaComp.png> <../diagrams/shapeComp.png>]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 95.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 88.
- [25]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 114.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 95.
+ [27]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 121.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 114.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 121.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 117.
- [26] [27] [28]
-<../diagrams/relationaldb.png, id=178, 1102.1175pt x 715.67375pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 124.
+ [28] [29] [30]
+[31] <../diagrams/relationaldb.png, id=206, 1102.1175pt x 715.67375pt>
 File: ../diagrams/relationaldb.png Graphic file (type png)
 
 <use ../diagrams/relationaldb.png>
-Package pdftex.def Info: ../diagrams/relationaldb.png used on input line 223.
+Package pdftex.def Info: ../diagrams/relationaldb.png used on input line 230.
 (pdftex.def)             Requested size: 173.44534pt x 112.62093pt.
- [29 <../diagrams/relationaldb.png>]
-<../diagrams/ds.png, id=182, 626.34pt x 393.47pt>
+ [32]
+<../diagrams/ds.png, id=210, 626.34pt x 393.47pt>
 File: ../diagrams/ds.png Graphic file (type png)
  <use ../diagrams/ds.png>
-Package pdftex.def Info: ../diagrams/ds.png used on input line 244.
+Package pdftex.def Info: ../diagrams/ds.png used on input line 251.
 (pdftex.def)             Requested size: 216.81pt x 136.19757pt.
 
-Overfull \hbox (5.14853pt too wide) in paragraph at lines 248--249
+Overfull \hbox (7.58186pt too wide) in paragraph at lines 255--256
 []\OT1/cmr/m/n/10.95 The \OT1/cmr/m/it/10.95 Ep-ithe-lium \OT1/cmr/m/n/10.95 da
-tas-truc-ture is a schema made up of the \OT1/cmtt/m/n/10.95 simulationCells\OT
+ta struc-ture is a schema made up of the \OT1/cmtt/m/n/10.95 simulationCells\OT
 1/cmr/m/n/10.95 , \OT1/cmtt/m/n/10.95 vertexList\OT1/cmr/m/n/10.95 ,
  []
 
 
-Overfull \hbox (6.98093pt too wide) in paragraph at lines 248--249
+Overfull \hbox (6.98093pt too wide) in paragraph at lines 255--256
 \OT1/cmtt/m/n/10.95 X\OT1/cmr/m/n/10.95 , \OT1/cmtt/m/n/10.95 Y\OT1/cmr/m/n/10.
 95 , \OT1/cmtt/m/n/10.95 tempX \OT1/cmr/m/n/10.95 and \OT1/cmtt/m/n/10.95 tempY
  \OT1/cmr/m/n/10.95 ta-bles. The cell and ver-tex ta-bles are im-ple-mented as 
 1D \OT1/cmtt/m/n/10.95 std::vectors
  []
 
-[30 <../diagrams/ds.png>]
-<../diagrams/vert_mesh.png, id=186, 752.8125pt x 666.49pt>
+[33 <../diagrams/relationaldb.png> <../diagrams/ds.png>]
+<../diagrams/vert_mesh.png, id=214, 752.8125pt x 666.49pt>
 File: ../diagrams/vert_mesh.png Graphic file (type png)
 
 <use ../diagrams/vert_mesh.png>
-Package pdftex.def Info: ../diagrams/vert_mesh.png used on input line 261.
+Package pdftex.def Info: ../diagrams/vert_mesh.png used on input line 268.
 (pdftex.def)             Requested size: 303.53267pt x 268.7371pt.
- [31 <../diagrams/vert_mesh.png>]
-<../diagrams/counterclockwise.jpg, id=191, 497.86pt x 559.08875pt>
+ [34] [35 <../diagrams/vert_mesh.png>]
+<../diagrams/counterclockwise.jpg, id=221, 497.86pt x 559.08875pt>
 File: ../diagrams/counterclockwise.jpg Graphic file (type jpg)
 
 <use ../diagrams/counterclockwise.jpg>
 Package pdftex.def Info: ../diagrams/counterclockwise.jpg used on input line 28
-1.
+8.
 (pdftex.def)             Requested size: 164.77771pt x 185.04584pt.
 
-<../diagrams/rotate.png, id=192, 451.6875pt x 451.6875pt>
+<../diagrams/rotate.png, id=222, 451.6875pt x 451.6875pt>
 File: ../diagrams/rotate.png Graphic file (type png)
 
 <use ../diagrams/rotate.png>
-Package pdftex.def Info: ../diagrams/rotate.png used on input line 291.
+Package pdftex.def Info: ../diagrams/rotate.png used on input line 298.
 (pdftex.def)             Requested size: 216.81pt x 216.81442pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[32 <../diagrams/counterclockwise.jpg>] [33 <../diagrams/rotate.png>]
+[36] [37 <../diagrams/rotate.png> <../diagrams/counterclockwise.jpg>]
 
-LaTeX Warning: Reference `sec:rdb' on page 34 undefined on input line 304.
+LaTeX Warning: Reference `sec:rdb' on page 38 undefined on input line 311.
 
-[34] [35] <../diagrams/t1pdf.png, id=208, 439.6425pt x 505.89pt>
+[38] [39] [40] [41] [42]
+<../diagrams/t1pdf.png, id=247, 439.6425pt x 505.89pt>
 File: ../diagrams/t1pdf.png Graphic file (type png)
 
 <use ../diagrams/t1pdf.png>
-Package pdftex.def Info: ../diagrams/t1pdf.png used on input line 332.
+Package pdftex.def Info: ../diagrams/t1pdf.png used on input line 339.
 (pdftex.def)             Requested size: 282.63141pt x 325.215pt.
- [36] [37 <../diagrams/t1pdf.png>]) (./Advances.tex
-[38]
+
+Overfull \hbox (23.52711pt too wide) in paragraph at lines 345--346
+\OT1/cmr/m/n/10.95 parallelized ver-sion of \OT1/cmr/m/it/10.95 Ep-ithe-lium \O
+T1/cmr/m/n/10.95 re-quires only Python2.7,
+ []
+
+[43 <../diagrams/t1pdf.png>]) (./Advances.tex [44] [45]
 Chapter 3.
-<../diagrams/checkers.jpg, id=219, 659.46375pt x 517.935pt>
+<../diagrams/checkers.jpg, id=258, 659.46375pt x 517.935pt>
 File: ../diagrams/checkers.jpg Graphic file (type jpg)
 
 <use ../diagrams/checkers.jpg>
 Package pdftex.def Info: ../diagrams/checkers.jpg used on input line 8.
 (pdftex.def)             Requested size: 216.81pt x 170.27892pt.
- [39
+ [46
 
- <../diagrams/checkers.jpg>] [40]
-<../diagrams/rubber.jpeg, id=228, 985.6825pt x 770.88pt>
+ <../diagrams/checkers.jpg>] [47]
+<../diagrams/rubber.jpeg, id=267, 985.6825pt x 770.88pt>
 File: ../diagrams/rubber.jpeg Graphic file (type jpg)
 
 <use ../diagrams/rubber.jpeg>
 Package pdftex.def Info: ../diagrams/rubber.jpeg used on input line 28.
 (pdftex.def)             Requested size: 208.13574pt x 162.77177pt.
- [41 <../diagrams/rubber.jpeg>]
+ [48 <../diagrams/rubber.jpeg>] [49]
 
-LaTeX Warning: Citation `boost' on page 42 undefined on input line 44.
+LaTeX Warning: Citation `boost' on page 50 undefined on input line 44.
 
-[42]) (./bib.tex [43]
+[50]) (./bib.tex [51]
 Underfull \hbox (badness 10000) in paragraph at lines 10--11
 []\OT1/cmr/m/n/10.95 CHARMM tu-to-rial. $\OT1/cmtt/m/n/10.95 http : / / www . c
 harmmtutorial . org / index . php / The _ Energy _
@@ -680,33 +775,33 @@ Underfull \hbox (badness 2205) in paragraph at lines 11--12
  . cs . ox . ac . uk / chaste / tutorials / release _ 2 . 1 /
  []
 
+[52
 
+]
 Underfull \hbox (badness 10000) in paragraph at lines 15--16
 []\OT1/cmr/m/it/10.95 Epithelial Tis-sues $\OT1/cmtt/m/n/10.95 http : / / www .
  botany . uwc . ac . za / sci _ ed / grade10 / mammal /
  []
 
-[44
 
-]
 Underfull \hbox (badness 5817) in paragraph at lines 20--21
 []\OT1/cmr/m/n/10.95 The Gi-ant's Cause-way Im-age. $\OT1/cmtt/m/n/10.95 http :
  / / images . nationalgeographic . com / wpf /
  []
 
-
+[53]
 Underfull \hbox (badness 1072) in paragraph at lines 24--25
 []\OT1/cmr/m/n/10.95 H. Honda. De-scrip-tion of Cel-lu-lar Pat-terns by Dirich-
 let Do-mains: The Two-
  []
 
-[45] [46]
+[54] [55]
 Underfull \hbox (badness 10000) in paragraph at lines 49--50
 []$\OT1/cmtt/m/n/10.95 http : / / www . millerplace . k12 . ny . us / webpages 
 / lmiller / photos / 636532 /
  []
 
-[47]) (./appendix.tex [48]
+[56]) (./appendix.tex [57]
 Appendix A.
 Missing character: There is no Â in font cmr10!
 Missing character: There is no ´ in font cmr10!
@@ -717,21 +812,24 @@ n be found at $\OT1/cmtt/m/n/10.95 https : / / github . com / JulianCienfuegos
 / NAGAIHONDAMODEL$\OT1/cmr/m/n/10.95 . 
  []
 
-[49
+[58
 
-]) [50] (./main.aux)
+]) [59] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 6704 strings out of 495028
- 96589 string characters out of 6181497
- 200882 words of memory out of 5000000
- 9765 multiletter control sequences out of 15000+600000
- 14239 words of font info for 51 fonts, out of 8000000 for 9000
+ 6961 strings out of 495028
+ 100505 string characters out of 6181497
+ 206306 words of memory out of 5000000
+ 10018 multiletter control sequences out of 15000+600000
+ 15563 words of font info for 55 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,15n,58p,1655b,1549s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,15n,58p,1633b,1549s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
@@ -743,19 +841,20 @@ ype1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (56 pages, 4196678 bytes).
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmtt9.pfb>
+Output written on main.pdf (71 pages, 4546373 bytes).
 PDF statistics:
- 330 PDF objects out of 1000 (max. 8388607)
- 211 compressed objects within 3 object streams
+ 378 PDF objects out of 1000 (max. 8388607)
+ 246 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  116 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -16,9 +16,20 @@
 
 %%%%%%%% Title Formatting.
 \usepackage{titlesec}
-\titleformat{\chapter}[display]   
-{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{12pt}{\huge}   
-\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+\titleformat{\chapter}[display]
+  {\normalfont\Large\bfseries\centering}
+  {\chaptertitlename\ \thechapter}{}{\Large}
+\titleformat{\section}
+  {\normalfont\large\bfseries}
+  {\thesection}{3pt}{}
+\titleformat{\chapter}[hang] 
+{\normalfont\Large\bfseries\centering}{\chaptertitlename\ \thechapter:}{3pt}{} 
+\titlespacing*{\chapter}{0pt}{22pt}{20pt}
+
+%\usepackage{titlesec}
+%\titleformat{\chapter}[display]   
+%{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{12pt}{\huge}   
+%\titlespacing*{\chapter}{0pt}{0pt}{20pt}
 
 %%%%%%%% Font.
 %\renewcommand*{\familydefault}{\ttdefault}
@@ -32,6 +43,11 @@
 \newcommand{\HRuleBig}{\rule{\linewidth}{0.7mm}}
 \linespread{1.5}
 
+\usepackage{tocloft}
+
+\renewcommand\cftchapdotsep{\cftdotsep}
+\renewcommand\cftchapleader{\cftdotfill{\cftchapdotsep}}
+
 % Formatting for code
 \lstset{language=C++,
         basicstyle=\small,
@@ -42,24 +58,7 @@
  }
 
 \begin{document}
-% Chapter 1
-% Modelling ET
-%    Sec1 Intro to ET
-%    Sec2 Modelling ET
-%    Sec3 The Nagai Honda Model
-% Chapter 2
-% Epithelium
-%    Sec1 Design
-%    Sec2 Results
-% Chapter 3
-% Epithelium and Beyond
-% New potential energy
-% Show how Epithelium can perform other things,
-%          e.g. T3 swap, active migration, Periodic BC
-%          e.g  Entire Parallelization of the model
-% Need a mathematically formal statement for the distribution of cell shapes as a function of parameters.
-
-\pagenumbering{gobble}
+\pagenumbering{roman}
 \input{./title.tex}
 \input{./copyright.tex}
 \input{./abstract.tex}
@@ -67,9 +66,10 @@
 \input{./acknowledgments.tex}
 \input{./vita.tex}
 \clearpage
-\pagenumbering{arabic}
 \tableofcontents{}
+\clearpage
 \listoffigures
+\clearpage\pagenumbering{arabic}
 \input{./Modeling.tex}
 \input{./Epithelium.tex}
 \input{./Advances.tex}

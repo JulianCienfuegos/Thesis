@@ -1,4 +1,4 @@
-\chapter{The Future of Epithelial Modeling}
+\chapter{The Future of \emph{Epithelium}}
 \label{chap:advances}
 
 We have thusfar explored the nature of epithelial tissue, discussed the variety of models that are currently in use, and thoroughly examined the \emph{Epithelium} implementation the Honda-Nagai Model. In this chapter, we will discuss some ideas for future epithelial tissue models. 
@@ -6,7 +6,7 @@ We have thusfar explored the nature of epithelial tissue, discussed the variety 
 \begin{figure}[hb]
 \centering
 \includegraphics[width=0.5\textwidth]{../diagrams/checkers.jpg}
-\caption{\textbf{Square Cells in Quail Epithelium. Image courtesy of~\cite{Checkers}.}}
+\caption{Square cells in quail epithelium. Image courtesy of~\cite{Checkers}.}
 \label{fig:quail}
 \end{figure}
 
@@ -27,11 +27,11 @@ Another recent development in epithelial tissue science is the ability to record
   \begin{center}
     \includegraphics[width=0.48\textwidth]{../diagrams/rubber.jpeg}
   \end{center}
-  \caption{\textbf{The stress-strain curve for rubber. Image courtesy of~\cite{rubr}.}}
+  \caption{The stress-strain curve for rubber. Image courtesy of~\cite{rubr}.}
 \label{fig:rubber}
 \end{wrapfigure}
 
-An equally promising development in the field of epithelial tissue imaging is the work being done in the surface reconstruction of \emph{Drosophila} wings. Several softwares exist which can reconstruct a mesh of epithelial cells from an input image, but the most recent software released by L. Bai is able to take sets of images and faithfully reconstruct the apical face of a sheet of wing cells~\cite{3dwing}, even detecting 3d deformations. These imaging softwares will provide immense amounts of data about epithelial cell shapes and topology which will guide the development of future models, and perhaps serve as initial conditions and benchmarks for existing models. Unfortunately, the source code for the 3d imaging software is not freely available, and the possibility of developing an open source version ought to be considered. Very little is known about the accuracy of these softwares, as information about them comes exclusively from academic journal articles, and, depending on the quality of these imaging packages, competitive programs may be able to be developed in a short amount of time thanks to advanced libraries like Python's OpenCV~\cite{OpenCV}.
+An equally promising development in the field of epithelial tissue imaging is the work being done in the surface reconstruction of \emph{Drosophila} wings. Several softwares exist which can reconstruct a mesh of epithelial cells from an input image, but the most recent software released by L. Bai is able to take sets of images and faithfully reconstruct the apical face of a sheet of wing cells~\cite{3dwing}, even detecting 3D deformations. These imaging softwares will provide immense amounts of data about epithelial cell shapes and topology which will guide the development of future models, and perhaps serve as initial conditions and benchmarks for existing models. Unfortunately, the source code for the 3D imaging software is not freely available, and the possibility of developing an open source version ought to be considered. Very little is known about the accuracy of these softwares, as information about them comes exclusively from academic journal articles, and, depending on the quality of these imaging packages, competitive programs may be able to be developed in a short amount of time thanks to advanced libraries like Python's OpenCV~\cite{OpenCV}.
 
 \section{Further Parallelization}
 While the preceding ideas are very interesting and would contribute new ideas to the world of epithelial tissue modeling, the project of recreating the Honda-Nagai model was originally undertaken in the hopes of parallelizing the vast majority of the computations. Unfortunately, the trouble of efficiently storing a large tissue rendered the implementation of a parallel integrator seemingly impossible. 

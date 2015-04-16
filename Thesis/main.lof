@@ -1,27 +1,27 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces The Types of Epithelial Tissue. Image credit\nobreakspace {}\cite {Epithelium}.\relax }}{4}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Various Models of Epithelial Tissue}}{6}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces The Weliky-Oster Force.\relax }}{7}
-\contentsline {figure}{\numberline {1.4}{\ignorespaces The Giant's Causeway. Adapted from\nobreakspace {}\cite {Giant}.\relax }}{8}
-\contentsline {figure}{\numberline {1.5}{\ignorespaces A T1 Swap}}{12}
-\contentsline {figure}{\numberline {1.6}{\ignorespaces A T2 Swap}}{12}
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Some typical values used in a vertex dynamics simulation. Adapted from\nobreakspace {}\cite {ChasteMain}.\relax }}{13}
-\contentsline {figure}{\numberline {1.8}{\ignorespaces Distribution of Cell Shapes}}{14}
-\contentsline {figure}{\numberline {1.9}{\ignorespaces The HOI swap.}}{15}
-\contentsline {figure}{\numberline {1.10}{\ignorespaces A jump in the potential energy. The reconnection scheme of the Honda-Nagai model can result in curves which are not smooth under certain circumstances.\relax }}{15}
-\contentsline {figure}{\numberline {1.11}{\ignorespaces The T3 Swap.}}{17}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces The Types of Epithelial Tissue\nobreakspace {}\cite {Epithelium}.\relax }}{1}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Various Models of Epithelial Tissue}}{3}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces The Weliky-Oster Force.\relax }}{5}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces The Giant's Causeway. Adapted from\nobreakspace {}\cite {Giant}.\relax }}{6}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces A T1 Swap}}{10}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces A T2 Swap}}{11}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Distribution of Cell Shapes}}{12}
+\contentsline {figure}{\numberline {1.8}{\ignorespaces The HOI swap.}}{13}
+\contentsline {figure}{\numberline {1.9}{\ignorespaces A non-smooth energy curve.}}{14}
+\contentsline {figure}{\numberline {1.10}{\ignorespaces The T3 Swap.}}{17}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Cells before (left) and after (right) dynamics.\relax }}{21}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces \textbf {Simulation output.}}}{23}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces \textbf {Simulation output}\relax }}{24}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces \textbf {Simulation output}\relax }}{24}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces An example of a relational database.}}{29}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Datastructure used for storing data in a non-redundant form.\relax }}{30}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces A 5x5 Hexagonal Mesh.}}{31}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Getting Cells in Order\relax }}{32}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces \textbf {A Rotated Mesh for Error Analysis.}\relax }}{33}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Implementation of a T1 swap.}}{37}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Cells before and after dynamics}}{22}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Energy graphs.}}{25}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Equilibrium area graphs}}{25}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Equilibrium area graphs}}{26}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Equilibrium distribution of cell shapes.}}{26}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces An example of a relational database.}}{33}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Data structure used for storing data in a non-redundant form.\relax }}{33}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces A 5x5 Hexagonal Mesh.}}{35}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces A rotated mesh for error analysis.\relax }}{37}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Getting Cells in Order\relax }}{37}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Implementation of a T1 swap.}}{43}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces \textbf {Square Cells in Quail Epithelium. Image courtesy of\nobreakspace {}\cite {Checkers}.}\relax }}{39}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces \textbf {The stress-strain curve for rubber. Image courtesy of\nobreakspace {}\cite {rubr}.}\relax }}{41}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Square cells in quail epithelium. Image courtesy of\nobreakspace {}\cite {Checkers}.\relax }}{46}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces The stress-strain curve for rubber. Image courtesy of\nobreakspace {}\cite {rubr}.\relax }}{48}
 \addvspace {10\p@ }

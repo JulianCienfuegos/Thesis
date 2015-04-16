@@ -6,7 +6,7 @@ Here I present my implementation of the Honda-Nagai Model for epithelial tissue 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{../diagrams/BeforeAfter.png}
-\caption{Cells before (left) and after (right) dynamics.}
+\caption[Cells before and after dynamics]{Cells before (left) and after (right) dynamics. The colored cells highlight cells with parameters different from the globally assigned values.}
 \label{fig:beforeafter}
 \end{figure}
 
@@ -33,7 +33,7 @@ The \texttt{swap length}, \texttt{upper bound}, and \texttt{max swaps} parameter
 1 # Make a movie in the end? [1/0]
 \end{lstlisting}
 
-\subsection{Global Mesh Parameters}
+\subsection{Global Cell Parmeters}
 In the \texttt{parameters.txt} file, the user can specify the parameters discussed in Chapter~\ref{chap:intro}. These are the default parameters for all of the cells in the tissue.
 \begin{lstlisting}
 beta = 3;
@@ -42,8 +42,8 @@ t_gamma = 1;
 t_area = 4.0;
 \end{lstlisting}
 
-\subsection{Local Mesh Parameters}
-While the parameters file allows global control of the mesh, the \texttt{change\_mesh.txt} file allows users to change local properties of the mesh. The first line of the file is for specifying how many $\gamma$, $A_0$, $\lambda$, and $\beta$ modifications will be made to the mesh. Note that $P_0$ cannot be changed, as $P_0$ is a function of $A_0$. The subsequent lines are for specifying the cell index and new cell parameter value for each one of these modifications. As can be seen in Figure~\ref{fig:beforeafter}, cells can be color coded by parameter value to highlight these changes to the default settings.
+\subsection{Local Cell Parameters}
+While the parameters file allows global control of the mesh, the \texttt{change\_mesh.txt} file allows users to change local properties of the mesh. The first line of the file is for specifying how many cells will have their $\gamma$, $A_0$, $\lambda$, and $\beta$ parameters changed. Note that $P_0$ cannot be changed, as $P_0$ is a function of $A_0$. The subsequent lines are for specifying the cell index and new cell parameter value for each one of these modifications. As can be seen in Figure~\ref{fig:beforeafter}, cells can be color coded by parameter value to highlight these changes to the default settings.
 \begin{lstlisting}
 2 3 1 1 # num gamma, num area, num lambda, num beta
 16 4.0  # gamma
@@ -60,23 +60,30 @@ Model parameters are easy to change in \emph{Epithelium}, and a variety of simul
 
 \begin{figure}
 \centering
-\includegraphics[height=0.4\textheight]{../diagrams/graphs4.png}
-\caption[\textbf{Simulation output.}]{\textbf{Simulation output}}
+\includegraphics[width=0.8\textwidth]{../diagrams/energyComp.png}
+\caption[Energy graphs.]{Energy graphs. Showing the decreasing energy in a mesh for two parameterizations. (left)$A_0 = 4.0$; $\beta = 0.0$; $\gamma = 1.0$; $\lambda = 5.0$. Many jumps due to inconsistencies that result from the T1 swaps. (right) $A_0 = 4.0$; $\beta = 5.0$; $\gamma = 1.0$; $\lambda = 1.0$. Energy decreases smoothly.}
 \label{fig:g1}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[height=0.4\textheight]{../diagrams/graphs2.png}
-\caption{\textbf{Simulation output}}
+\includegraphics[width=0.8\textwidth]{../diagrams/perimComp.png}
+\caption[Equilibrium area graphs]{Equilibrium distribution of cell perimeters after dynamics. (left) $A_0 = 3.0$; $\beta = 1.0$; $\gamma = 3.0$; $\lambda = 3.0$. (right) $A_0 = 4.0$; $\beta = 5.0$; $\gamma = 1.0$; $\lambda = 1.0$.}
 \label{fig:g2}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[height=0.4\textheight]{../diagrams/graphs3.png}
-\caption{\textbf{Simulation output}}
+\includegraphics[width=0.8\textwidth]{../diagrams/areaComp.png}
+\caption[Equilibrium area graphs]{Equilibrium area after dynamics. (left) $A_0 = 4.0$; $\beta = 5.0$; $\gamma = 1.0$; $\lambda = 1.0$. (right) $A_0 = 4.0$; $\beta = 0.0$; $\gamma = 1.0$; $\lambda = 5.0$.}
 \label{fig:g3}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{../diagrams/shapeComp.png}
+\caption[Equilibrium distribution of cell shapes.]{Equilibrium distribution of cell shapes after dynamics. (left) $A_0 = 3.0$; $\beta = 1.0$; $\gamma = 3.0$; $\lambda = 3.0$. (right) $A_0 = 4.0$; $\beta = 5.0$; $\gamma = 1.0$; $\lambda = 1.0$.}
+\label{fig:g2}
 \end{figure}
 
 \section{The Design of \emph{Epithelium}}
@@ -242,10 +249,10 @@ together define a \emph{schema}. By defining an appropriate schema, we can minim
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\textwidth]{../diagrams/ds.png}
-\caption{Datastructure used for storing data in a non-redundant form.}
+\caption{Data structure used for storing data in a non-redundant form.}
 \end{figure}
 
-The \emph{Epithelium} datastructure is a schema made up of the \texttt{simulationCells}, \texttt{vertexList}, \texttt{X}, \texttt{Y}, \texttt{tempX} and \texttt{tempY} tables. The cell and vertex tables are implemented as 1D \texttt{std::vectors} of cell and vertex indices, whereas the position tables are implemented as low-level 1D arrays for ease of passing these structures to CUDA C functions in the parallel implementation of the software. The cells can extract coordinate information from the \texttt{vertexList} table via the \emph{index} key, and the \texttt{coordinateList} can access the position information from the \texttt{X} and \texttt{Y} arrays via their own \emph{index}. The temporary X and Y arrays store temporary position information about the vertices before the mesh positions are updated. This choice saves both memory and time because no data is stored redundantly. The coordinate information of a vertex is not stored in every cell that contains it, thus huge data structures need not be passed around when only a small portion of data is required. When updating vector locations, only the position and temporary positions are passed to a function instead of the entire mesh. 
+The \emph{Epithelium} data structure is a schema made up of the \texttt{simulationCells}, \texttt{vertexList}, \texttt{X}, \texttt{Y}, \texttt{tempX} and \texttt{tempY} tables. The cell and vertex tables are implemented as 1D \texttt{std::vectors} of cell and vertex indices, whereas the position tables are implemented as low-level 1D arrays for ease of passing these structures to CUDA C functions in the parallel implementation of the software. The cells can extract coordinate information from the \texttt{vertexList} table via the \emph{index} key, and the \texttt{coordinateList} can access the position information from the \texttt{X} and \texttt{Y} arrays via their own \emph{index}. The temporary X and Y arrays store temporary position information about the vertices before the mesh positions are updated. This choice saves both memory and time because no data is stored redundantly. The coordinate information of a vertex is not stored in every cell that contains it, thus huge data structures need not be passed around when only a small portion of data is required. When updating vector locations, only the position and temporary positions are passed to a function instead of the entire mesh. 
 
 \section{Initial Mesh Design}
 The hex\_mesh() function generates an $n\times n$ mesh of cells, where the 
@@ -289,7 +296,7 @@ Another important aspect of the numerical integration is that cell and vertex in
 \begin{figure}[hr]
 \centering
 \includegraphics[width=0.5\textwidth]{../diagrams/rotate.png}
-\caption{\textbf{A Rotated Mesh for Error Analysis.}}
+\caption{A rotated mesh for error analysis.}
 \label{fig:rotate}
 \end{figure}
 
@@ -313,7 +320,7 @@ CUDA was also employed for the slightly challenging task of calculating the erro
 \section{Computing Topological changes.}
 Now that we have covered the way that the equation of motion is integrated, we move on to how the topological changes are implemented in \emph{Epithelium}.  
 
-\subsection{The implementation of the T2 swap.}
+\subsection{The T2 swap.}
 The \texttt{PerformT2s()} function looks at every triangular cell in the mesh and checks the edge lengths. If the cell has a critically small edge, then the cell is deleted from the mesh. The centroid of the cell is calculated, and this becomes the vertex representing the collapsed triangle. Then, one of the three constituent vertices has its position updated to the centroid coordinate and any cell which previously bordered the triangular element has both vertices related to the triangle deleted from \texttt{m\_AssociatedVertices}. Finally, the centroidal vertex is inserted in the position of the deleted vertices. It is important to note that the \texttt{PerformT2s()} function must be called before the \texttt{PerformT1s()} function to make sure that all offending triangular elements are deleted before we perform the T1 swaps. The T1 swap requires four vertices to be performed correctly, as explained in the next section.
 
 \subsection{The T1 Swap}
