@@ -1,6 +1,0 @@
-Run time for simulation:
-iter = 100
-           Serial                  Parallel
-dim = 13
-dim = 15
-dim = 25

@@ -24,7 +24,7 @@
   {\normalfont\Large\bfseries\centering}
   {\chaptertitlename\ \thechapter}{}{\Large}
 \titleformat{\section}
-  {\normalfont\large\bfseries}
+  {\normalfont\Large\bfseries}
   {\thesection}{3pt}{}
 \titleformat{\chapter}[hang] 
 {\normalfont\Large\bfseries\centering}{\chaptertitlename\ \thechapter:}{3pt}{} 
@@ -37,7 +37,6 @@
 
 %%%%%%%% Font.
 %\renewcommand*{\familydefault}{\ttdefault}
-
 % Some section formatting
 %\setlength\parindent{0pt}
 \allowdisplaybreaks

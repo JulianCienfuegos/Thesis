@@ -1,22 +1,17 @@
 \begin{thebibliography}{10}
 
-\bibitem{rose}
-K.~Liu at~al.
-\newblock Epithelial rosette detection in microscopic images.
-
 \bibitem{tessel}
 David Austin.
-\newblock Voronoi diagrams and a day at the beach., 2014.
+\newblock Voronoi diagrams and a day at the beach.
+\newblock \url{http://www.ams.org/samplings/feature-column/fcarc-voronoi},
+  2014.
 
 \bibitem{CellSurf}
-Liu Bai.
+L.~Bai.
 \newblock 3d surface reconstruction and visualization of the drosophila wing
-  imaginal disk at cellular resolution, Awaiting publication.
-
-\bibitem{3dwing}
-Liu Bai.
-\newblock 3d surface reconstruction and visualization of the drosophila wing
-  imaginal disk at cellular resolution, Awaiting publication.
+  imaginal disk at cellular resolution.
+\newblock \url{https://www.cs.drexel.edu/tech-reports/Bai_Widmann_TR_2012.pdf},
+  2012.
 
 \bibitem{Yoshi}
 Kapil Bambardekar, Raphaël Clément, Olivier Blanc, Claire Chardès, and
@@ -26,9 +21,16 @@ Kapil Bambardekar, Raphaël Clément, Olivier Blanc, Claire Chardès, and
 \newblock {\em Proceedings of the National Academy of Sciences},
   112(5):1416--1421, 2015.
 
+\bibitem{Epithelium}
+Botany.uwc.ac.za.
+\newblock Epithelial tissues.
+\newblock
+  \url{http://www.botany.uwc.ac.za/sci_ed/grade10/mammal/epithelial.htm}.
+
 \bibitem{Rubber}
 M.~Boyce.
 \newblock Constitutive models of rubber elasticity: a review.
+\newblock \url{http://biomechanics.stanford.edu/me338/me338_project01.pdf}.
 
 \bibitem{CHARMM}
 B.~R. Brooks, C.~L. Brooks, A.~D. Mackerell, L.~Nilsson, R.~J. Petrella,
@@ -54,9 +56,11 @@ Vito Conte, José~J Muñoz, and Mark Miodownik.
 \newblock {\em Journal of the Mechanical Behavior of Biomedical Materials},
   1(2):188 -- 198, 2008.
 
-\bibitem{Udacity}
-J.~Owens D.~Luebke.
-\newblock Intro to parallel programming.
+\bibitem{ChasteTutorial}
+A.~Fletcher et. al.
+\newblock Chaste tutorial.
+\newblock
+  \url{https://chaste.cs.ox.ac.uk/chaste/tutorials/release_2.1/UserTutorials.html}.
 
 \bibitem{Farhadifar}
 Reza Farhadifar, Jens-Christian R{\"o}per, Benoit Aigouy, Suzanne Eaton, and
@@ -83,6 +87,12 @@ Ramsey~A Foty and Malcolm~S Steinberg.
 \newblock The differential adhesion hypothesis: a direct evaluation.
 \newblock {\em Developmental biology}, 278(1):255--263, 2005.
 
+\bibitem{Giant}
+National Geographic.
+\newblock The giant's causeway.
+\newblock
+  \url{http://images.nationalgeographic.com/wpf/media-live/photos/000/009/cache/giants-causeway_974_990x742.jpg}.
+
 \bibitem{Overview}
 William~T Gibson and Matthew~C Gibson.
 \newblock Cell topology, geometry, and morphogenesis in proliferating
@@ -102,7 +112,9 @@ Hisao Honda.
 
 \bibitem{ShapeFormation}
 Hisao Honda.
-\newblock Essence of shape formation in animals, 2014.
+\newblock Essence of shape formation in animals.
+\newblock \url{http://www.scipress.org/journals/forma/pdf/27s1/27s10001.pdf},
+  2014.
 
 \bibitem{Honda3D}
 Hisao Honda, Masaharu Tanemura, and Tatsuzo Nagai.
@@ -121,6 +133,17 @@ F.~Jülicher, K.~Kruse, J.~Prost, and J.-F. Joanny.
 Kyozi Kawasaki, Tatsuzo Nagai, and Katsuya Nakashima.
 \newblock Vertex models for two-dimensional grain growth.
 \newblock {\em Philosophical Magazine Part B}, 60(3):399--421, 1989.
+
+\bibitem{rose}
+Kun Liu, Ra~Ernst, Virginie Lecaudey, and Olaf Ronneberger.
+\newblock Epithelial rosette detection in microscopic images.
+\newblock
+  \url{http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.269.6896}, 2013.
+
+\bibitem{Udacity}
+D.~Luebke and J.~Owens.
+\newblock Intro to parallel programming.
+\newblock \url{www.udacity.com}, 2014.
 
 \bibitem{Mao}
 Yanlan Mao, Alexander~L Tournier, Andreas Hoppe, Lennart Kester, Barry~J
@@ -220,14 +243,25 @@ Steve Plimpton.
 \newblock Fast parallel algorithms for short-range molecular dynamics.
 \newblock {\em Journal of Computational Physics}, 117(1):1 -- 19, 1995.
 
+\bibitem{OpenCV}
+Various Programmers.
+\newblock Open computer vision.
+\newblock \url{opencv.org}.
+
 \bibitem{Order}
 Katerina Ragkousi and Matthew~C. Gibson.
 \newblock Cell division and the maintenance of epithelial order.
 \newblock {\em The Journal of Cell Biology}, 207(2):181--188, 2014.
 
+\bibitem{voro++}
+C.~Rycroft.
+\newblock Voro++ - a 3d voronoi cell software library.
+\newblock \url{math.lbl.gov/voro++}, 2008.
+
 \bibitem{triangle}
 Jonathan Shewchuk.
 \newblock Triangle: A two-dimensional quality mesh generator.
+\newblock \url{ww.cs.cmu.edu/~quake/triangle.html}.
 
 \bibitem{Sokolow}
 Adam Sokolow, Yusuke Toyama, Daniel~P Kiehart, and Glenn~S Edwards.
@@ -235,33 +269,20 @@ Adam Sokolow, Yusuke Toyama, Daniel~P Kiehart, and Glenn~S Edwards.
   in drosophila.
 \newblock {\em Biophysical journal}, 102(5):969--979, 2012.
 
-\bibitem{ChasteTutorial}
-unknown.
-\newblock Chaste tutorial.
-
-\bibitem{Epithelium}
-unknown.
-\newblock Epithelial tissues.
-
-\bibitem{Giant}
-unknown.
-\newblock The giant's causeway.
-
-\bibitem{OpenCV}
-unknown.
-\newblock Open computer vision.
-
 \bibitem{rubr}
 unknown.
 \newblock Rubber stress strain.
-
-\bibitem{voro++}
-unknown.
-\newblock Voro++ - a 3d voronoi cell software library.
+\newblock \url{boundless.com}.
 
 \bibitem{q1}
 user121113.
 \newblock How to construct a voronoi diagram inside a box.
+\newblock \url{"Stackoverflow.org}, 2014.
+
+\bibitem{boost}
+Various.
+\newblock The c++ boost library.
+\newblock www.boost.org.
 
 \bibitem{Soap}
 D.~Weaire and N.~Rivier.
@@ -272,10 +293,6 @@ D.~Weaire and N.~Rivier.
 Michael Weliky and George Oster.
 \newblock The mechanical basis of cell rearrangement.
 \newblock {\em Development}, 109(2):373--386, 1990.
-
-\bibitem{boost}
-Boost Writers.
-\newblock The c++ boost library.
 
 \bibitem{epihyper}
 Jeremiah~J. Zartman and Stanislav~Y. Shvartsman.

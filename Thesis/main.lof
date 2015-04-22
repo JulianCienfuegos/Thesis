@@ -1,26 +1,27 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces The Types of Epithelial Tissue\nobreakspace {}\cite {Epithelium}.\relax }}{1}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Various Models of Epithelial Tissue}}{2}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Various Models of Epithelial Tissue}}{3}
 \contentsline {figure}{\numberline {1.3}{\ignorespaces The Weliky-Oster Force.\relax }}{4}
 \contentsline {figure}{\numberline {1.4}{\ignorespaces The Giant's Causeway. Adapted from\nobreakspace {}\cite {Giant}.\relax }}{5}
 \contentsline {figure}{\numberline {1.5}{\ignorespaces A T1 Swap.\relax }}{9}
-\contentsline {figure}{\numberline {1.6}{\ignorespaces A T2 Swap}}{9}
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Distribution of Cell Shapes}}{10}
-\contentsline {figure}{\numberline {1.8}{\ignorespaces The HOI swap.}}{11}
-\contentsline {figure}{\numberline {1.9}{\ignorespaces A non-smooth energy curve.}}{12}
-\contentsline {figure}{\numberline {1.10}{\ignorespaces The T3 Swap.}}{14}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces A T2 Swap}}{10}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Distribution of Cell Shapes}}{11}
+\contentsline {figure}{\numberline {1.8}{\ignorespaces The HOI swap.}}{12}
+\contentsline {figure}{\numberline {1.9}{\ignorespaces A non-smooth energy curve.}}{13}
+\contentsline {figure}{\numberline {1.10}{\ignorespaces The T3 Swap.}}{15}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Cells before and after dynamics}}{18}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Energy graphs.}}{20}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Equilibrium area graphs}}{20}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Equilibrium area graphs}}{21}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Equilibrium distribution of cell shapes.}}{21}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces An example of a relational database.}}{27}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Cells before and after dynamics}}{19}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Energy graphs.}}{21}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Equilibrium area graphs}}{22}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Equilibrium area graphs}}{22}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Equilibrium distribution of cell shapes.}}{22}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces An example of a relational database.}}{28}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Data structure used for storing data in a non-redundant form.\relax }}{28}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces A 5x5 Hexagonal Mesh.}}{29}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces A rotated mesh for error analysis.\relax }}{30}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Getting Cells in Order\relax }}{31}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Implementation of a T1 swap.}}{34}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces A rotated mesh for error analysis.\relax }}{31}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Implementation of a T1 swap.}}{35}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces The runtime does not scale as the number of vertices.\relax }}{36}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces The runtime does not scale as $|V|^2$.\relax }}{37}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Square cells in quail epithelium. Image courtesy of\nobreakspace {}\cite {Checkers}.\relax }}{35}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces The stress-strain curve for rubber. Image courtesy of\nobreakspace {}\cite {rubr}.\relax }}{37}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Square cells in quail epithelium. Image courtesy of\nobreakspace {}\cite {Checkers}.\relax }}{38}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces The stress-strain curve for rubber. Image courtesy of\nobreakspace {}\cite {rubr}.\relax }}{40}
