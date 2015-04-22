@@ -73,17 +73,15 @@ In 1989, K. Kawaski showed that the dynamics of grain growth can be reduced to a
 \label{eq:motion}
 \eta\frac{dr_i}{dt} = F_i
 \end{equation}
-
 where $F_i$ denotes the force applied to vertex $i$, $r_i$ denotes the position of the $i^{th}$ vertex,  and the left hand side is the velocity of the vertex multiplied by a positive drag coefficient, $\eta$~\cite{1989Kawasaki}. This is equivalent to $m_i\frac{d^2r_i}{dt^2} + \eta\frac{dr_i}{dt} = F_i$, in which the 
 inertial term is considered to be much smaller than the drag term.
 
-Based upon the notion that biological cells move in a way quite similar to high temperature crystallites\footnote{Often referred to as grain growth.}, the Honda-Nagai model has equation~\ref{eq:motion} as its basis. The force on the right hand side of the equation is in turn defined as the gradient of an energy function, since the model presupposes that the tendency towards a state of lower potential energy is the guiding principle behind epithelial tissue equilibria. The energy function is composed of three terms which reflect the properties of biological cells.
+Based upon the notion that biological cells move in a way quite similar to high temperature crystallites\footnote{Often referred to as grain growth.}, the Honda-Nagai model has equation(~\ref{eq:motion}) as its basis. The force on the right hand side of the equation is in turn defined as the gradient of an energy function, since the model presupposes that the tendency towards a state of lower potential energy is the guiding principle behind epithelial tissue equilibria. The energy function is composed of three terms which reflect the properties of biological cells.
 
 The first two potential energy terms come from the assumption that the cell is elastic, and that the cell wants to return to a target shape. Therefore, the first two energy terms are of the harmonic form: 
 \begin{equation}
 C(x-x_0)^2
 \end{equation}
-
 where $x$ is some physical quantity, and $C$ is some constant. The plot of this energy is therefore a parabola with a minimum at $x =  x_0$, and the farther the quantity $x$ strays from the equilibrium, the steeper its gradient will be, and the more forcefully it will want to return to equilibrium.
 
 The third energy term is an adhesion energy, which is proportional to the amount of interfacial surface area between a cell and its neighbor. There is a successful theory in biology called the \textbf{differential adhesion hypothesis} which attempts to account for certain cellular distribution phenomena through their adhesive binding tendencies. The theory essentially says that certain cells tend to bond more tightly to cells of type A than to cells of type B due to the presence or absence of different adhesion proteins in the membranes of these cells~\cite{DA}. In proliferating tissues, this difference in binding energies leads to cell segregation and the formation of structured tissues and organs. 
@@ -132,7 +130,7 @@ Therefore, the gradient is given by:
 y_{I_l+1} - y_{I_l-1},\;\;x_{I_l-1} - x_{I_l+1}
 \Big)
 \end{equation}
- where the superscripts $l$ denote that $x$, $y$ are in cell $l$. The subscripts are local indices in the cell $l$, and the orientation of vertices is counterclockwise. The circumference is given by:
+ where the subscripts $l$ denote that $x$, $y$ are in cell $l$. The subscripts are local indices in the cell $l$, and the orientation of vertices is counterclockwise. The circumference is given by:
 
 \begin{equation}
 P = \sum\limits_{j=1}^Nd_j = \sum\limits_{j=1}^N\sqrt{(x_{j+1} - x_j)^2 + (y_{j+1} - y_j)^2}
@@ -152,14 +150,14 @@ Substituting the above values into the equation:
 \begin{equation}
 -\nabla_iU = -\nabla_i(U_D + U_S + U_A) = F_i
 \end{equation}
-gives the force described in equation~\ref{eq:force}.
+gives the force described in equation(~\ref{eq:force}).
 
 \subsection{Topological Changes to the Mesh}
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth, keepaspectratio]{../diagrams/t1.png}
+    \caption{A T1 Swap.}
     \label{fig:t1}
-    \caption[A T1 Swap]{A T1 Swap. Two neighboring cells are no longer neighbors after the swap. Adapted from~\cite{Soap}}
 \end{figure}
 There is emprirical evidence that nearly all vertices in a sheet of epithelial tissue have coordination number three (most vertices have three incident edges)~\cite{EpithelialTopology}. This observation has led many researchers in the field of cellular structures to consider what sort of topological changes can occur in meshes of cells without changing their connectivity~\cite{Soap}.  As it turns out there are three possible changes called the T1, T2 and T3 swaps, and the original Honda-Nagai Model implements the first two.
 
@@ -168,11 +166,10 @@ There is emprirical evidence that nearly all vertices in a sheet of epithelial t
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth, keepaspectratio]{../diagrams/t2.png}
-\caption[A T2 Swap]{A T2 Swap. Adapted from~\cite{Soap}.}
+\includegraphics[width=0.2\textwidth, keepaspectratio]{../diagrams/t2.png}
+\caption[A T2 Swap]{A T2 Swap.}
 \label{fig:t2}
 \end{figure}
-
 
 The second topological change is the T2 swap, which is also known as ``cell removal''. A T2 swap occurs when an edge of a triangular cell becomes too small and the cell is deleted and replaced by a single vertex located at the centroid of the cell (Figure~\ref{fig:t2}).
 
@@ -198,7 +195,7 @@ Over the years, various modifications and improvements have been made to the Hon
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{../diagrams/hoi.png}
-\caption[The HOI swap.]{The HOI swap. \emph{H} configutation(left),\emph{O} configutation (center), \emph{I} configuration (right).}
+\caption[The HOI swap.]{The HOI swap. \emph{H} configutation(left),\emph{O} configutation (center), \emph{I} configuration (right). Adapted from~cite{Honda3D}.}
 \label{fig:hoi}
 \end{figure}
 
@@ -241,7 +238,7 @@ The T3 swap is also known as ``mitosis'' or ``cell division''. Cell division was
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{../diagrams/t3.png}
-\caption[The T3 Swap.]{The T3 Swap. Adapted from~\cite{Soap}.}
+\caption[The T3 Swap.]{The T3 Swap.}
 \label{fig:t3}
 \end{figure}
 
@@ -265,7 +262,7 @@ Similarly, if we consider how to relate the number of edges to the faces in the 
 \begin{equation}
 \sum_{k=3}^N kF_k = E
 \end{equation}
-Where $N$ is the highest number of edges in any cell in the mesh. But in this way we have again counted all of the edges twice, so the true number of edges must be the summation above divided by 2. We simplify the equation to get
+where $N$ is the highest number of edges in any cell in the mesh. But in this way we have again counted all of the edges twice, so the true number of edges must be the summation above divided by 2. We simplify the equation to get
 \begin{equation}
 \sum_{k=3}^N kF_k = 2E
 \end{equation}

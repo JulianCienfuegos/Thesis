@@ -1,41 +1,42 @@
 \contentsline {chapter}{\numberline {1}Epithelial Tissue and Vertex Dynamics}{1}
 \contentsline {section}{\numberline {1.1}About Epithelial Tissue}{1}
-\contentsline {section}{\numberline {1.2}Modeling Epithelial Tissue}{4}
-\contentsline {section}{\numberline {1.3}The Nagai-Honda Model}{7}
-\contentsline {subsection}{\numberline {1.3.1}How the Vertices Move}{7}
-\contentsline {subsection}{\numberline {1.3.2}Topological Changes to the Mesh}{10}
-\contentsline {subsection}{\numberline {1.3.3}Selection of Parameters}{11}
-\contentsline {section}{\numberline {1.4}Further Remarks About Epithelial Tissue Modeling}{13}
-\contentsline {subsection}{\numberline {1.4.1}Three dimensional models: Honda-Nagai and Okuda.}{14}
-\contentsline {subsection}{\numberline {1.4.2}Similar Models of Potential Energy}{16}
-\contentsline {subsection}{\numberline {1.4.3}The T3 Swap}{16}
-\contentsline {subsection}{\numberline {1.4.4}The Euler Characteristic and Its Implications}{17}
-\contentsline {chapter}{\numberline {2}Epithelium}{21}
-\contentsline {section}{\numberline {2.1}About Epithelium}{21}
-\contentsline {section}{\numberline {2.2}Sample Configuration Files}{21}
-\contentsline {subsection}{\numberline {2.2.1}Simulation Settings, the Initial Mesh, and config.txt}{22}
-\contentsline {subsection}{\numberline {2.2.2}Global Mesh Parameters}{23}
-\contentsline {subsection}{\numberline {2.2.3}Local Mesh Parameters}{24}
-\contentsline {section}{\numberline {2.3}Monitoring the Output of Epithelium}{24}
-\contentsline {section}{\numberline {2.4}The Design of \emph {Epithelium}}{25}
-\contentsline {subsection}{\numberline {2.4.1}[Highly Simplified] Pseudocode}{27}
-\contentsline {subsection}{\numberline {2.4.2}Classes}{28}
-\contentsline {section}{\numberline {2.5}Executive Decisions About Parameter Implementations}{31}
-\contentsline {section}{\numberline {2.6}A Relational Database}{32}
-\contentsline {section}{\numberline {2.7}Initial Mesh Design}{34}
-\contentsline {section}{\numberline {2.8}Moving the Vertices}{34}
-\contentsline {section}{\numberline {2.9}Error Tolerance of the Algorithm}{37}
-\contentsline {section}{\numberline {2.10}Embarassing Parallelism and CUDA}{38}
-\contentsline {section}{\numberline {2.11}Computing Topological changes.}{40}
-\contentsline {subsection}{\numberline {2.11.1}The T2 swap.}{40}
-\contentsline {subsection}{\numberline {2.11.2}The T1 Swap}{41}
-\contentsline {section}{\numberline {2.12}Dependencies}{44}
-\contentsline {chapter}{\numberline {3}The Future of \emph {Epithelium}}{46}
-\contentsline {section}{\numberline {3.1}Rosette Models}{46}
-\contentsline {section}{\numberline {3.2}A New Potential, A New Force}{47}
-\contentsline {section}{\numberline {3.3}Improvements in Imaging}{48}
-\contentsline {section}{\numberline {3.4}Further Parallelization}{49}
-\contentsline {section}{\numberline {3.5}Voronoi Tesselations}{50}
-\contentsline {section}{\numberline {3.6}Visualization Software }{51}
-\contentsline {chapter}{\numberline {A}Getting, Running, and Modifying the Code}{58}
-\contentsline {section}{\numberline {A.1}GitHub}{58}
+\contentsline {section}{\numberline {1.2}Modeling Epithelial Tissue}{3}
+\contentsline {section}{\numberline {1.3}The Nagai-Honda Model}{6}
+\contentsline {subsection}{\numberline {1.3.1}How the Vertices Move}{6}
+\contentsline {subsection}{\numberline {1.3.2}Topological Changes to the Mesh}{8}
+\contentsline {subsection}{\numberline {1.3.3}Selection of Parameters}{10}
+\contentsline {section}{\numberline {1.4}Further Remarks About Epithelial Tissue Modeling}{11}
+\contentsline {subsection}{\numberline {1.4.1}Three dimensional models: Honda-Nagai and Okuda.}{11}
+\contentsline {subsection}{\numberline {1.4.2}Similar Models of Potential Energy}{13}
+\contentsline {subsection}{\numberline {1.4.3}The T3 Swap}{13}
+\contentsline {subsection}{\numberline {1.4.4}The Euler Characteristic and Its Implications}{14}
+\contentsline {chapter}{\numberline {2}Epithelium}{17}
+\contentsline {section}{\numberline {2.1}About Epithelium}{17}
+\contentsline {section}{\numberline {2.2}Sample Configuration Files}{17}
+\contentsline {subsection}{\numberline {2.2.1}Simulation Settings, the Initial Mesh, and config.txt}{17}
+\contentsline {subsection}{\numberline {2.2.2}Global Cell Parmeters}{19}
+\contentsline {subsection}{\numberline {2.2.3}Local Cell Parameters}{19}
+\contentsline {section}{\numberline {2.3}Monitoring the Output of Epithelium}{20}
+\contentsline {section}{\numberline {2.4}The Design of \emph {Epithelium}}{22}
+\contentsline {subsection}{\numberline {2.4.1}[Highly Simplified] Pseudocode}{22}
+\contentsline {subsection}{\numberline {2.4.2}Classes}{23}
+\contentsline {section}{\numberline {2.5}Executive Decisions About Parameter Implementations}{25}
+\contentsline {section}{\numberline {2.6}A Relational Database}{26}
+\contentsline {section}{\numberline {2.7}Initial Mesh Design}{27}
+\contentsline {section}{\numberline {2.8}Moving the Vertices}{28}
+\contentsline {section}{\numberline {2.9}Error Tolerance of the Algorithm}{29}
+\contentsline {section}{\numberline {2.10}Embarassing Parallelism and CUDA}{30}
+\contentsline {section}{\numberline {2.11}Computing Topological changes.}{32}
+\contentsline {subsection}{\numberline {2.11.1}The T2 swap.}{32}
+\contentsline {subsection}{\numberline {2.11.2}The T1 Swap}{32}
+\contentsline {section}{\numberline {2.12}Dependencies}{33}
+\contentsline {section}{\numberline {2.13}Complexity}{35}
+\contentsline {chapter}{\numberline {3}The Future of \emph {Epithelium}}{37}
+\contentsline {section}{\numberline {3.1}Rosette Models}{37}
+\contentsline {section}{\numberline {3.2}A New Potential, A New Force}{38}
+\contentsline {section}{\numberline {3.3}Improvements in Imaging}{38}
+\contentsline {section}{\numberline {3.4}Further Parallelization}{39}
+\contentsline {section}{\numberline {3.5}Voronoi Tesselations}{40}
+\contentsline {section}{\numberline {3.6}Visualization Software }{41}
+\contentsline {chapter}{\numberline {A}Getting, Running, and Modifying the Code}{47}
+\contentsline {section}{\numberline {A.1}GitHub}{47}
