@@ -30,13 +30,10 @@
 \contentsline {subsection}{\numberline {2.11.1}The T2 swap.}{32}
 \contentsline {subsection}{\numberline {2.11.2}The T1 Swap}{32}
 \contentsline {section}{\numberline {2.12}Dependencies}{33}
-\contentsline {section}{\numberline {2.13}Complexity}{35}
-\contentsline {chapter}{\numberline {3}The Future of \emph {Epithelium}}{37}
-\contentsline {section}{\numberline {3.1}Rosette Models}{37}
-\contentsline {section}{\numberline {3.2}A New Potential, A New Force}{38}
-\contentsline {section}{\numberline {3.3}Improvements in Imaging}{38}
-\contentsline {section}{\numberline {3.4}Further Parallelization}{39}
-\contentsline {section}{\numberline {3.5}Voronoi Tesselations}{40}
-\contentsline {section}{\numberline {3.6}Visualization Software }{41}
-\contentsline {chapter}{\numberline {A}Getting, Running, and Modifying the Code}{47}
-\contentsline {section}{\numberline {A.1}GitHub}{47}
+\contentsline {chapter}{\numberline {3}The Future of \emph {Epithelium}}{35}
+\contentsline {section}{\numberline {3.1}Rosette Models}{35}
+\contentsline {section}{\numberline {3.2}A New Potential, A New Force}{36}
+\contentsline {section}{\numberline {3.3}Improvements in Imaging}{36}
+\contentsline {section}{\numberline {3.4}Further Parallelization}{37}
+\contentsline {section}{\numberline {3.5}Voronoi Tesselations}{38}
+\contentsline {section}{\numberline {3.6}Visualization Software }{39}

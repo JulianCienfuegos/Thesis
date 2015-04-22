@@ -21,9 +21,6 @@
 \contentsline {figure}{\numberline {2.10}{\ignorespaces A rotated mesh for error analysis.\relax }}{30}
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Getting Cells in Order\relax }}{31}
 \contentsline {figure}{\numberline {2.11}{\ignorespaces Implementation of a T1 swap.}}{34}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces The runtime does not scale as the number of vertices.\relax }}{35}
-\contentsline {figure}{\numberline {2.13}{\ignorespaces The runtime does not scale as $|V|^2$.\relax }}{36}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Square cells in quail epithelium. Image courtesy of\nobreakspace {}\cite {Checkers}.\relax }}{37}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces The stress-strain curve for rubber. Image courtesy of\nobreakspace {}\cite {rubr}.\relax }}{39}
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Square cells in quail epithelium. Image courtesy of\nobreakspace {}\cite {Checkers}.\relax }}{35}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces The stress-strain curve for rubber. Image courtesy of\nobreakspace {}\cite {rubr}.\relax }}{37}

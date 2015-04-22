@@ -1,0 +1,287 @@
+\begin{thebibliography}{10}
+
+\bibitem{rose}
+K.~Liu at~al.
+\newblock Epithelial rosette detection in microscopic images.
+
+\bibitem{tessel}
+David Austin.
+\newblock Voronoi diagrams and a day at the beach., 2014.
+
+\bibitem{CellSurf}
+Liu Bai.
+\newblock 3d surface reconstruction and visualization of the drosophila wing
+  imaginal disk at cellular resolution, Awaiting publication.
+
+\bibitem{3dwing}
+Liu Bai.
+\newblock 3d surface reconstruction and visualization of the drosophila wing
+  imaginal disk at cellular resolution, Awaiting publication.
+
+\bibitem{Yoshi}
+Kapil Bambardekar, Raphaël Clément, Olivier Blanc, Claire Chardès, and
+  Pierre-François Lenne.
+\newblock Direct laser manipulation reveals the mechanics of cell contacts in
+  vivo.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  112(5):1416--1421, 2015.
+
+\bibitem{Rubber}
+M.~Boyce.
+\newblock Constitutive models of rubber elasticity: a review.
+
+\bibitem{CHARMM}
+B.~R. Brooks, C.~L. Brooks, A.~D. Mackerell, L.~Nilsson, R.~J. Petrella,
+  B.~Roux, Y.~Won, G.~Archontis, C.~Bartels, S.~Boresch, A.~Caflisch, L.~Caves,
+  Q.~Cui, A.~R. Dinner, M.~Feig, S.~Fischer, J.~Gao, M.~Hodoscek, W.~Im,
+  K.~Kuczera, T.~Lazaridis, J.~Ma, V.~Ovchinnikov, E.~Paci, R.~W. Pastor, C.~B.
+  Post, J.~Z. Pu, M.~Schaefer, B.~Tidor, R.~M. Venable, H.~L. Woodcock, X.~Wu,
+  W.~Yang, D.~M. York, and M.~Karplus.
+\newblock Charmm: The biomolecular simulation program.
+\newblock {\em Journal of Computational Chemistry}, 30(10):1545--1614, 2009.
+
+\bibitem{Xiong}
+Vito Conte, José~J Muñoz, and Mark Miodownik.
+\newblock A 3d finite element model of ventral furrow invagination in the
+  drosophila melanogaster embryo.
+\newblock {\em Journal of the Mechanical Behavior of Biomedical Materials},
+  1(2):188 -- 198, 2008.
+
+\bibitem{epihyper2}
+Vito Conte, José~J Muñoz, and Mark Miodownik.
+\newblock A 3d finite element model of ventral furrow invagination in the
+  drosophila melanogaster embryo.
+\newblock {\em Journal of the Mechanical Behavior of Biomedical Materials},
+  1(2):188 -- 198, 2008.
+
+\bibitem{Udacity}
+J.~Owens D.~Luebke.
+\newblock Intro to parallel programming.
+
+\bibitem{Farhadifar}
+Reza Farhadifar, Jens-Christian R{\"o}per, Benoit Aigouy, Suzanne Eaton, and
+  Frank J{\"u}licher.
+\newblock The influence of cell mechanics, cell-cell interactions, and
+  proliferation on epithelial packing.
+\newblock {\em Current Biology}, 17(24):2095--2104, 2007.
+
+\bibitem{ChasteMain}
+Alexander~G Fletcher, James~M Osborne, Philip~K Maini, and David~J Gavaghan.
+\newblock Implementing vertex dynamics models of cell populations in biology
+  within a consistent computational framework.
+\newblock {\em Progress in biophysics and molecular biology}, 113(2):299--326,
+  2013.
+
+\bibitem{VertexModels}
+Alexander~G Fletcher, Miriam Osterfield, Ruth~E Baker, and Stanislav~Y
+  Shvartsman.
+\newblock Vertex models of epithelial morphogenesis.
+\newblock {\em Biophysical journal}, 106(11):2291--2304, 2014.
+
+\bibitem{DA}
+Ramsey~A Foty and Malcolm~S Steinberg.
+\newblock The differential adhesion hypothesis: a direct evaluation.
+\newblock {\em Developmental biology}, 278(1):255--263, 2005.
+
+\bibitem{Overview}
+William~T Gibson and Matthew~C Gibson.
+\newblock Cell topology, geometry, and morphogenesis in proliferating
+  epithelia.
+\newblock {\em Current topics in developmental biology}, 89:87--114, 2009.
+
+\bibitem{Orientation}
+Taryn E. Gillies and Clemens Cabernard.
+\newblock Cell division orientation in animals.
+\newblock {\em Current Biology}, 21(15):R599 -- R609, 2011.
+
+\bibitem{DirichletDomains}
+Hisao Honda.
+\newblock Description of cellular patterns by dirichlet domains: The
+  two-dimensional case.
+\newblock {\em Journal of Theoretical Biology}, 72(3):523 -- 543, 1978.
+
+\bibitem{ShapeFormation}
+Hisao Honda.
+\newblock Essence of shape formation in animals, 2014.
+
+\bibitem{Honda3D}
+Hisao Honda, Masaharu Tanemura, and Tatsuzo Nagai.
+\newblock A three-dimensional vertex dynamics cell model of space-filling
+  polyhedra simulating cell behavior in a cell aggregate.
+\newblock {\em Journal of Theoretical Biology}, 226(4):439 -- 453, 2004.
+
+\bibitem{hyperbio2}
+F.~Jülicher, K.~Kruse, J.~Prost, and J.-F. Joanny.
+\newblock Active behavior of the cytoskeleton.
+\newblock {\em Physics Reports}, 449(1–3):3 -- 28, 2007.
+\newblock Nonequilibrium physics: From complex fluids to biological systems
+  III. Living systems.
+
+\bibitem{1989Kawasaki}
+Kyozi Kawasaki, Tatsuzo Nagai, and Katsuya Nakashima.
+\newblock Vertex models for two-dimensional grain growth.
+\newblock {\em Philosophical Magazine Part B}, 60(3):399--421, 1989.
+
+\bibitem{Mao}
+Yanlan Mao, Alexander~L Tournier, Andreas Hoppe, Lennart Kester, Barry~J
+  Thompson, and Nicolas Tapon.
+\newblock Differential proliferation rates generate patterns of mechanical
+  tension that orient tissue growth.
+\newblock {\em The EMBO journal}, 32(21):2790--2803, 2013.
+
+\bibitem{Rubber2}
+AH~Muhr.
+\newblock Modeling the stress-strain behavior of rubber.
+\newblock {\em Rubber chemistry and technology}, 78(3):391--425, 2005.
+
+\bibitem{HondaNagai}
+Tatsuzo Nagai and Hisao Honda.
+\newblock A dynamic cell model for the formation of epithelial tissues.
+\newblock {\em Philosophical Magazine Part B}, 81(7):699--719, 2001.
+
+\bibitem{WoundHealing}
+TATSUZO Nagai and HISAO Honda.
+\newblock Wound healing mechanism in epithelial tissues cell adhesion to basal
+  lamina.
+\newblock {\em WSEAS Transactions on Biology and Biomedicine}, 3(6):389, 2006.
+
+\bibitem{VertDyn}
+Tatsuzo Nagai, Kyozi Kawasaki, and Katsuhiro Nakamura.
+\newblock Vertex dynamics of two-dimensional cellular patterns.
+\newblock {\em Journal of the physical society of Japan}, 57(7):2221--2224,
+  1988.
+
+\bibitem{EpithelialTopology}
+Radhika Nagpal, Ankit Patel, and Matthew~C. Gibson.
+\newblock Epithelial topology.
+\newblock {\em BioEssays}, 30(3):260--266, 2008.
+
+\bibitem{hyperbio}
+A~Natali, E~Carniel, P~Pavan, Paolo Dario, and Ivano Izzo.
+\newblock Hyperelastic models for the analysis of soft tissue mechanics:
+  definition of constitutive parameters.
+\newblock In {\em Biomedical Robotics and Biomechatronics, 2006. BioRob 2006.
+  The First IEEE/RAS-EMBS International Conference on}, pages 188--191. IEEE,
+  2006.
+
+\bibitem{Okuda3}
+Satoru Okuda, Yasuhiro Inoue, Mototsugu Eiraku, Yoshiki Sasai, and Taiji
+  Adachi.
+\newblock Modeling cell proliferation for simulating three-dimensional tissue
+  morphogenesis based on a reversible network reconnection framework.
+\newblock {\em Biomechanics and modeling in mechanobiology}, 12(5):987--996,
+  2013.
+
+\bibitem{Okuda1}
+Satoru Okuda, Yasuhiro Inoue, Mototsugu Eiraku, Yoshiki Sasai, and Taiji
+  Adachi.
+\newblock Reversible network reconnection model for simulating large
+  deformation in dynamic tissue morphogenesis.
+\newblock {\em Biomechanics and modeling in mechanobiology}, 12(4):627--644,
+  2013.
+
+\bibitem{NewOkuda}
+Satoru Okuda, Yasuhiro Inoue, Tadashi Watanabe, and Taiji Adachi.
+\newblock Coupling intercellular molecular signalling with multicellular
+  deformation for simulating three-dimensional tissue morphogenesis.
+\newblock {\em Interface focus}, 5(2):20140095, 2015.
+
+\bibitem{Amber}
+David~A. Pearlman, David~A. Case, James~W. Caldwell, Wilson~S. Ross, Thomas
+  E.~Cheatham III, Steve DeBolt, David Ferguson, George Seibel, and Peter
+  Kollman.
+\newblock Amber, a package of computer programs for applying molecular
+  mechanics, normal mode analysis, molecular dynamics and free energy
+  calculations to simulate the structural and energetic properties of
+  molecules.
+\newblock {\em Computer Physics Communications}, 91(1–3):1 -- 41, 1995.
+
+\bibitem{Checkers}
+Jillian~C. Pease and Jennifer~S. Tirnauer.
+\newblock Mitotic spindle misorientation in cancer – out of alignment and
+  into the fire.
+\newblock {\em Journal of Cell Science}, 124(7):1007--1016, 2011.
+
+\bibitem{misaligned}
+Jillian~C. Pease and Jennifer~S. Tirnauer.
+\newblock Mitotic spindle misorientation in cancer – out of alignment and
+  into the fire.
+\newblock {\em Journal of Cell Science}, 124(7):1007--1016, 2011.
+
+\bibitem{NAMD}
+James~C Phillips, Rosemary Braun, Wei Wang, James Gumbart, Emad Tajkhorshid,
+  Elizabeth Villa, Christophe Chipot, Robert~D Skeel, Laxmikant Kale, and Klaus
+  Schulten.
+\newblock Scalable molecular dynamics with namd.
+\newblock {\em Journal of computational chemistry}, 26(16):1781--1802, 2005.
+
+\bibitem{LAMMPS}
+Steve Plimpton.
+\newblock Fast parallel algorithms for short-range molecular dynamics.
+\newblock {\em Journal of Computational Physics}, 117(1):1 -- 19, 1995.
+
+\bibitem{Order}
+Katerina Ragkousi and Matthew~C. Gibson.
+\newblock Cell division and the maintenance of epithelial order.
+\newblock {\em The Journal of Cell Biology}, 207(2):181--188, 2014.
+
+\bibitem{triangle}
+Jonathan Shewchuk.
+\newblock Triangle: A two-dimensional quality mesh generator.
+
+\bibitem{Sokolow}
+Adam Sokolow, Yusuke Toyama, Daniel~P Kiehart, and Glenn~S Edwards.
+\newblock Cell ingression and apical shape oscillations during dorsal closure
+  in drosophila.
+\newblock {\em Biophysical journal}, 102(5):969--979, 2012.
+
+\bibitem{ChasteTutorial}
+unknown.
+\newblock Chaste tutorial.
+
+\bibitem{Epithelium}
+unknown.
+\newblock Epithelial tissues.
+
+\bibitem{Giant}
+unknown.
+\newblock The giant's causeway.
+
+\bibitem{OpenCV}
+unknown.
+\newblock Open computer vision.
+
+\bibitem{rubr}
+unknown.
+\newblock Rubber stress strain.
+
+\bibitem{voro++}
+unknown.
+\newblock Voro++ - a 3d voronoi cell software library.
+
+\bibitem{q1}
+user121113.
+\newblock How to construct a voronoi diagram inside a box.
+
+\bibitem{Soap}
+D.~Weaire and N.~Rivier.
+\newblock Soap, cells and statistics—random patterns in two dimensions.
+\newblock {\em Contemporary Physics}, 25(1):59--99, 1984.
+
+\bibitem{WO}
+Michael Weliky and George Oster.
+\newblock The mechanical basis of cell rearrangement.
+\newblock {\em Development}, 109(2):373--386, 1990.
+
+\bibitem{boost}
+Boost Writers.
+\newblock The c++ boost library.
+
+\bibitem{epihyper}
+Jeremiah~J. Zartman and Stanislav~Y. Shvartsman.
+\newblock Unit operations of tissue development: Epithelial folding.
+\newblock {\em Annual Review of Chemical and Biomolecular Engineering},
+  1(1):231--246, 2010.
+\newblock PMID: 22432580.
+
+\end{thebibliography}
