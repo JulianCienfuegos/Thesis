@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.11)  22 APR 2015 13:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.21)  23 APR 2015 23:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
@@ -68,8 +68,8 @@ Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
@@ -87,19 +87,19 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen111
 \Gin@req@width=\dimen112
 )
-(/home/labcomputer/texmf/tex/latex/local/sectsty.sty
+(/home/melvyn/texmf/tex/latex/local/sectsty.sty
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
 )
-(/home/labcomputer/texmf/tex/latex/local/changepage.sty
+(/home/melvyn/texmf/tex/latex/local/changepage.sty
 Package: changepage 2009/10/20 v1.0c check page and change page layout
 \c@cp@cntr=\count92
 \cp@tempcnt=\count93
 )
-(/home/labcomputer/texmf/tex/latex/local/xcolor.sty
+(/home/melvyn/texmf/tex/latex/local/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+(/etc/texmf/tex/latex/config/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -113,7 +113,7 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-(/home/labcomputer/texmf/tex/latex/local/multicol.sty
+(/home/melvyn/texmf/tex/latex/local/multicol.sty
 Package: multicol 2014/06/19 v1.8f multicolumn formatting (FMi)
 \c@tracingmulticols=\count94
 \mult@box=\box26
@@ -162,7 +162,7 @@ Package: multicol 2014/06/19 v1.8f multicolumn formatting (FMi)
 \colbreak@box=\box51
 \mc@col@check@num=\count102
 )
-(/home/labcomputer/texmf/tex/latex/local/wrapfig/wrapfig.sty
+(/home/melvyn/texmf/tex/latex/local/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen122
 \WF@size=\dimen123
 \c@WF@wrappedlines=\count103
@@ -170,7 +170,7 @@ Package: multicol 2014/06/19 v1.8f multicolumn formatting (FMi)
 \WF@everypar=\toks16
 Package: wrapfig 2003/01/31  v 3.6
 )
-(/home/labcomputer/texmf/tex/latex/local/listings.sty
+(/home/melvyn/texmf/tex/latex/local/listings.sty
 \lst@mode=\count104
 \lst@gtempboxa=\box53
 \lst@token=\toks17
@@ -184,7 +184,7 @@ Package: wrapfig 2003/01/31  v 3.6
 \lst@lineno=\count109
 \lst@maxwidth=\dimen127
 
-(/home/labcomputer/texmf/tex/latex/local/lstmisc.sty
+(/home/melvyn/texmf/tex/latex/local/lstmisc.sty
 File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
 \c@lstnumber=\count110
 \lst@skipnumbers=\count111
@@ -195,24 +195,24 @@ File: listings.cfg 2013/08/26 1.5b listings configuration
 ))
 Package: listings 2014/03/04 1.5c (Carsten Heinz)
 
-(/home/labcomputer/texmf/tex/latex/local/amsmath.sty
+(/home/melvyn/texmf/tex/latex/local/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip45
 
 For additional information on amsmath, use the `?' option.
-(/home/labcomputer/texmf/tex/latex/local/amstext.sty
+(/home/melvyn/texmf/tex/latex/local/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/home/labcomputer/texmf/tex/latex/local/amsgen.sty
+(/home/melvyn/texmf/tex/latex/local/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks18
 \ex@=\dimen128
 ))
-(/home/labcomputer/texmf/tex/latex/local/amsbsy.sty
+(/home/melvyn/texmf/tex/latex/local/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen129
 )
-(/home/labcomputer/texmf/tex/latex/local/amsopn.sty
+(/home/melvyn/texmf/tex/latex/local/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count112
@@ -277,7 +277,7 @@ Package caption Info: wrapfig package is loaded.
 \c@subfigure=\count125
 \c@subtable=\count126
 )
-(/home/labcomputer/texmf/tex/latex/local/titlesec/titlesec.sty
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \ttl@box=\box57
 \beforetitleunit=\skip48
@@ -289,7 +289,7 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \titlewidthlast=\dimen147
 \titlewidthfirst=\dimen148
 )
-(/home/labcomputer/texmf/tex/latex/local/tocloft/tocloft.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 44.
 \cftparskip=\skip50
@@ -329,29 +329,29 @@ Package tocloft Info: The document has chapter divisions on input line 44.
 \cfttabindent=\skip82
 \cfttabnumwidth=\skip83
 )
-(/home/labcomputer/texmf/tex/latex/local/lstlang1.sty
+(/home/melvyn/texmf/tex/latex/local/lstlang1.sty
 File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
-(/home/labcomputer/texmf/tex/latex/local/lstlang1.sty
+(/home/melvyn/texmf/tex/latex/local/lstlang1.sty
 File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
-(/home/labcomputer/texmf/tex/latex/local/lstmisc.sty
+(/home/melvyn/texmf/tex/latex/local/lstmisc.sty
 File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -400,55 +400,11 @@ LaTeX Font Info:    ... okay on input line 68.
 \MPnumerator=\count133
 \makeMPintoPDFobject=\count134
 \everyMPtoPDFconversion=\toks25
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
 \c@lstlisting=\count135
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-
-(./title.tex [1
+ (./title.tex [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
 (./copyright.tex) (./abstract.tex [2] [3]) (./dedicatoria.tex)
@@ -547,7 +503,7 @@ ed.
 
 ] [9] (./Modeling.tex
 Chapter 1.
-<../diagrams/output.png, id=45, 1565.85pt x 626.34pt>
+<../diagrams/output.png, id=44, 1565.85pt x 626.34pt>
 File: ../diagrams/output.png Graphic file (type png)
 
 <use ../diagrams/output.png>
@@ -557,21 +513,21 @@ Package pdftex.def Info: ../diagrams/output.png used on input line 7.
 
 
  <../diagrams/output.png>]
-<../diagrams/abcd3.pdf, id=49, 722.7pt x 542.025pt>
+<../diagrams/abcd3.pdf, id=48, 722.7pt x 542.025pt>
 File: ../diagrams/abcd3.pdf Graphic file (type pdf)
 
 <use ../diagrams/abcd3.pdf>
 Package pdftex.def Info: ../diagrams/abcd3.pdf used on input line 18.
 (pdftex.def)             Requested size: 433.62001pt x 325.2175pt.
  [2] [3 <../diagrams/abcd3.pdf>]
-<../diagrams/welikyoster.png, id=89, 1439.3775pt x 1077.02374pt>
+<../diagrams/welikyoster.png, id=88, 1439.3775pt x 1077.02374pt>
 File: ../diagrams/welikyoster.png Graphic file (type png)
 
 <use ../diagrams/welikyoster.png>
 Package pdftex.def Info: ../diagrams/welikyoster.png used on input line 41.
 (pdftex.def)             Requested size: 216.81pt x 162.22038pt.
  [4 <../diagrams/welikyoster.png>]
-<../diagrams/resize_giant.jpg, id=96, 501.875pt x 376.40625pt>
+<../diagrams/resize_giant.jpg, id=95, 501.875pt x 376.40625pt>
 File: ../diagrams/resize_giant.jpg Graphic file (type jpg)
 
 <use ../diagrams/resize_giant.jpg>
@@ -582,21 +538,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
-[7] <../diagrams/t1.png, id=107, 595.22375pt x 292.09125pt>
+[7] <../diagrams/t1.png, id=106, 595.22375pt x 292.09125pt>
 File: ../diagrams/t1.png Graphic file (type png)
 
 <use ../diagrams/t1.png>
 Package pdftex.def Info: ../diagrams/t1.png used on input line 158.
 (pdftex.def)             Requested size: 433.62001pt x 212.78804pt.
  [8]
-<../diagrams/t2.png, id=111, 493.845pt x 328.22626pt>
+<../diagrams/t2.png, id=110, 493.845pt x 328.22626pt>
 File: ../diagrams/t2.png Graphic file (type png)
  <use ../diagrams/t2.png>
 Package pdftex.def Info: ../diagrams/t2.png used on input line 169.
 (pdftex.def)             Requested size: 346.89732pt x 230.55814pt.
 
 [9 <../diagrams/t1.png>]
-<../diagrams/distibutionHonda.png, id=116, 424.58624pt x 523.9575pt>
+<../diagrams/distibutionHonda.png, id=115, 424.58624pt x 523.9575pt>
 File: ../diagrams/distibutionHonda.png Graphic file (type png)
 
 <use ../diagrams/distibutionHonda.png>
@@ -604,21 +560,21 @@ Package pdftex.def Info: ../diagrams/distibutionHonda.png used on input line 18
 3.
 (pdftex.def)             Requested size: 216.81pt x 267.55057pt.
  [10 <../diagrams/t2.png>] [11 <../diagrams/distibutionHonda.png>]
-<../diagrams/hoi.png, id=123, 645.41125pt x 196.735pt>
+<../diagrams/hoi.png, id=122, 645.41125pt x 196.735pt>
 File: ../diagrams/hoi.png Graphic file (type png)
 
 <use ../diagrams/hoi.png>
 Package pdftex.def Info: ../diagrams/hoi.png used on input line 197.
 (pdftex.def)             Requested size: 433.62001pt x 132.17497pt.
  [12 <../diagrams/hoi.png>]
-<../diagrams/jump.png, id=129, 722.7pt x 542.025pt>
+<../diagrams/jump.png, id=128, 722.7pt x 542.025pt>
 File: ../diagrams/jump.png Graphic file (type png)
  <use ../diagrams/jump.png>
 Package pdftex.def Info: ../diagrams/jump.png used on input line 211.
 (pdftex.def)             Requested size: 208.13574pt x 156.09976pt.
 
 [13 <../diagrams/jump.png>]
-<../diagrams/t3.png, id=134, 643.40375pt x 251.94125pt>
+<../diagrams/t3.png, id=133, 643.40375pt x 251.94125pt>
 File: ../diagrams/t3.png Graphic file (type png)
 
 <use ../diagrams/t3.png>
@@ -626,7 +582,7 @@ Package pdftex.def Info: ../diagrams/t3.png used on input line 242.
 (pdftex.def)             Requested size: 433.62001pt x 169.79927pt.
  [14] [15 <../diagrams/t3.png>] [16]) (./Epithelium.tex [17]
 Chapter 2.
-<../diagrams/BeforeAfter.png, id=148, 1003.75pt x 501.875pt>
+<../diagrams/BeforeAfter.png, id=147, 1003.75pt x 501.875pt>
 File: ../diagrams/BeforeAfter.png Graphic file (type png)
 
 <use ../diagrams/BeforeAfter.png>
@@ -635,28 +591,28 @@ Package pdftex.def Info: ../diagrams/BeforeAfter.png used on input line 8.
  [18
 
 ] [19 <../diagrams/BeforeAfter.png>]
-[20] <../diagrams/energyComp.png, id=159, 1156.32pt x 433.62pt>
+[20] <../diagrams/energyComp.png, id=158, 1156.32pt x 433.62pt>
 File: ../diagrams/energyComp.png Graphic file (type png)
 
 <use ../diagrams/energyComp.png>
 Package pdftex.def Info: ../diagrams/energyComp.png used on input line 63.
 (pdftex.def)             Requested size: 433.62001pt x 162.6071pt.
 
-<../diagrams/perimComp.png, id=160, 7811.1825pt x 2940.9875pt>
+<../diagrams/perimComp.png, id=159, 7811.1825pt x 2940.9875pt>
 File: ../diagrams/perimComp.png Graphic file (type png)
 
 <use ../diagrams/perimComp.png>
 Package pdftex.def Info: ../diagrams/perimComp.png used on input line 70.
 (pdftex.def)             Requested size: 346.89732pt x 130.58856pt.
 
-<../diagrams/areaComp.png, id=161, 4611.2275pt x 1800.7275pt>
+<../diagrams/areaComp.png, id=160, 4611.2275pt x 1800.7275pt>
 File: ../diagrams/areaComp.png Graphic file (type png)
 
 <use ../diagrams/areaComp.png>
 Package pdftex.def Info: ../diagrams/areaComp.png used on input line 77.
 (pdftex.def)             Requested size: 346.89732pt x 135.46088pt.
 
-<../diagrams/shapeComp.png, id=162, 8052.0825pt x 3351.52126pt>
+<../diagrams/shapeComp.png, id=161, 8052.0825pt x 3351.52126pt>
 File: ../diagrams/shapeComp.png Graphic file (type png)
 
 <use ../diagrams/shapeComp.png>
@@ -683,14 +639,14 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 124.
  [24] [25]
-[26] <../diagrams/relationaldb.png, id=183, 1102.1175pt x 715.67375pt>
+[26] <../diagrams/relationaldb.png, id=182, 1102.1175pt x 715.67375pt>
 File: ../diagrams/relationaldb.png Graphic file (type png)
 
 <use ../diagrams/relationaldb.png>
 Package pdftex.def Info: ../diagrams/relationaldb.png used on input line 230.
 (pdftex.def)             Requested size: 346.89732pt x 225.26369pt.
 
-<../diagrams/ds.png, id=184, 626.34pt x 393.47pt>
+<../diagrams/ds.png, id=183, 626.34pt x 393.47pt>
 File: ../diagrams/ds.png Graphic file (type png)
  <use ../diagrams/ds.png>
 Package pdftex.def Info: ../diagrams/ds.png used on input line 251.
@@ -712,66 +668,58 @@ Overfull \hbox (6.98093pt too wide) in paragraph at lines 255--256
  []
 
 [28 <../diagrams/relationaldb.png> <../diagrams/ds.png>]
-<../diagrams/vert_mesh.png, id=192, 752.8125pt x 666.49pt>
+<../diagrams/vert_mesh.png, id=191, 752.8125pt x 666.49pt>
 File: ../diagrams/vert_mesh.png Graphic file (type png)
 
 <use ../diagrams/vert_mesh.png>
 Package pdftex.def Info: ../diagrams/vert_mesh.png used on input line 268.
 (pdftex.def)             Requested size: 303.53267pt x 268.7371pt.
- [29 <../diagrams/vert_mesh.png>]
-
-LaTeX Warning: Reference `fig:ctrclockwise' on page 30 undefined on input line 
-286.
-
-<../diagrams/rotate.png, id=196, 451.6875pt x 451.6875pt>
+ [29] [30 <../diagrams/vert_mesh.png>]
+<../diagrams/rotate.png, id=198, 451.6875pt x 451.6875pt>
 File: ../diagrams/rotate.png Graphic file (type png)
 
 <use ../diagrams/rotate.png>
 Package pdftex.def Info: ../diagrams/rotate.png used on input line 290.
 (pdftex.def)             Requested size: 216.81pt x 216.81442pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[30] [31 <../diagrams/rotate.png>] [32] [33]
-<../diagrams/t1pdf.png, id=213, 439.6425pt x 505.89pt>
+ [31 <../diagrams/rotate.png>] [32] [33] [34]
+<../diagrams/t1pdf.png, id=214, 439.6425pt x 505.89pt>
 File: ../diagrams/t1pdf.png Graphic file (type png)
 
 <use ../diagrams/t1pdf.png>
 Package pdftex.def Info: ../diagrams/t1pdf.png used on input line 331.
 (pdftex.def)             Requested size: 270.71059pt x 311.50014pt.
- [34] [35 <../diagrams/t1pdf.png>]
-<../diagrams/v.png, id=220, 705.63625pt x 708.6475pt>
+ [35 <../diagrams/t1pdf.png>]
+<../diagrams/v.png, id=218, 705.63625pt x 708.6475pt>
 File: ../diagrams/v.png Graphic file (type png)
  <use ../diagrams/v.png>
 Package pdftex.def Info: ../diagrams/v.png used on input line 345.
 (pdftex.def)             Requested size: 216.81pt x 217.7321pt.
 
-<../diagrams/vsqrd.png, id=221, 713.66624pt x 719.68875pt>
+<../diagrams/vsqrd.png, id=219, 713.66624pt x 719.68875pt>
 File: ../diagrams/vsqrd.png Graphic file (type png)
 
 <use ../diagrams/vsqrd.png>
 Package pdftex.def Info: ../diagrams/vsqrd.png used on input line 353.
 (pdftex.def)             Requested size: 216.81pt x 218.63171pt.
- [36 <../diagrams/v.png>]) (./Advances.tex [37 <../diagrams/vsqrd.png>]
+ [36] [37 <../diagrams/v.png> <../diagrams/vsqrd.png>]) (./Advances.tex [38]
 Chapter 3.
-<../diagrams/checkers.jpg, id=228, 659.46375pt x 517.935pt>
+<../diagrams/checkers.jpg, id=229, 659.46375pt x 517.935pt>
 File: ../diagrams/checkers.jpg Graphic file (type jpg)
 
 <use ../diagrams/checkers.jpg>
 Package pdftex.def Info: ../diagrams/checkers.jpg used on input line 8.
 (pdftex.def)             Requested size: 216.81pt x 170.27892pt.
- [38
+ [39
 
- <../diagrams/checkers.jpg>] [39]
-<../diagrams/rubber.jpeg, id=238, 985.6825pt x 770.88pt>
+ <../diagrams/checkers.jpg>] [40]
+<../diagrams/rubber.jpeg, id=239, 985.6825pt x 770.88pt>
 File: ../diagrams/rubber.jpeg Graphic file (type jpg)
 
 <use ../diagrams/rubber.jpeg>
 Package pdftex.def Info: ../diagrams/rubber.jpeg used on input line 28.
 (pdftex.def)             Requested size: 208.13574pt x 162.77177pt.
- [40 <../diagrams/rubber.jpeg>] [41]) (./main.bbl
-[42]
+ [41 <../diagrams/rubber.jpeg>] [42]) (./main.bbl
+[43]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no « in font cmr10!
 Missing character: There is no Ã in font cmr10!
@@ -794,7 +742,7 @@ Missing character: There is no Ã in font cmr10!
 Missing character: There is no © in font cmr10!
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ± in font cmr10!
-[43
+[44
 
 ]
 Underfull \hbox (badness 1552) in paragraph at lines 60--64
@@ -810,64 +758,59 @@ iants -[] causeway _ 974 _ 990x742 .
 
 Missing character: There is no Â in font cmr10!
 Missing character: There is no   in font cmr10!
-[44]
+[45]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¼ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
- [45]
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
  [46]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+ [47]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
 Missing character: There is no ” in font cmr10!
-) [47] (./main.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+) [48] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 6954 strings out of 495028
- 100353 string characters out of 6181497
- 206444 words of memory out of 5000000
- 10012 multiletter control sequences out of 15000+600000
- 15563 words of font info for 55 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
+ 6609 strings out of 493308
+ 93828 string characters out of 6140092
+ 210620 words of memory out of 5000000
+ 9943 multiletter control sequences out of 15000+600000
+ 15204 words of font info for 54 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
  42i,15n,58p,1633b,1581s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmtt9.pfb>
-Output written on main.pdf (57 pages, 4457137 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+bx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmtt9.pfb>
+Output written on main.pdf (58 pages, 4429765 bytes).
 PDF statistics:
- 336 PDF objects out of 1000 (max. 8388607)
- 216 compressed objects within 3 object streams
+ 335 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

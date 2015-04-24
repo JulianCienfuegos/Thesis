@@ -23,18 +23,18 @@
 \contentsline {section}{\numberline {2.5}Executive Decisions About Parameter Implementations}{26}
 \contentsline {section}{\numberline {2.6}A Relational Database}{27}
 \contentsline {section}{\numberline {2.7}Initial Mesh Design}{29}
-\contentsline {section}{\numberline {2.8}Moving the Vertices}{30}
-\contentsline {section}{\numberline {2.9}Error Tolerance of the Algorithm}{31}
-\contentsline {section}{\numberline {2.10}Embarassing Parallelism and CUDA}{31}
+\contentsline {section}{\numberline {2.8}Moving the Vertices}{29}
+\contentsline {section}{\numberline {2.9}Error Tolerance of the Algorithm}{32}
+\contentsline {section}{\numberline {2.10}Embarassing Parallelism and CUDA}{32}
 \contentsline {section}{\numberline {2.11}Computing Topological changes.}{33}
-\contentsline {subsection}{\numberline {2.11.1}The T2 swap.}{33}
-\contentsline {subsection}{\numberline {2.11.2}The T1 Swap}{33}
-\contentsline {section}{\numberline {2.12}Dependencies}{34}
+\contentsline {subsection}{\numberline {2.11.1}The T2 swap.}{34}
+\contentsline {subsection}{\numberline {2.11.2}The T1 Swap}{34}
+\contentsline {section}{\numberline {2.12}Dependencies}{36}
 \contentsline {section}{\numberline {2.13}Complexity}{36}
-\contentsline {chapter}{\numberline {3}The Future of \emph {Epithelium}}{38}
-\contentsline {section}{\numberline {3.1}Rosette Models}{38}
-\contentsline {section}{\numberline {3.2}A New Potential, A New Force}{39}
-\contentsline {section}{\numberline {3.3}Improvements in Imaging}{40}
-\contentsline {section}{\numberline {3.4}Further Parallelization}{41}
-\contentsline {section}{\numberline {3.5}Voronoi Tesselations}{41}
-\contentsline {section}{\numberline {3.6}Visualization Software }{42}
+\contentsline {chapter}{\numberline {3}The Future of \emph {Epithelium}}{39}
+\contentsline {section}{\numberline {3.1}Rosette Models}{39}
+\contentsline {section}{\numberline {3.2}A New Potential, A New Force}{40}
+\contentsline {section}{\numberline {3.3}Improvements in Imaging}{41}
+\contentsline {section}{\numberline {3.4}Further Parallelization}{42}
+\contentsline {section}{\numberline {3.5}Voronoi Tesselations}{42}
+\contentsline {section}{\numberline {3.6}Visualization Software }{43}
