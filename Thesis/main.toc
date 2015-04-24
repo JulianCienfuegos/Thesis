@@ -20,7 +20,7 @@
 \contentsline {section}{\numberline {2.4}The Design of \emph {Epithelium}}{21}
 \contentsline {subsection}{\numberline {2.4.1}[Highly Simplified] Pseudocode}{23}
 \contentsline {subsection}{\numberline {2.4.2}Classes}{23}
-\contentsline {section}{\numberline {2.5}Executive Decisions About Parameter Implementations}{26}
+\contentsline {section}{\numberline {2.5}Parameter Implementations}{26}
 \contentsline {section}{\numberline {2.6}A Relational Database}{27}
 \contentsline {section}{\numberline {2.7}Initial Mesh Design}{29}
 \contentsline {section}{\numberline {2.8}Moving the Vertices}{29}
