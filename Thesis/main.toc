@@ -1,11 +1,15 @@
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Abstract}{ii}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Dedication}{iii}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Acknowledgements}{iv}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Vita}{v}
 \contentsline {chapter}{\numberline {1}Epithelial Tissue and Vertex Dynamics}{1}
 \contentsline {section}{\numberline {1.1}About Epithelial Tissue}{1}
 \contentsline {section}{\numberline {1.2}Modeling Epithelial Tissue}{3}
 \contentsline {section}{\numberline {1.3}The Nagai-Honda Model}{6}
 \contentsline {subsection}{\numberline {1.3.1}How the Vertices Move}{6}
-\contentsline {subsection}{\numberline {1.3.2}Topological Changes to the Mesh}{8}
+\contentsline {subsection}{\numberline {1.3.2}Topological Changes to the Mesh}{9}
 \contentsline {subsection}{\numberline {1.3.3}Selection of Parameters}{10}
-\contentsline {section}{\numberline {1.4}Further Remarks About Epithelial Tissue Modeling}{11}
+\contentsline {section}{\numberline {1.4}Further Remarks About Epithelial Tissue Modeling}{12}
 \contentsline {subsection}{\numberline {1.4.1}Three dimensional models: Honda-Nagai and Okuda.}{12}
 \contentsline {subsection}{\numberline {1.4.2}Similar Models of Potential Energy}{14}
 \contentsline {subsection}{\numberline {1.4.3}The T3 Swap}{14}
@@ -13,24 +17,24 @@
 \contentsline {chapter}{\numberline {2}Epithelium}{18}
 \contentsline {section}{\numberline {2.1}About Epithelium}{18}
 \contentsline {section}{\numberline {2.2}Sample Configuration Files}{18}
-\contentsline {subsection}{\numberline {2.2.1}Simulation Settings, the Initial Mesh, and config.txt}{18}
+\contentsline {subsection}{\numberline {2.2.1}Simulation Settings, the Initial Mesh, and config.txt}{19}
 \contentsline {subsection}{\numberline {2.2.2}Global Cell Parmeters}{20}
 \contentsline {subsection}{\numberline {2.2.3}Local Cell Parameters}{20}
 \contentsline {section}{\numberline {2.3}Monitoring the Output of Epithelium}{21}
-\contentsline {section}{\numberline {2.4}The Design of \emph {Epithelium}}{21}
+\contentsline {section}{\numberline {2.4}The Design of \emph {Epithelium}}{23}
 \contentsline {subsection}{\numberline {2.4.1}[Highly Simplified] Pseudocode}{23}
-\contentsline {subsection}{\numberline {2.4.2}Classes}{23}
+\contentsline {subsection}{\numberline {2.4.2}Classes}{24}
 \contentsline {section}{\numberline {2.5}Parameter Implementations}{26}
 \contentsline {section}{\numberline {2.6}A Relational Database}{27}
 \contentsline {section}{\numberline {2.7}Initial Mesh Design}{29}
 \contentsline {section}{\numberline {2.8}Moving the Vertices}{29}
-\contentsline {section}{\numberline {2.9}Error Tolerance of the Algorithm}{32}
+\contentsline {section}{\numberline {2.9}Error Tolerance of the Algorithm}{31}
 \contentsline {section}{\numberline {2.10}Embarassing Parallelism and CUDA}{32}
-\contentsline {section}{\numberline {2.11}Computing Topological changes.}{33}
+\contentsline {section}{\numberline {2.11}Computing Topological changes.}{34}
 \contentsline {subsection}{\numberline {2.11.1}The T2 swap.}{34}
 \contentsline {subsection}{\numberline {2.11.2}The T1 Swap}{34}
-\contentsline {section}{\numberline {2.12}Dependencies}{36}
-\contentsline {section}{\numberline {2.13}Complexity}{36}
+\contentsline {section}{\numberline {2.12}Dependencies}{35}
+\contentsline {section}{\numberline {2.13}Complexity}{37}
 \contentsline {chapter}{\numberline {3}The Future of \emph {Epithelium}}{39}
 \contentsline {section}{\numberline {3.1}Rosette Models}{39}
 \contentsline {section}{\numberline {3.2}A New Potential, A New Force}{40}

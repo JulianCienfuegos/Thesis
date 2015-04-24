@@ -18,10 +18,10 @@
 \contentsline {figure}{\numberline {2.6}{\ignorespaces An example of a relational database.}}{28}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Data structure used for storing data in a non-redundant form.\relax }}{28}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces A 5x5 Hexagonal Mesh.}}{30}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces A rotated mesh for error analysis.\relax }}{31}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Implementation of a T1 swap.}}{35}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces A rotated mesh for error analysis.\relax }}{32}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Implementation of a T1 swap.}}{36}
 \contentsline {figure}{\numberline {2.11}{\ignorespaces The runtime does not scale as the number of vertices.\relax }}{37}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces The runtime does not scale as $|V|^2$.\relax }}{37}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces The runtime does not scale as $|V|^2$.\relax }}{38}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Square cells in quail epithelium. Adapted from\nobreakspace {}\cite {Checkers}.\relax }}{39}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces The stress-strain curve for rubber. Adapted from\nobreakspace {}\cite {rubr}.\relax }}{41}
